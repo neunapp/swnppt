@@ -1,0 +1,24 @@
+//archivo principal o main scss
+
+//archivos base foundation
+@import "app";
+
+//archivos base para font awesone
+@import "font-awesome/scss/font-awesome";
+
+//archivos de configuracion
+@import "config";
+
+//modulos
+@import "modules/colores";
+@import "modules/conmon";
+//@import "modules/forms";
+//@import "modules/buttons";
+//@import "modules/cards";
+
+//componentes
+@import "components/include/header/mov-header";
+@import "components/include/header/mov-header-menu";
+@import "components/home/banner";
+@import "components/home/armar-paque";
+@import "components/home/paque-result";

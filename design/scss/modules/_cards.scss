@@ -1,0 +1,16 @@
+.frame-card {
+  width: 100%;
+  background: color(fondo3);
+}
+
+.card-register {
+  box-shadow: 1px 1px 1px 1px rgba(129,137,140,0.34);
+  background: color(blanco);
+  border-radius: 5px;
+  padding: 1.5em;
+  &__title {
+    font-family: $font-uno;
+    color: color(gris1);
+    text-align: center;
+  }
+}

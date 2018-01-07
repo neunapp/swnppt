@@ -1,0 +1,33 @@
+.body {
+  background: color(fondo2);
+}
+
+.centrar{
+  text-align: center;
+}
+
+.text-subtitle {
+  font-family: $font-fam-segundo;
+  text-align: center;
+  font-size: $font-siz-mov-h2;
+  padding: 0.3em;
+  font-weight: bold;
+  color: color(cuatro);
+}
+
+.label-input {
+  background: color(dos);
+  color: color(blanco);
+  padding: {
+    left: 5px;
+    right: 5px;
+    top: 2px;
+    bottom: 2px;
+  };
+  border-radius: 3px;
+  font-family: $font-fam-primero;
+}
+
+.search-form {
+
+}

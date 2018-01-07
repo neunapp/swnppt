@@ -1,0 +1,19 @@
+.form-item {
+  position: relative;
+  font-family: $font-tres;
+  width: 100%;
+  &__label {
+    color: color(gris1);
+  }
+  &__input {
+    background: color(fondo3);
+    border-radius: 15px;
+    padding-left: 2em;
+  }
+  &__icon {
+    position: absolute;
+    color: color(gris1);
+    top: 2.25em;
+    left: 0.6em;
+  }
+}

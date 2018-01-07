@@ -1,0 +1,146 @@
+.frame-login {
+  background: color(fondo1);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  //for pc
+  @include desde(640px){
+    height: 100vh;
+  };
+}
+
+.login {
+  box-shadow: 1px 1px 1px 1px rgba(129,137,140,0.34);
+  background: color(blanco);
+  border-radius: 5px;
+  padding: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__logo {
+    text-align: center;
+    font-family: $font-uno;
+    font-size: $font-siz-title;
+    font-weight: bold;
+    color: color(tres);
+    &:hover {
+      color: color(uno);
+    }
+  }
+  &__title {
+    font-family: $font-dos;
+    font-size: $font-siz-subtitle;
+    color: color(negro-suave);
+  }
+}
+
+.login__form {
+  &__item {
+    position: relative;
+    font-family: $font-tres;
+    width: 100%;
+    &__label {
+      color: color(gris1);
+    }
+    &__input {
+      border-radius: 15px;
+      padding-left: 2em;
+    }
+    &__icon {
+      position: absolute;
+      color: color(gris1);
+      top: 2.25em;
+      left: 0.7em;
+    }
+    &__btn {
+      background: color(uno);
+      color: color(blanco);
+      margin: {
+        top: 23%;
+        bottom: 10%;
+      };
+      border: none;
+      border-radius: 20px;
+      width: 100%;
+      height: 35px;
+      &:hover {
+        cursor: pointer;
+        background: color(tres);
+      }
+    }
+  }
+}
+
+
+.login__links {
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  &__forgot {
+    font-size: $font-siz-text-mov;
+    color: color(gris1);
+    margin: 0px;
+  }
+  &__rs {
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-around;
+    &__a {
+      background: color(dos);
+      color: color(blanco);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      &:hover {
+        color: color(blanco);
+        background: color(tres);
+      }
+    }
+  }
+}
+
+.login__register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  &__description {
+    font-size: $font-siz-text-mov;
+    color: color(gris1);
+    margin-bottom: 10px;
+  }
+  &__btn {
+    background: color(dos);
+    color: color(blanco);
+    width: 100%;
+    text-align: center;
+    padding: {
+      top: 0.5em;
+      bottom: 0.5em;
+    };
+    border-radius: 50px;
+    &:hover {
+      background: color(uno);
+      color: color(blanco);
+    }
+  }
+}
+
+.color-face {
+  background: color(dos);
+}
+
+.color-google {
+  background: color(cinco);
+}
+
+.color-pinterest {
+  background: color(siete);
+}
