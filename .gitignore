@@ -102,7 +102,6 @@ desing/scss/styles.scss
 # Secrect json
 
 nppt/secrets.json
-nppt/manage.py
 nppt/nppt/settings.py
 
 !__init__.py
