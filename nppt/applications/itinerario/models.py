@@ -39,6 +39,24 @@ class Place(TimeStampedModel):
     def __str__(self):
         return self.destiny
 
+    def save(self, *args, **kwargs):
+        if not self.id:
+            # calculamos el total de segundos de la hora actual
+            now = datetime.now()
+            total_time = timedelta(
+                hours=now.hour,
+                minutes=now.minute,
+                seconds=now.second
+            )
+            seconds = int(total_time.total_seconds())
+            slug_unique = '%s %s' % (self.title, str(seconds))
+        else:
+            seconds = self.slug.split('-')[-1]  # recuperamos los segundos
+            slug_unique = '%s %s' % (self.title, str(seconds))
+
+        self.slug = slugify(slug_unique)
+        super(Place, self).save(*args, **kwargs)
+
 
 @python_2_unicode_compatible
 class Itinerary(TimeStampedModel):
