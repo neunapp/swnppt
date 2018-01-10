@@ -12,4 +12,16 @@ $(function(){
     }
 
   });
+
+
+  //scrip para scroll en header
+  var header_class = $('#main-header');
+  $(window).scroll(function () {
+      if ($(this).scrollTop() > 70) {
+        header_class.removeClass('main-header').addClass('main-header-change');
+      }
+      if ($(this).scrollTop() < 70) {
+        header_class.removeClass('main-header-change').addClass('main-header');
+      }
+   });
 });

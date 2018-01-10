@@ -4,6 +4,7 @@ from datetime import timedelta, datetime
 # Create your models here.
 #third party
 from model_utils.models import TimeStampedModel
+from froala_editor.fields import FroalaField
 
 #django libraries
 
@@ -50,12 +51,12 @@ class Service(TimeStampedModel):
     type_service = models.ForeignKey(Type_service, on_delete=models.CASCADE)
     destiny = models.ForeignKey(Destiny, on_delete=models.CASCADE)
     title = models.CharField('titulo', max_length=100)
-    image = models.URLField()
+    image = models.ImageField('imagen', upload_to="destinos")
     days = models.IntegerField()
     altitude_average = models.IntegerField()
-    description = models.CharField('descripcion', max_length=200)
-    include = models.CharField('incluye', max_length=200)
-    not_include = models.CharField('no incluye', max_length=200)
+    description = models.TextField('descripcion', blank=True)
+    include = FroalaField()
+    not_include = FroalaField()
     private_price = models.CharField('precio privado', max_length=50)
     shared_price = models.CharField('precio compartido', max_length=50)
     difficulty = models.CharField('dificultad', max_length=50)
@@ -64,7 +65,7 @@ class Service(TimeStampedModel):
     hour_end = models.TimeField('hora inicio')
     distance_total = models.CharField('distancia total', max_length=50)
     recommended_for = models.CharField('recomendado para', max_length=200)
-    consideration = models.CharField('consideraciones', max_length=200)
+    consideration = FroalaField()
     state = models.BooleanField(default=True)
     visit = models.IntegerField()
 

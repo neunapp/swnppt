@@ -2,11 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f481dbc0-a1dd-460f-82ee-2a54b5cbf232" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/img/1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/img/2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/img/3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/img/4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/img/5.jpeg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/img/6.jpeg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/img/7.jpeg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/img/8.jpeg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/img/images.jpeg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/img/logo_mov2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/img/p.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/scss/components/home/_about.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/scss/components/include/header/_main-header.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/design/scss/modules/cards/_product-card.scss" />
       <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/swnppt.iml" afterPath="$PROJECT_DIR$/.idea/swnppt.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/nppt/applications/blog/admin.py" afterPath="$PROJECT_DIR$/nppt/applications/blog/admin.py" />
+      <change beforePath="$PROJECT_DIR$/design/js/scrips.js" afterPath="$PROJECT_DIR$/design/js/scrips.js" />
+      <change beforePath="$PROJECT_DIR$/design/scss/_config.scss" afterPath="$PROJECT_DIR$/design/scss/_config.scss" />
+      <change beforePath="$PROJECT_DIR$/design/scss/components/home/_armar-paque.scss" afterPath="$PROJECT_DIR$/design/scss/components/home/_armar-paque.scss" />
+      <change beforePath="$PROJECT_DIR$/design/scss/components/home/_banner.scss" afterPath="$PROJECT_DIR$/design/scss/components/home/_banner.scss" />
+      <change beforePath="$PROJECT_DIR$/design/scss/components/home/_paque-result.scss" afterPath="$PROJECT_DIR$/design/scss/components/home/_paque-result.scss" />
+      <change beforePath="$PROJECT_DIR$/design/scss/components/include/header/_mov-header-menu.scss" afterPath="$PROJECT_DIR$/design/scss/components/include/header/_mov-header-menu.scss" />
+      <change beforePath="$PROJECT_DIR$/design/scss/components/include/header/_mov-header.scss" afterPath="$PROJECT_DIR$/design/scss/components/include/header/_mov-header.scss" />
+      <change beforePath="$PROJECT_DIR$/design/scss/modules/_buttons.scss" afterPath="$PROJECT_DIR$/design/scss/modules/_buttons.scss" />
+      <change beforePath="$PROJECT_DIR$/design/scss/modules/_cards.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/design/scss/modules/_colores.scss" afterPath="$PROJECT_DIR$/design/scss/modules/_colores.scss" />
+      <change beforePath="$PROJECT_DIR$/design/scss/modules/_conmon.scss" afterPath="$PROJECT_DIR$/design/scss/modules/_conmon.scss" />
+      <change beforePath="$PROJECT_DIR$/design/scss/styles.scss" afterPath="$PROJECT_DIR$/design/scss/styles.scss" />
+      <change beforePath="$PROJECT_DIR$/design/templates/home/index.html" afterPath="$PROJECT_DIR$/design/templates/home/index.html" />
+      <change beforePath="$PROJECT_DIR$/design/templates/include/header.html" afterPath="$PROJECT_DIR$/design/templates/include/header.html" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/blog/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/nppt/applications/blog/migrations/0001_initial.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/blog/models.py" afterPath="$PROJECT_DIR$/nppt/applications/blog/models.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/itinerario/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/nppt/applications/itinerario/migrations/0001_initial.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/itinerario/models.py" afterPath="$PROJECT_DIR$/nppt/applications/itinerario/models.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/pagos/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/nppt/applications/pagos/migrations/0001_initial.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/servicio/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/nppt/applications/servicio/migrations/0001_initial.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/servicio/models.py" afterPath="$PROJECT_DIR$/nppt/applications/servicio/models.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/nppt/settings/base.py" afterPath="$PROJECT_DIR$/nppt/nppt/settings/base.py" />
+      <change beforePath="$PROJECT_DIR$/requirements/base.txt" afterPath="$PROJECT_DIR$/requirements/base.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/nppt/applications/blog/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -64,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+            <state relative-caret-position="239">
+              <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,18 +132,18 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nppt/applications/blog/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="399">
+              <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="228">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,8 +162,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nppt/applications/itinerario/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="65" column="14" lean-forward="false" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+            <state relative-caret-position="1302">
+              <caret line="66" column="14" lean-forward="false" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -138,7 +173,7 @@
         <entry file="file://$PROJECT_DIR$/nppt/applications/home/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+              <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -175,9 +210,9 @@
         <option value="$PROJECT_DIR$/nppt/applications/itinerario/admin.py" />
         <option value="$PROJECT_DIR$/nppt/applications/pagos/admin.py" />
         <option value="$PROJECT_DIR$/nppt/applications/servicio/admin.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/nppt/applications/blog/admin.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -659,7 +694,7 @@
         <state relative-caret-position="105">
           <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -677,7 +712,7 @@
         <state relative-caret-position="84">
           <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -687,7 +722,7 @@
         <state relative-caret-position="105">
           <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -697,7 +732,7 @@
         <state relative-caret-position="84">
           <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -721,15 +756,15 @@
     <entry file="file://$PROJECT_DIR$/nppt/applications/home/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+          <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nppt/applications/itinerario/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="65" column="14" lean-forward="false" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+        <state relative-caret-position="1302">
+          <caret line="66" column="14" lean-forward="false" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -750,18 +785,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nppt/applications/blog/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -778,16 +805,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nppt/applications/blog/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        <state relative-caret-position="399">
+          <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="228">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding />
         </state>
       </provider>
