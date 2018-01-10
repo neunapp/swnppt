@@ -5,6 +5,14 @@
   box-shadow: 1px 1px 1px 0px rgba(70,177,187,1);
   padding: 5px;
   margin-bottom: 1em;
+  @include desde_hasta(640px, 1024px){
+    padding: {
+      top: 1em;
+      bottom: 1em;
+      left: 2em;
+      right: 2em;
+    };
+  };
   &__input {
     font-family: $font-fam-primero;
     color: color(gris);
@@ -20,6 +28,15 @@
       bottom: 0.4em;
     };
     border-radius: 10px;
+    //tablet
+    @include desde_hasta(640px, 1024px){
+      padding: {
+        left: 2.5em;
+        right: 2.5em;
+        top: 0.6em;
+        bottom: 0.6em;
+      };
+    };
     &:hover {
       cursor: pointer;
       background: color(ocho);
@@ -60,5 +77,6 @@
   &__input {
     padding-left: 1.7em;
     font-family: $font-fam-primero;
+    margin: 0px;
   }
 }

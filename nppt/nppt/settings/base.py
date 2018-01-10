@@ -36,6 +36,7 @@ LOCAL_APPS = (
 )
 
 THIRD_PARTY_APPS = (
+    'froala_editor',
     'sorl.thumbnail',
     'rest_framework',
 )

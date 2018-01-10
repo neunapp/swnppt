@@ -13,12 +13,14 @@
 @import "modules/colores";
 @import "modules/conmon";
 //@import "modules/forms";
-//@import "modules/buttons";
-//@import "modules/cards";
+@import "modules/buttons";
+@import "modules/cards/product-card";
 
 //componentes
 @import "components/include/header/mov-header";
 @import "components/include/header/mov-header-menu";
+@import "components/include/header/main-header";
 @import "components/home/banner";
 @import "components/home/armar-paque";
 @import "components/home/paque-result";
+@import "components/home/about";

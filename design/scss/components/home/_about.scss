@@ -1,0 +1,117 @@
+.home-about {
+  background: color(blanco);
+  padding: {
+    top: 0.5em;
+    bottom: 0.5em;
+    left: 5px;
+    right: 5px;
+  }
+  border: 1px solid;
+  border-color: color(tres);
+  border-radius: 10px;
+  margin-top: 1em;
+  @include desde(1024px){
+    padding: 2em;
+  };
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    &__img {
+      width: 50px;
+      height: 50px;
+      margin: 0px;
+      @include desde(1024px){
+        width: 80px;
+        height: 80px;
+      };
+    }
+    &__title {
+      font-family: $font-fam-tercero;
+      font-weight: bold;
+      color: #43a047;
+      text-decoration: underline;
+      @include desde(1024px){
+        font-size: $font-siz-h1;
+      };
+    }
+  }
+  &__body {
+    &__video {
+      height: 200px;
+      //for pc
+      @include desde(1024px){
+        height: 300px;
+      };
+    }
+    &__text {
+      font-family: $font-fam-segundo;
+      text-align: justify;
+      font-size: 1em;
+      padding: 0.5em;
+      height: 200px;
+      @include desde_hasta(640px, 1024px){
+        padding: {
+          top: 5px;
+          bottom: 10px;
+          left: 1em;
+          right: 1em;
+        }
+      };
+      &__action {
+        text-align: right;
+        &__btn {
+          background: color(dos);
+          color: color(blanco);
+          border-radius: 5px;
+          padding: {
+            top: 5px;
+            bottom: 5px;
+            left: 1em;
+            right: 1em;
+          };
+          &:hover {
+            background: color(uno);
+            color: color(blanco);
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-about-galery {
+  margin-top: 1em;
+  padding: 10px;
+  border: 1px solid;
+  border-color: color(cuatro);
+  border-radius: 10px;
+  width: 100%;
+  @include desde(640px){
+    padding: 1em;
+  };
+  &__title {
+    font-family: $font-fam-segundo;
+    font-weight: bold;
+    color: color(cuatro);
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  &__item {
+    margin-bottom: 2em;
+    &__img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      @include desde_hasta(600px, 1000px){
+        width: 150px;
+        height: 150px;
+      };
+      @include desde(1000px){
+        width: 250px;
+        height: 250px;
+      };
+    }
+  }
+}

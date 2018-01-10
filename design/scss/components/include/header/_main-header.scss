@@ -1,0 +1,64 @@
+.main-header-change {
+  position: fixed;
+  width: 100%;
+  padding: 1em;
+  background: color(dos);
+  @include hasta(1024px){
+    display: none;
+  };
+  z-index: 400;
+}
+
+.main-header {
+  position: fixed;
+  width: 100%;
+  padding: 1em;
+  background-color:rgba(0,0,0,0.4);
+  @include hasta(1024px){
+    display: none;
+  };
+  z-index: 400;
+}
+
+.main-header__menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &__logo {
+    display: flex;
+    align-items: center;
+    &__img {
+      width: 60px;
+      height: 30px;
+      margin: 0px;
+    }
+    &__name {
+      font-family: $font-fam-segundo;
+      color: color(cuatro);
+      font-weight: bold;
+    }
+  }
+  &__ul {
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__li {
+      padding: {
+        top: 0.6em;
+        bottom: 0.6em;
+        left: 1em;
+        right: 1em;
+      };
+      &__a {
+        color: color(blanco);
+        font-family: $font-fam-segundo;
+        font-weight: bold;
+        &:hover {
+          color: color(tres);
+        }
+      }
+    }
+  }
+}

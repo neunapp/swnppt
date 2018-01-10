@@ -113,6 +113,8 @@ nppt/static/img/*
 
 
 nppt/applications/home/migrations/*
+nppt/applications/blog/migrations/*
+nppt/applications/itinerario/migrations/*
+nppt/applications/pagos/migrations/*
+nppt/applications/servicio/migrations/*
 nppt/applications/users/migrations/*
-
-
