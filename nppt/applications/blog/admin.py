@@ -15,9 +15,10 @@ class BlogAdmin(admin.ModelAdmin):
      'author',
      'tags',
     )
+    list_filter = ('category',)
 
 admin.site.register(Category)
 admin.site.register(Tag)
-admin.site.register(Blog)
+admin.site.register(Blog, BlogAdmin)
 
 
