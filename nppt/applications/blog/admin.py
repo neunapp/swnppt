@@ -11,7 +11,6 @@ class BlogAdmin(admin.ModelAdmin):
      'title',
      'sub_title',
      'description',
-     'content',
      'author',
     )
     list_filter = ('category',)
@@ -36,7 +35,6 @@ class SocialProjectAdmin(admin.ModelAdmin):
      'title',
      'sub_title',
      'description',
-     'content',
      'author',
     )
     list_filter = ('category',)

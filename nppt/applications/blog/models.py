@@ -14,11 +14,15 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.template.defaultfilters import slugify
 
 
+#import manager
+from .managers import SocialProjectManager, CategoryManager
+
 @python_2_unicode_compatible
 class Category(TimeStampedModel):
 
     model = models.CharField('modelos', max_length=200)
     name_spa = models.CharField('nombre spa', max_length=100)
+    objects =CategoryManager()
 
     class Meta:
         verbose_name = 'categoria'
@@ -118,6 +122,8 @@ class Social_Project(TimeStampedModel):
        null=True
    )
    tags = models.ManyToManyField(Tag)
+
+   objects = SocialProjectManager()
 
    class Meta:
        verbose_name = 'Proyeccion social'
