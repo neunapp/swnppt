@@ -77,3 +77,7 @@ class Itinerary(TimeStampedModel):
 
     def __str__(self):
         return self.denomination
+
+
+
+

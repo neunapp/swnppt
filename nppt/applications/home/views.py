@@ -3,9 +3,14 @@ from django.shortcuts import render
 from django.views.generic import ListView, TemplateView
 # Create your views here.
 
-from applications.blog.models import Category
-from applications.blog.forms import SearchForm
+#forms
+from .forms import ContactUsForm
 
+#models from other applicatoons
+from applications.blog.models import Category
+
+#forms from other applications
+from applications.blog.forms import SearchForm
 
 class CategoriaListView(ListView):
     """
@@ -19,6 +24,7 @@ class CategoriaListView(ListView):
         context = super(CategoriaListView, self).get_context_data(**kwargs)
         context['form'] = SearchForm
         context['category'] = Category.objects.list_category()
+        context['formcontactus'] = ContactUsForm
         return context
 
     def get_queryset(self):

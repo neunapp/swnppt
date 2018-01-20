@@ -57,6 +57,7 @@ class Blog(TimeStampedModel):
     content = FroalaField()
     author = models.CharField('autor', max_length=200)
     image1 = models.ImageField('imagen uno', upload_to="blog")
+    slug = models.SlugField(editable=False, max_length=200, null=True, blank=True)
     image2 = models.ImageField(
         'imagen dos',
         upload_to="blog",
@@ -78,6 +79,29 @@ class Blog(TimeStampedModel):
 
     def __str__(self):
         return self.title_seo
+
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            # calculamos el total de segundos de la hora actual
+            now = datetime.now()
+            total_time = timedelta(
+                hours=now.hour,
+                minutes=now.minute,
+                seconds=now.second
+            )
+            seconds = int(total_time.total_seconds())
+            slug_unique = '%s %s' % (self.title, str(seconds))
+        else:
+            seconds = self.slug.split('-')[-1]  # recuperamos los segundos
+            slug_unique = '%s %s' % (self.title, str(seconds))
+
+        self.slug = slugify(slug_unique)
+        super(Blog, self).save(*args, **kwargs)
+
+
+
+
 
 @python_2_unicode_compatible
 class Social_Project(TimeStampedModel):

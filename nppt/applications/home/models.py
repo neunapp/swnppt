@@ -12,6 +12,10 @@ from django.conf import settings
 from django.utils.encoding import python_2_unicode_compatible
 from django.template.defaultfilters import slugify
 
+#model from other applications
+
+from applications.servicio.models import Destiny
+
 
 @python_2_unicode_compatible
 class Values_enterprice(TimeStampedModel):
@@ -72,5 +76,63 @@ class Client_commentary(TimeStampedModel):
 
     def __str__(self):
         return self.client_name
+
+
+
+@python_2_unicode_compatible
+class ContactUs(TimeStampedModel):
+    ESTRELLA_5 = '3'
+    ESTRELLA_4 = '2'
+    ESTRELLA_3 = '1'
+    ECONOMY = '0'
+
+    MODE_CHOICES = (
+        (ESTRELLA_5, '5 star'),
+        (ESTRELLA_4, '4 star'),
+        (ESTRELLA_3, '3 star'),
+        (ECONOMY, 'Economy'),
+    )
+
+    COMPARTIDO = '2'
+    PRIVADO = '1'
+    MODE_CHOICES_HOTEL = (
+        (PRIVADO, 'privado'),
+        (COMPARTIDO, 'compartido'),
+
+    )
+    name = models.CharField('nombre', max_length=50)
+    last_name = models.CharField('apellido', max_length=150, blank=False, null=False)
+    email = models.EmailField('correo', blank=False, null=False)
+    phone = models.CharField('telefono', max_length=15)
+    skype = models.URLField('skype', max_length=150)
+    best_time_contact = models.CharField('Mejor momento para contactarlo', max_length=200)
+    country_residence = models.CharField('pais de residencia', max_length=20)
+    city = models.CharField('ciudad', max_length=15)
+    destiny = models.ForeignKey(Destiny, on_delete=models.CASCADE)
+    departure_date = models.DateField('fecha de salida')
+    days_amount = models.IntegerField('cantidad de dias')
+    adult_amount = models.IntegerField('cantidad de adultos')
+    infant_amount = models.IntegerField('cantidad de infantes')
+    boy_infant_amount = models.IntegerField('cantidad de niños menosres de 2 a 3')
+    boy_amount = models.IntegerField('cantidad de niños mayores a 3 años')
+    hotel = models.CharField(
+        'hotel',
+        max_length=2,
+        blank=True,
+        choices=MODE_CHOICES
+    )
+    type_service = models.CharField(
+        'tipo de servicio',
+        max_length=2,
+        blank=True,
+        choices=MODE_CHOICES_HOTEL
+    )
+    message = models.TextField('mensaje')
+
+
+
+
+
+
 
 

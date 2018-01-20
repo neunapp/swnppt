@@ -21,6 +21,11 @@
     <p></p>-----------------------------------------------
 {% endfor %}
 
+<form action="post">{% csrf_token %}
+    {{ formcontactus }}
+    <button type="submit">Enviar</button>
+</form>
+
 
 
 
