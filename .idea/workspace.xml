@@ -2,14 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f481dbc0-a1dd-460f-82ee-2a54b5cbf232" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/nppt/applications/home/forms.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/nppt/templates/home/list_blog.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ee22b553-0f52-4eec-b4b0-cbeab1b5dbf9.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/ee22b553-0f52-4eec-b4b0-cbeab1b5dbf9.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ee22b553-0f52-4eec-b4b0-cbeab1b5dbf9/storage_v2/_src_/database/pptdb.8vFeBg/schema/public.abK9xQ.meta" afterPath="$PROJECT_DIR$/.idea/dataSources/ee22b553-0f52-4eec-b4b0-cbeab1b5dbf9/storage_v2/_src_/database/pptdb.8vFeBg/schema/public.abK9xQ.meta" />
       <change beforePath="$PROJECT_DIR$/.idea/swnppt.iml" afterPath="$PROJECT_DIR$/.idea/swnppt.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/blog/admin.py" afterPath="$PROJECT_DIR$/nppt/applications/blog/admin.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/blog/managers.py" afterPath="$PROJECT_DIR$/nppt/applications/blog/managers.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/blog/migrations/0001_initial.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/blog/migrations/__init__.py" afterPath="" />
       <change beforePath="$PROJECT_DIR$/nppt/applications/blog/models.py" afterPath="$PROJECT_DIR$/nppt/applications/blog/models.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/home/admin.py" afterPath="$PROJECT_DIR$/nppt/applications/home/admin.py" />
       <change beforePath="$PROJECT_DIR$/nppt/applications/home/models.py" afterPath="$PROJECT_DIR$/nppt/applications/home/models.py" />
-      <change beforePath="$PROJECT_DIR$/nppt/applications/home/views.py" afterPath="$PROJECT_DIR$/nppt/applications/home/views.py" />
-      <change beforePath="$PROJECT_DIR$/nppt/applications/itinerario/models.py" afterPath="$PROJECT_DIR$/nppt/applications/itinerario/models.py" />
-      <change beforePath="$PROJECT_DIR$/nppt/applications/servicio/services_urls.py" afterPath="$PROJECT_DIR$/nppt/applications/servicio/services_urls.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/itinerario/admin.py" afterPath="$PROJECT_DIR$/nppt/applications/itinerario/admin.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/itinerario/migrations/0001_initial.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/itinerario/migrations/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/pagos/admin.py" afterPath="$PROJECT_DIR$/nppt/applications/pagos/admin.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/pagos/migrations/0001_initial.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/pagos/migrations/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/servicio/admin.py" afterPath="$PROJECT_DIR$/nppt/applications/servicio/admin.py" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/servicio/migrations/0001_initial.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/servicio/migrations/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/nppt/applications/servicio/models.py" afterPath="$PROJECT_DIR$/nppt/applications/servicio/models.py" />
       <change beforePath="$PROJECT_DIR$/nppt/templates/home/list_category.html" afterPath="$PROJECT_DIR$/nppt/templates/home/list_category.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -36,32 +50,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="pptdb@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="pptdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="pptdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="pptdb: database" type="6d9b600a:PostgresImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="pptdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="pptdb: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="pptdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="pptdb: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
     </expand>
     <select />
   </component>
@@ -73,17 +61,17 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nppt/applications/blog/models.py">
+        <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="124" column="19" lean-forward="true" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
+            <state relative-caret-position="189">
+              <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/tests.py">
+      <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/apps.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -92,66 +80,79 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services_urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/services_urls.py">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="714">
+              <caret line="37" column="16" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nppt/applications/pagos/views.py">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nppt/applications/pagos/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nppt/applications/itinerario/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nppt/applications/home/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="30" />
+            <state relative-caret-position="553">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list_category.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nppt/templates/home/list_category.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nppt/applications/pagos/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nppt/applications/home/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nppt/applications/itinerario/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="35" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../Entornos/sisturismo/Lib/site-packages/django/core/management/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="409" column="0" lean-forward="false" selection-start-line="409" selection-start-column="0" selection-end-line="409" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nppt/applications/home/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-              <folding>
-                <element signature="e#20#60#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="138">
+              <caret line="66" column="15" lean-forward="false" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="15" />
+              <caret line="67" column="14" lean-forward="false" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="14" />
+              <caret line="68" column="14" lean-forward="false" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="14" />
+              <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,21 +160,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nppt/applications/itinerario/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="791">
-              <caret line="70" column="31" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nppt/applications/pagos/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="21" />
-              <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="12" />
-              <caret line="48" column="10" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="10" />
-              <caret line="63" column="17" lean-forward="false" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="17" />
+            <state relative-caret-position="189">
+              <caret line="69" column="9" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -184,8 +172,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -195,6 +183,10 @@
       <find>user</find>
       <find>conte</find>
       <find>FORE</find>
+      <find>many</find>
+      <find>dest</find>
+      <find>bole</find>
+      <find>type</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,15 +197,10 @@
       <list>
         <option value="$PROJECT_DIR$/nppt/nppt/settings/base.py" />
         <option value="$PROJECT_DIR$/nppt/applications/pagos/models.py" />
-        <option value="$PROJECT_DIR$/nppt/applications/home/admin.py" />
-        <option value="$PROJECT_DIR$/nppt/applications/itinerario/admin.py" />
-        <option value="$PROJECT_DIR$/nppt/applications/pagos/admin.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/nppt/templates/home.html" />
         <option value="$PROJECT_DIR$/nppt/applications/blog/views.py" />
-        <option value="$PROJECT_DIR$/nppt/applications/blog/admin.py" />
-        <option value="$PROJECT_DIR$/nppt/applications/servicio/models.py" />
         <option value="$PROJECT_DIR$/nppt/applications/servicio/managers.py" />
         <option value="$PROJECT_DIR$/nppt/applications/servicio/serializers.py" />
         <option value="$PROJECT_DIR$/nppt/applications/servicio/viewsets.py" />
@@ -223,15 +210,21 @@
         <option value="$PROJECT_DIR$/nppt/applications/servicio/urls.py" />
         <option value="$PROJECT_DIR$/nppt/nppt/urls.py" />
         <option value="$PROJECT_DIR$/nppt/applications/home/urls.py" />
-        <option value="$PROJECT_DIR$/nppt/applications/blog/managers.py" />
-        <option value="$PROJECT_DIR$/nppt/applications/servicio/admin.py" />
-        <option value="$PROJECT_DIR$/nppt/applications/blog/models.py" />
         <option value="$PROJECT_DIR$/nppt/applications/itinerario/models.py" />
-        <option value="$PROJECT_DIR$/nppt/applications/home/models.py" />
         <option value="$PROJECT_DIR$/nppt/applications/home/forms.py" />
         <option value="$PROJECT_DIR$/nppt/applications/servicio/services_urls.py" />
         <option value="$PROJECT_DIR$/nppt/applications/home/views.py" />
+        <option value="$PROJECT_DIR$/nppt/templates/home/list_blog.html" />
+        <option value="$PROJECT_DIR$/nppt/applications/blog/admin.py" />
+        <option value="$PROJECT_DIR$/nppt/applications/servicio/models.py" />
         <option value="$PROJECT_DIR$/nppt/templates/home/list_category.html" />
+        <option value="$PROJECT_DIR$/nppt/applications/blog/managers.py" />
+        <option value="$PROJECT_DIR$/nppt/applications/blog/models.py" />
+        <option value="$PROJECT_DIR$/nppt/applications/home/models.py" />
+        <option value="$PROJECT_DIR$/nppt/applications/home/admin.py" />
+        <option value="$PROJECT_DIR$/nppt/applications/servicio/admin.py" />
+        <option value="$PROJECT_DIR$/nppt/applications/itinerario/admin.py" />
+        <option value="$PROJECT_DIR$/nppt/applications/pagos/admin.py" />
       </list>
     </option>
   </component>
@@ -241,7 +234,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="208" />
     <option name="width" value="1934" />
@@ -310,13 +303,6 @@
               <item name="swnppt" type="462c0819:PsiDirectoryNode" />
               <item name="nppt" type="462c0819:PsiDirectoryNode" />
               <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swnppt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swnppt" type="462c0819:PsiDirectoryNode" />
-              <item name="nppt" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
               <item name="itinerario" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -325,13 +311,6 @@
               <item name="nppt" type="462c0819:PsiDirectoryNode" />
               <item name="applications" type="462c0819:PsiDirectoryNode" />
               <item name="pagos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swnppt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swnppt" type="462c0819:PsiDirectoryNode" />
-              <item name="nppt" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="servicio" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="swnppt" type="b2602c69:ProjectViewProjectNode" />
@@ -382,13 +361,13 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Gaell\Desktop\Django Project\swnppt" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Gaell\Desktop\Django Project\swnppt\nppt\templates\blog" />
       <recent name="C:\Users\Gaell\Desktop\Django Project\swnppt\nppt\applications" />
       <recent name="C:\Users\Gaell\Desktop\Django Project\swnppt\nppt" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Gaell\Desktop\Django Project\swnppt" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -457,7 +436,7 @@
     <option name="totallyTimeSpent" value="233000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -495,39 +474,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/nppt/applications/home/urls.py</url>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nppt/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/nppt/settings/prod.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ee22b553-0f52-4eec-b4b0-cbeab1b5dbf9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/869a2168/ee22b553-0f52-4eec-b4b0-cbeab1b5dbf9/pptdb.public.django_content_type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/869a2168/ee22b553-0f52-4eec-b4b0-cbeab1b5dbf9/pptdb.public.django_migrations">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -577,20 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/itinerario/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/pagos/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nppt/applications/users/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -634,13 +577,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nppt/templates/blog/home.html" />
-    <entry file="file://$PROJECT_DIR$/nppt/applications/home/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nppt/applications/blog/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -652,13 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/home/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -676,31 +605,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/home/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -715,7 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,59 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/managers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="90" column="15" lean-forward="false" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/home/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -783,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,7 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,7 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -807,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,25 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/home/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="124" column="19" lean-forward="true" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,44 +672,195 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nppt/templates/home/list_category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        <state relative-caret-position="462">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/pagos/models.py">
+    <entry file="file://$PROJECT_DIR$/nppt/templates/home/list_blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="21" />
-          <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="12" />
-          <caret line="48" column="10" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="10" />
-          <caret line="63" column="17" lean-forward="false" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="17" />
+        <state relative-caret-position="126">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nppt/applications/itinerario/models.py">
+    <entry file="file://$PROJECT_DIR$/nppt/applications/home/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="70" column="31" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="31" />
+        <state relative-caret-position="210">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/managers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/home/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/home/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/blog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/home/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/servicio/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="37" column="16" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nppt/applications/home/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+        <state relative-caret-position="138">
+          <caret line="66" column="15" lean-forward="false" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="15" />
+          <caret line="67" column="14" lean-forward="false" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="14" />
+          <caret line="68" column="14" lean-forward="false" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="14" />
+          <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/home/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="46" />
           <folding>
-            <element signature="e#20#60#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/itinerario/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="69" column="9" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Entornos/sisturismo/Lib/site-packages/django/core/management/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="409" column="0" lean-forward="false" selection-start-line="409" selection-start-column="0" selection-end-line="409" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/itinerario/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="35" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/pagos/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nppt/applications/pagos/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

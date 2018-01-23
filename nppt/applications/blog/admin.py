@@ -15,15 +15,7 @@ class BlogAdmin(admin.ModelAdmin):
     )
     list_filter = ('category',)
     # campos para agregar
-    """fields = (
-        'title',
-        'description',
-        'content',
-        'category',
-        'image1',
-        'tags',
-        'author',
-    )"""
+
     filter_horizontal = ('tags',)
 
 
@@ -39,15 +31,7 @@ class SocialProjectAdmin(admin.ModelAdmin):
     )
     list_filter = ('category',)
     # campos para agregar
-    """fields = (
-        'title',
-        'description',
-        'content',
-        'category',
-        'image1',
-        'tags',
-        'author',
-    )"""
+
     filter_horizontal = ('tags',)
 
 

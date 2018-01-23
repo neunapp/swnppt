@@ -52,8 +52,8 @@ class Home(TimeStampedModel):
    description = models.CharField('descripcion', max_length=200)
 
    class Meta:
-       verbose_name = 'titulo seo'
-       verbose_name_plural = 'titulos seo'
+       verbose_name = 'home'
+       verbose_name_plural = 'home'
        ordering = ['-created']
 
    def __str__(self):
@@ -108,7 +108,7 @@ class ContactUs(TimeStampedModel):
     best_time_contact = models.CharField('Mejor momento para contactarlo', max_length=200)
     country_residence = models.CharField('pais de residencia', max_length=20)
     city = models.CharField('ciudad', max_length=15)
-    destiny = models.ForeignKey(Destiny, on_delete=models.CASCADE)
+    destiny = models.ManyToManyField(Destiny)
     departure_date = models.DateField('fecha de salida')
     days_amount = models.IntegerField('cantidad de dias')
     adult_amount = models.IntegerField('cantidad de adultos')

@@ -77,8 +77,8 @@ class Destiny(TimeStampedModel):
     hour_end = models.TimeField('hora fin')
 
     class Meta:
-        verbose_name = 'descuento'
-        verbose_name_plural = 'descuentos'
+        verbose_name = 'destino'
+        verbose_name_plural = 'destinos'
         ordering = ['-created']
 
     def __str__(self):

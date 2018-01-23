@@ -19,7 +19,7 @@ class CategoryManager(models.Manager):
     def list_category(self):
         """Consulta ah categorias de los blogs"""
 
-        return self.order_by('-name_spa')
+        return self.order_by('-type_name')
 
 
     def search_category(self, find):
@@ -27,6 +27,30 @@ class CategoryManager(models.Manager):
 
         # filtramos por nombre
         return self.filter(
-            name_spa__icontains=find,
-        ).order_by('-name_spa')[:20]
+            type_name__icontains=find,
+        ).order_by('-type_name')[:20]
+
+
+class BlogManager(models.Manager):
+    """procedimiento para tabla blog"""
+
+    def search_blog(self, name):
+        """funcion que devuelve blogs mas visitados"""
+
+        #filtramos por nombre
+        return self.filter(
+            title__icontains = name,
+        ).order_by('-views')[:20]
+
+
+    def search_blog_by_category(self, slug):
+        #filtramos por nombre blog
+        return self.filter(
+            published=True,
+            category__slug = slug,
+        ).order_by('-views')[:20]
+
+
+
+
 

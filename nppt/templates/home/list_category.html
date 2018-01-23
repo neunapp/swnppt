@@ -13,14 +13,14 @@
     <button type="submit">Buscar</button>
 </form>
 
-<h1>lista de resultados</h1>
+<h1>Categoria de blogs</h1>
 {% for c in categoryfind  %}
     <a href="#">
-        {{ c.model }}
+        {{ c.type_name }}
     </a>
-    <p></p>-----------------------------------------------
+    <p>-----------------------------------------------</p>
 {% endfor %}
-
+<h1>CONTACT US</h1>
 <form action="post">{% csrf_token %}
     {{ formcontactus }}
     <button type="submit">Enviar</button>
