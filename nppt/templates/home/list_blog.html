@@ -5,6 +5,22 @@
     <title>Title</title>
 </head>
 <body>
+<form  method="get">{% csrf_token %}
+      {{form.kword}}
+    <button type="submit">Buscar</button>
+</form>
+
+<h1>Blogs que pertenecen a esta categoria</h1>
+
+
+{% for c in blogs  %}
+        <a href="{% url 'home_app:blog-detail' c.category.slug c.slug %}">
+        {{ c.title_seo }}
+    </a>
+    <p>-----------------------------------------------</p>
+{% endfor %}
+
+
 
 </body>
 </html>

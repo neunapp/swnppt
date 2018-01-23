@@ -82,6 +82,15 @@
         <option name="doNotUseTestRunner" value="false" />
       </configuration>
     </facet>
+    <facet type="django" name="Django">
+      <configuration>
+        <option name="rootFolder" value="$MODULE_DIR$/nppt" />
+        <option name="settingsModule" value="nppt/settings/local.py" />
+        <option name="manageScript" value="manage.py" />
+        <option name="environment" value="&lt;map/&gt;" />
+        <option name="doNotUseTestRunner" value="false" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
@@ -89,7 +98,7 @@
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6 virtualenv at C:\Users\Gaell\Desktop\Entornos\sisturismo" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6 (sisturismo)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">

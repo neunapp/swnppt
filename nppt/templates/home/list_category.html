@@ -13,13 +13,14 @@
     <button type="submit">Buscar</button>
 </form>
 
-<h1>Categoria de blogs</h1>
+<h1>CATEGORIAS DE BLOG</h1>
 {% for c in categoryfind  %}
-    <a href="#">
+    <a href="{% url 'home_app:blog-list' c.slug %}">
         {{ c.type_name }}
     </a>
     <p>-----------------------------------------------</p>
 {% endfor %}
+
 <h1>CONTACT US</h1>
 <form action="post">{% csrf_token %}
     {{ formcontactus }}

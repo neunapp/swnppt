@@ -34,21 +34,26 @@ class CategoryManager(models.Manager):
 class BlogManager(models.Manager):
     """procedimiento para tabla blog"""
 
-    def search_blog(self, name):
-        """funcion que devuelve blogs mas visitados"""
-
-        #filtramos por nombre
+    def search_blog(self, blog, category):
+        #"""funcion que devuelve blogs mas visitados"""
         return self.filter(
-            title__icontains = name,
-        ).order_by('-views')[:20]
+            title_seo__icontains=blog,
+            category__slug=category
+        ).order_by('-title_seo')[:20]
 
 
-    def search_blog_by_category(self, slug):
+    def list_blog_by_category(self, slugcategory):
         #filtramos por nombre blog
         return self.filter(
-            published=True,
-            category__slug = slug,
-        ).order_by('-views')[:20]
+            category__slug=slugcategory,
+        ).order_by('-title_seo')[:20]
+
+
+    def search_blog_detail(self, slug):
+        # """funcion que devuelve detalle de blog"""
+        return self.filter(
+            slug=slug
+        ).order_by('-title_seo')[:20]
 
 
 

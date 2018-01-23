@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
-from django.views.generic import ListView, TemplateView
+from django.views.generic import ListView, TemplateView, DetailView
 # Create your views here.
 
 #forms
 from .forms import ContactUsForm
 
 #models from other applicatoons
-from applications.blog.models import Category
+from applications.blog.models import Category, Blog
 
 #forms from other applications
 from applications.blog.forms import SearchForm
@@ -32,3 +32,42 @@ class CategoriaListView(ListView):
         category = self.request.GET.get("kword", '')
         queryset = Category.objects.search_category(category)
         return queryset
+
+
+
+class BLogListView(ListView):
+    """
+        vista que lista blog por categoria
+    """
+    context_object_name = 'blogs'
+    template_name = 'home/list_blog.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(BLogListView, self).get_context_data(**kwargs)
+        context['form'] = SearchForm
+        return context
+
+    def get_queryset(self):
+        # recuperamos el valor por GET
+        blog = self.request.GET.get("kword", '')
+        category = self.kwargs['category']
+        queryset = Blog.objects.search_blog(blog, category)
+        return queryset
+
+
+
+class BLogDetailview(DetailView):
+    """
+    vista que muestra detalle blog
+    """
+
+    context_object_name = 'blogs'
+    model = Blog
+    template_name = 'home/detail_blog.html'
+
+
+    def get_context_data(self, **kwargs):
+        context = super(BLogDetailview, self).get_context_data(**kwargs)
+        slug = self.kwargs['slug']
+        context['blog'] = Blog.objects.search_blog_detail(slug)
+        return context

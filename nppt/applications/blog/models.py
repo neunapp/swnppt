@@ -15,7 +15,7 @@ from django.template.defaultfilters import slugify
 
 
 #import manager
-from .managers import SocialProjectManager, CategoryManager
+from .managers import SocialProjectManager, CategoryManager, BlogManager
 
 @python_2_unicode_compatible
 class Category(TimeStampedModel):
@@ -109,6 +109,7 @@ class Blog(TimeStampedModel):
         null=True
     )
     tags = models.ManyToManyField(Tag)
+    objects = BlogManager()
 
     class Meta:
         verbose_name = 'blog'
