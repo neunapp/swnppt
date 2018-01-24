@@ -12,3 +12,86 @@
     background: color(uno);
   }
 }
+
+.search__btn__1 {
+  background: color(tres);
+  width: 50px;
+  height: 30px;
+  color: color(blanco);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  &:hover {
+    cursor: pointer;
+    background: color(uno);
+  }
+}
+
+.btn-submit {
+  background: color(cuatro);
+  color: color(blanco);
+  font-family: $font-fam-tercero;
+  padding: {
+    top: 3px;
+    bottom: 3px;
+    left: 1.5em;
+    right: 1.5em;
+  };
+  border-radius: 5px;
+  &:hover {
+    background: color(dos);
+    cursor: pointer;
+  }
+}
+
+.simple-btn {
+  padding: {
+    top: 0.5em;
+    bottom: 0.5em;
+    left: 2em;
+    right: 2em;
+  };
+  border-radius: 10px;
+  color: color(blanco);
+  &:hover {
+    cursor: pointer;
+  }
+}
+.primary-btn {
+  background: color(dos);
+  color: color(blanco);
+  padding: {
+    top: 5px;
+    bottom: 5px;
+    left: 1em;
+    right: 1em;
+  };
+  border-radius: 10px;
+  &:hover {
+    cursor: pointer;
+    background: color(uno);
+  }
+}
+
+.primary-btn-2 {
+  background: color(dos);
+  color: color(blanco);
+  padding: {
+    top: 0.5em;
+    bottom: 0.5em;
+    left: 1.5em;
+    right: 1.5em;
+  };
+  border-radius: 10px;
+  &:hover {
+    cursor: pointer;
+    background: color(uno);
+  }
+}
+
+.secondary-btn {
+  font-size: 2.5em;
+  &:hover {
+    cursor: pointer;
+    color: color(dos);
+  }
+}

@@ -1,0 +1,46 @@
+.main-footer {
+  width: 100%;
+  margin-top: 2em;
+  background: color(negro-suave);
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__rs {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    &__item {
+      color: color(blanco);
+      margin: 10px;
+      font-family: $font-fam-tercero;
+      &:hover {
+        color: color(dos);
+      }
+    }
+  }
+  &__call {
+    text-align: center;
+    &__icon {
+      color: color(uno);
+      margin-bottom: 1em;
+    }
+    &__item {
+      color: color(blanco);
+      font-family: $font-fam-tercero;
+      font-size: 0.8em;
+    }
+  }
+  &__marca {
+    padding: 1em;
+    &__link {
+      color: color(blanco);
+      font-size: 1.8em;
+      font-family: $font-fam-segundo;
+      &:hover {
+        color: color(uno);
+      }
+    }
+  }
+}

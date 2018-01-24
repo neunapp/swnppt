@@ -1,0 +1,82 @@
+.banner-blog {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  z-index: 100;
+  @include desde(1000px){
+    height: 450px;
+  };
+  &__img {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+}
+
+.banner-blog__description {
+  position: absolute;
+  left: 0px;
+  top: 35px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-blog__card {
+  background: color(blanco);
+  border-radius: 10px;
+  width: 300px;
+  height: 260px;
+  text-align: center;
+  &__head {
+    background: color(dos);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    &__title {
+      color: color(blanco);
+      font-family: $font-fam-primero;
+    }
+  }
+  &__body {
+    padding: 10px;
+  }
+  &__footer {
+    &__tag {
+      font-size: 0.8em;
+      font-family: $font-fam-tercero;
+    }
+  }
+}
+
+.banner-blog__copy {
+  width: 450px;
+  height: 260px;
+  border-radius: 10px;
+  margin-left: 1em;
+  padding: 1em;
+  background-color:rgba(0,0,0,0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__title {
+    font-family: $font-fam-primero;
+    color: color(blanco);
+    font-size: $font-siz-h3;
+    margin-bottom: 1em;
+    font-weight: bold;
+  }
+  &__text {
+    text-align: center;
+    color: color(blanco);
+    font-family: $font-fam-tercero;
+    font-weight: bold;
+  }
+  @include hasta(1024px){
+    display: none;
+  };
+}

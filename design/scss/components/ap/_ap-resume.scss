@@ -1,0 +1,25 @@
+.ap-resume {
+  margin-bottom: 1em;
+  padding: 1em;
+  &__bloque {
+    margin-bottom: 2em;
+  }
+  &__title {
+    font-family: $font-fam-primero;
+    font-size: 1.3em;
+    text-decoration: underline;
+  }
+}
+
+.ap-resume__bloque {
+  &__ctrl {
+    padding: {
+      top: 10px;
+      bottom: 10px;
+      left: 5px;
+      right: 5px;
+    };
+    display: flex;
+    justify-content: space-between;
+  }
+}

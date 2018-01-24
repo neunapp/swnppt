@@ -50,7 +50,7 @@
       text-align: justify;
       font-size: 1em;
       padding: 0.5em;
-      height: 200px;
+      //height: 200px;
       @include desde_hasta(640px, 1024px){
         padding: {
           top: 5px;
@@ -113,5 +113,21 @@
         height: 250px;
       };
     }
+    &__name {
+      padding: 0.5em;
+      text-align: center;
+      font-family: $font-fam-tercero;
+      color: color(gris);
+      &:hover {
+        color: color(cuatro);
+      }
+    }
   }
+}
+
+.home-about-galery__item__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
