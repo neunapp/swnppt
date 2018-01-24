@@ -118,3 +118,10 @@ nppt/applications/itinerario/migrations/*
 nppt/applications/pagos/migrations/*
 nppt/applications/servicio/migrations/*
 nppt/applications/users/migrations/*
+nppt/applications/armado/migrations/*
+
+
+
+
+
+

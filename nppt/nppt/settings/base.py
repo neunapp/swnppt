@@ -32,7 +32,8 @@ LOCAL_APPS = (
     'applications.blog',
     'applications.itinerario',
     'applications.pagos',
-    'applications.servicio'
+    'applications.servicio',
+    'applications.armado',
 )
 
 THIRD_PARTY_APPS = (
