@@ -42,10 +42,10 @@ class Category_Service(TimeStampedModel):
                seconds=now.second
            )
            seconds = int(total_time.total_seconds())
-           slug_unique = '%s %s' % (self.title, str(seconds))
+           slug_unique = '%s %s' % (self.name, str(seconds))
        else:
            seconds = self.slug.split('-')[-1]  # recuperamos los segundos
-           slug_unique = '%s %s' % (self.title, str(seconds))
+           slug_unique = '%s %s' % (self.name, str(seconds))
 
        self.slug = slugify(slug_unique)
        super(Category_Service, self).save(*args, **kwargs)
@@ -80,6 +80,11 @@ class Destiny(TimeStampedModel):
         verbose_name = 'destino'
         verbose_name_plural = 'destinos'
         ordering = ['-created']
+
+    def save(self, force_insert=False, force_update=False, using=None,
+             update_fields=None):
+        self.city = self.city.lower()
+        return super(Destiny, self).save()
 
     def __str__(self):
         return self.city
