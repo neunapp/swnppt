@@ -40,6 +40,8 @@ THIRD_PARTY_APPS = (
     'froala_editor',
     'sorl.thumbnail',
     'rest_framework',
+    'rest_framework.authtoken',
+
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS

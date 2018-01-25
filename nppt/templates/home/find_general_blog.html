@@ -9,18 +9,12 @@
       {{form.kword}}
     <button type="submit">Buscar</button>
 </form>
-
-<h1>Blogs que pertenecen a esta categoria</h1>
-
-
-{% for c in blogs  %}
-        <a href="{% url 'blog_app:blog-detail' c.category.slug c.slug %}">
+sdfsd
+<h1>CATEGORIAS DE BLOG</h1>
+{% for c in blogsgeneral %}
         {{ c.title_seo }}
-    </a>
-    <p>-----------------------------------------------</p>
+
+    <p>-----------ddd------------------------------------</p>
 {% endfor %}
-
-
-
 </body>
 </html>

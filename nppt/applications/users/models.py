@@ -15,18 +15,54 @@ class User(AbstractBaseUser, PermissionsMixin):
         ('M', 'Masculino'),
         ('F', 'Femenino'),
     )
-    username = models.CharField('usuario', max_length=8, unique=True)
-    email = models.EmailField('correo electronico', unique=True)
-    first_name = models.CharField('nombres', max_length=50)
-    last_name = models.CharField('apellidos', max_length=50)
+    username = models.CharField(
+        'usuario',
+        max_length=100,
+        unique=True
+    )
+    email = models.EmailField(
+        'correo electronico',
+        unique=True
+    )
+    first_name = models.CharField(
+        'nombres',
+        max_length=50,
+        blank=True)
+    last_name = models.CharField(
+        'apellidos',
+        max_length=50,
+        blank=True)
     avatar = models.URLField(
         'foto',
         blank=True,
     )
-    phone = models.CharField('telefono', max_length=50, blank=True, null=True)
-    gender = models.CharField('sexo', max_length=1, choices=GENDER_CHOICES)
-    date_birth = models.DateField(blank=True, null=True)
-    addresse = models.CharField('direccion',blank=True, max_length=100)
+    phone = models.CharField(
+        'telefono',
+        max_length=50,
+        blank=True,
+        null=True
+    )
+    gender = models.CharField(
+        'sexo',
+        max_length=1,
+        choices=GENDER_CHOICES,
+        blank=True,
+        null=True
+    )
+    date_birth = models.DateField(
+        'fecha de nacionmiento',
+        blank=True,
+        null=True
+    )
+    addresse = models.CharField(
+        'direccion',
+        blank=True,
+        max_length=100
+    )
+    nacionality = models.CharField(
+        'nacionalidad',
+        max_length=60,
+    )
 
     objects = UserManager()
 
@@ -34,10 +70,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username', 'first_name', 'last_name', ]
+    REQUIRED_FIELDS = ['nacionality', ]
 
     def get_short_name(self):
-        return self.username
-
-    def get_full_name(self):
-        return "%s %s" % (self.last_name, self.first_name)
+        return self.email

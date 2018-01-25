@@ -15,17 +15,12 @@
 
 <h1>CATEGORIAS DE BLOG</h1>
 {% for c in categoryfind  %}
-    <a href="{% url 'home_app:blog-list' c.slug %}">
+    <a href="{% url 'blog_app:blog-list' c.slug %}">
         {{ c.type_name }}
     </a>
     <p>-----------------------------------------------</p>
 {% endfor %}
 
-<h1>CONTACT US</h1>
-<form action="post">{% csrf_token %}
-    {{ formcontactus }}
-    <button type="submit">Enviar</button>
-</form>
 
 
 

@@ -27,6 +27,6 @@ class ServicebyDestinyViewset(viewsets.ModelViewSet):
     serializer_class = ServiceRecentlyVisitSerializer
 
     def get_queryset(self):
-        destino = self.kwargs['destino']
-        queryset = Service.objects.find_destiny_by_service(destino)
+        pk = self.kwargs['pk']
+        queryset = Service.objects.find_destiny_by_service(pk)
         return queryset

@@ -10,7 +10,7 @@ urlpatterns = [
             viewsets.ServiceRecentlyVisitViewset.as_view({'get': 'list'}),
             name='api_servicerecent-list'
         ),
-        re_path(r'^api/servicio/service/(?P<destino>[-\w]+)/$',
+        re_path(r'^api/servicio/service/(?P<pk>[-\w]+)/$',
             viewsets.ServicebyDestinyViewset.as_view({'get': 'list'}),
             name='api_servicios-by-destiny'
         ),

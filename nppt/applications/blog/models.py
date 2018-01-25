@@ -96,6 +96,7 @@ class Blog(TimeStampedModel):
     author = models.CharField('autor', max_length=200)
     image1 = models.ImageField('imagen uno', upload_to="blog")
     slug = models.SlugField(editable=False, max_length=200, null=True, blank=True)
+    visit = models.IntegerField('Visitas')
     image2 = models.ImageField(
         'imagen dos',
         upload_to="blog",

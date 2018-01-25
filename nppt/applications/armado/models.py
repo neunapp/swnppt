@@ -53,6 +53,7 @@ class Armed(TimeStampedModel):
         return self.user
 
 
+
 @python_2_unicode_compatible
 class ArmedDestiny(TimeStampedModel):
 
@@ -66,6 +67,7 @@ class ArmedDestiny(TimeStampedModel):
 
     def __str__(self):
         return self.armed
+
 
 
 @python_2_unicode_compatible
