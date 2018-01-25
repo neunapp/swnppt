@@ -1,0 +1,43 @@
+.banner-detail {
+  border-bottom: 1em;
+  &__img {
+    width: 100%;
+    height: 250px;
+    @include desde_hasta(640px, 1024px){
+      height: 350px;
+    };
+    @include desde(1024px){
+      height: 430px;
+    };
+  }
+  &__title {
+    background: color(dos);
+    color: color(blanco);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include desde_hasta(640px, 1024px){
+      height: 90px;
+    };
+    @include desde(1024px){
+      height: 90px;
+    };
+    &__name {
+      font-family: $font-fam-segundo;
+      font-weight: bold;
+      text-align: center;
+      @include desde_hasta(640px, 1024px){
+        font-size: $font-siz-h2;
+      };
+      @include desde(1024px){
+        font-size: 2.3em;
+      };
+    }
+  }
+}
+
+.blog-detail-text {
+  padding-left: 2em;
+  padding-right: 2em;
+}

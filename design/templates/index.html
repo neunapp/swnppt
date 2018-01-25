@@ -1,0 +1,174 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index templates</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/js/scrips.js"></script>
+  </head>
+  <body class="body" id="body">
+    <div class="grid-container">
+      <h1 class="cell secondary-text">Pantalla principal de estilos</h1>
+      <div class="grid-x grid-margin-x align-center">
+        <h3 class="cell secondary-text">Formulario simple</h3>
+        <div class="cell small-12 medium-6 large-4">
+          <input type="text" class="simple-form" placeholder="nombre de usuario">
+        </div>
+        <div class="cell small-12 medium-6 large-4">
+          <input type="password" class="simple-form" placeholder="password">
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x align-center">
+        <h3 class="cell secondary-text">Formulario simple 2</h3>
+        <div class="cell small-12 medium-6 large-4">
+          <div class="simple-form-2">
+            <label for="formulario" class="simple-form-2__lbl">Nombres:</label>
+            <input type="text" name="formulario" class="simple-form" placeholder="nombre de usuario">
+          </div>
+          <div class="simple-form-2">
+            <label for="formulario" class="simple-form-2__lbl">Apellidos:</label>
+            <input type="text" name="formulario" class="simple-form" placeholder="apellidos">
+          </div>
+          <div class="simple-form-2">
+            <label for="formulario" class="simple-form-2__lbl">Email:</label>
+            <input type="text" name="formulario" class="simple-form" placeholder="correo electronico..">
+          </div>
+        </div>
+        <div class="cell small-12 medium-6 large-4">
+          <div class="simple-form-2">
+            <label for="formulario" class="simple-form-2__lbl">Ciudad:</label>
+            <select>
+              <option value="husker">Lima</option>
+              <option value="starbuck">Cusco</option>
+              <option value="hotdog">Arequipa</option>
+              <option value="apollo">Puno</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x align-center">
+        <h3 class="cell primary-text">Primary form</h3>
+        <div class="small-12 medium-6 large-4">
+          <div class="primary-form">
+            <i class="fa fa-address-card primary-form__icon" aria-hidden="true"></i>
+            <input type="text" name="name" class="primary-form__input">
+          </div>
+          <div class="primary-form">
+            <i class="fa fa-envelope-open-o primary-form__icon" aria-hidden="true"></i>
+            <input type="text" name="name" class="primary-form__input" placeholder="direccion">
+          </div>
+          <div class="primary-form">
+            <i class="fa fa-car primary-form__icon" aria-hidden="true"></i>
+            <input type="text" name="name" class="primary-form__input" placeholder="...">
+          </div>
+        </div>
+        <div class="cell small-12 medium-6 large-4">
+          <input id="checkbox1" type="checkbox"><label for="checkbox1" class="text-lbl">Checkbox 1</label>
+          <input id="checkbox2" type="checkbox"><label for="checkbox2" class="text-lbl">Checkbox 2</label>
+          <input id="checkbox3" type="checkbox"><label for="checkbox3" class="text-lbl">Checkbox 3</label>
+        </div>
+        <div class="cell small-12 medium-6 large-4">
+          <input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed" class="text-lbl">Red</label>
+          <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue" class="text-lbl">Blue</label>
+          <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow" class="text-lbl">Yellow</label>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x align-center">
+        <h3 class="cell primary-text">Secondary form</h3>
+        <div class="cell small-12 medium-6 large-4">
+          <div class="secondary-form">
+            <label for="name" class="secondary-form__lbl">Nombres y apellidos</label>
+            <input type="text" name="name" class="secondary-form__input">
+          </div>
+          <div class="secondary-form">
+            <label for="name" class="secondary-form__lbl">Direccion</label>
+            <input type="text" name="name" class="secondary-form__input">
+          </div>
+        </div>
+        <div class="cell small-12 medium-6 large-4">
+          <div class="secondary-form">
+            <label for="name" class="secondary-form__lbl">Telefonos</label>
+            <input type="text" name="name" class="secondary-form__input">
+          </div>
+          <div class="secondary-form">
+            <label for="name" class="secondary-form__lbl">Email</label>
+            <input type="text" name="name" class="secondary-form__input">
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x align-center">
+        <h3 class="cell">Blog Card</h3>
+        <div class="cell small-12 medium-6 large-3">
+          <div class="blog-2-card">
+            <div class="blog-2-card__head">
+              <img src="/img/10.jpeg" alt="name" class="blog-2-card__head__img">
+              <div class="blog-2-card__head__den">
+                <p class="blog-2-card__head__den__tag">Noticia</p>
+                <a href="#" class="blog-2-card__head__den__link">
+                  <i class="fa fa-plus-square blog-2-card__head__den__link__icon" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <div class="blog-2-card__body">
+              <p class="blog-2-card__body__name">Que alimentos son eficientes en la altura</p>
+              <span class="blog-2-card__body__subname">11 de ene de 2017</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x align-center">
+        <h3 class="cell">Shoping Card</h3>
+        <div class="cell small-12 medium-6 large-4">
+          <div class="shop-card">
+            <div class="shop-card__header">
+              <img src="/img/6.jpeg" alt="name" class="shop-card__header__img">
+              <span class="shop-card__header__tag">Promocion</span>
+            </div>
+            <div class="shop-card__denomination">
+              <a href="#" class="shop-card__denomination__name">Salkantay Camino Inca 6 Días</a>
+              <span class="shop-card__denomination__price"> $120.00 </span>
+            </div>
+            <div class="shop-card__body">
+              <p class="shop-card__body__text1">Grado dificultad: Facil</p>
+              <p class="shop-card__body__text2">
+                Voyage Features Highly Customizable Extensive Admin Interface Simple One-Click Import of Demo Content No coding knowledge required Big custom shortcode collection Responsive.
+              </p>
+            </div>
+            <div class="shop-card__footer">
+              <p class="shop-card__footer__item">
+                <i class="fa fa-hourglass-start" aria-hidden="true"></i>
+                Hora Inicio: 9:00 am
+              </p>
+              <p class="shop-card__footer__item">
+                <i class="fa fa-hourglass-end" aria-hidden="true"></i>
+                Hora Fin: 16:30 pm
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-x">
+        <h3 class="cell primary-subtitle">Conoce nuestros proyectos sociales</h3>
+        <div class="cell small-3">
+          <div class="card-secondary">
+            <img src="/img/1.jpg" alt="name" class="card-secondary__img">
+            <div class="card-secondary__copy">
+              <p class="card-secondary__copy__text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <a href="#" class="card-secondary__copy__link">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

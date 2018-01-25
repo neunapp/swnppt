@@ -1,19 +1,82 @@
-.form-item {
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  @include desde(1024px){
+    padding: {
+      bottom: 2em;
+      left: 10em;
+      right: 10em;
+    };
+  };
+  &__input {
+    margin: 0px;
+  }
+}
+
+.search__input__1 {
+  margin: 0px;
+  font-family: $font-fam-segundo;
+  height: 30px;
+}
+
+.form-banner {
+  padding: 1em;
+  &__input {
+    height: 30px;
+    font-family: $font-fam-tercero;
+  }
+}
+
+.simple-form {
+  background: color(fondo4);
+  font-family: $font-fam-primero;
+}
+
+.simple-form-2 {
+  font-family: $font-fam-primero;
+  &__lbl {
+    font-family: $font-fam-tercero;
+    color: color(gris);
+  }
+}
+
+.primary-form {
   position: relative;
-  font-family: $font-tres;
-  width: 100%;
-  &__label {
-    color: color(gris1);
+  &__icon{
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    font-size: 1.3em;
+    height: 36px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: color(negro-suave);
+    border-right: 3px solid;
+    border-color: color(fondo3);
   }
   &__input {
-    background: color(fondo3);
-    border-radius: 15px;
-    padding-left: 2em;
+    background: color(fondo4);
+    font-family: $font-fam-primero;
+    padding-left: 45px;
   }
-  &__icon {
-    position: absolute;
-    color: color(gris1);
-    top: 2.25em;
-    left: 0.6em;
+}
+
+.secondary-form {
+  font-family: $font-fam-primero;
+  width: 100%;
+  &__lbl {
+    font-family: $font-fam-tercero;
+  }
+  &__input {
+    background: color(fondo4);
+    padding-left: 10px;
+    border-radius: 5px;
+    &:focus {
+      border-color: color(dos);
+    }
   }
 }

@@ -12,15 +12,33 @@
 //modulos
 @import "modules/colores";
 @import "modules/conmon";
-//@import "modules/forms";
+@import "modules/forms";
 @import "modules/buttons";
 @import "modules/cards/product-card";
+@import "modules/cards/simple-card";
+@import "modules/cards/shop-card";
+@import "modules/cards/blog-card";
+@import "modules/cards/card-secondary";
+@import "modules/cards/detail-card";
+@import "modules/cards/primary-card";
 
 //componentes
 @import "components/include/header/mov-header";
 @import "components/include/header/mov-header-menu";
 @import "components/include/header/main-header";
+@import "components/include/footer/footer";
 @import "components/home/banner";
+@import "components/home/conmon";
 @import "components/home/armar-paque";
 @import "components/home/paque-result";
 @import "components/home/about";
+@import "components/service/banner-list";
+@import "components/service/service-list";
+@import "components/service/service-ps";
+@import "components/blog/banner";
+@import "components/blog/list";
+@import "components/blog/detail";
+@import "components/ap/banner";
+@import "components/ap/ap-bloque";
+@import "components/ap/ap-datos";
+@import "components/ap/ap-resume";

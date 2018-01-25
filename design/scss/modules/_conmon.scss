@@ -7,7 +7,7 @@
 }
 
 .text-subtitle {
-  font-family: $font-fam-segundo;
+  font-family: $font-fam-tercero;
   text-align: center;
   font-size: $font-siz-mov-h2;
   padding: 0.3em;
@@ -17,6 +17,19 @@
     font-size: $font-siz-mov-h1;
     padding: 0.5em;
   };
+  @include desde(1024px){
+    height: 60px;
+  };
+}
+
+.text-subtitle-2 {
+  margin-left: 1em;
+  font-family: $font-fam-tercero;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 0.3em;
+  font-weight: bold;
+  color: color(cuatro);
 }
 
 .label-input {
@@ -32,6 +45,38 @@
   font-family: $font-fam-primero;
 }
 
-.search-form {
+.primary-subtitle {
+  font-size: $font-siz-mov-h2;
+  text-align: center;
+  font-family: $font-fam-tercero;
+  color: color(gris);
+  margin-bottom: 1em;
+  @include desde_hasta(640px,1024px){
+    font-size: $font-siz-mov-h1;
+  };
+  @include desde(1000px){
+    font-size: $font-siz-h2;
+  };
+}
 
+.text-date {
+  padding: 1em;
+  text-align: center;
+  font-family: $font-fam-tercero;
+}
+
+.blog-text {
+  font-family: $font-fam-primero;
+}
+
+.primary-text {
+  font-family: $font-fam-primero;
+}
+
+.secondary-text {
+  font-family: $font-fam-tercero;
+}
+
+.text-lbl {
+  font-family: $font-fam-tercero;
 }

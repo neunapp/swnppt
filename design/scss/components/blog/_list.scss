@@ -1,0 +1,6 @@
+.lista-blog {
+  margin-top: 1em;
+  @include desde(640px){
+    margin-top: 2em;
+  };
+}

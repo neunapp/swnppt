@@ -1,0 +1,79 @@
+.shop-card {
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(70,177,187,1);
+  //for pc
+  @include desde(1024px){
+    height: 406px;
+  };
+  &__header {
+    position: relative;
+    &__img {
+      width: 100%;
+      height: 160px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      @include hasta(1024px){
+        height: 200px;
+      };
+    }
+    &__tag {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      border-radius: 10px;
+      background: color(cinco);
+      color: color(blanco);
+      font-family: $font-fam-tercero;
+      padding: {
+        top: 3px;
+        bottom: 3px;
+        left: 1em;
+        right: 1em;
+      };
+      text-align: center;
+    }
+  }
+  &__denomination {
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__name {
+      font-family: $font-fam-segundo;
+      font-weight: bold;
+      color: color(dos);
+    }
+    &__price {
+      font-family: $font-fam-tercero;
+      background: color(cuatro);
+      color: color(blanco);
+      padding: {
+        top: 2px;
+        bottom: 2px;
+        left: 1em;
+        right: 1em;
+      };
+      border-radius: 5px;
+    }
+  }
+  &__body {
+    padding: 0.5em;
+    color: color(gris);
+    font-family: $font-fam-segundo;
+    &__text1 {
+      margin: 0px;
+      font-family: $font-fam-tercero;
+      color: color(negro-suave);
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em;
+    &__item {
+      font-family: $font-fam-tercero;
+      color: color(negro);
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.blog-card {
+  box-shadow: 1px 1px 2px 1px rgba(148,146,148,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  margin: {
+    top: 1em;
+    bottom: 1em;
+  }
+  &__img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+  }
+  &__name {
+    padding: 10px;
+    color: color(dos);
+    font-family: $font-fam-segundo;
+    height: 50px;
+    text-align: center;
+    &:hover {
+      color: color(tres);
+    }
+  }
+  &__text {
+    padding: 10px;
+    color: color(gris);
+    font-family: $font-fam-tercero;
+    text-align: center;
+  }
+}
+
+.blog-2-card {
+  box-shadow: 1px 1px 2px 1px rgba(148,146,148,1);
+  background: color(fondo3);
+  border-radius: 10px;
+  margin-bottom: 1em;
+  &__head {
+    position: relative;
+    height: 180px;
+    margin-bottom: 2em;
+    &__img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      width: 100%;
+      height: 100%;
+    }
+    &__den {
+      position: absolute;
+      width: 100%;
+      bottom: -25px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__tag {
+        background: color(blanco);
+        color: color(dos);
+        border-radius: 20px;
+        width: 150px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-fam-tercero;
+        margin: 0px;
+      }
+      &__link {
+        margin-left: -1.5em;
+        background: color(dos);
+        color: color(blanco);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        &:hover {
+          background: color(cuatro);
+          color: color(blanco);
+        }
+        &__icon {
+          margin: 0px;
+        }
+      }
+    }
+  }
+  &__body {
+    padding: 10px;
+    text-align: center;
+    &__name {
+      color: color(cuatro);
+      font-family: $font-fam-segundo;
+      font-size: $font-siz-mov-h1;
+      font-weight: bold;
+      text-align: center;
+      height: 70px;
+    }
+    &__subname {
+      font-family: $font-fam-tercero;
+      font-size: $font-siz-mov-h3;
+      color: color(dos);
+    }
+  }
+}
