@@ -19,7 +19,7 @@ urlpatterns = [
         name='blog-detail'
     ),
     re_path(
-        r'^blog/buscador/$',
+        r'^hilascador/$',
         views.SearchGeneralBlogView.as_view(),
         name='blog-find'
     ),
