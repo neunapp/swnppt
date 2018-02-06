@@ -90,26 +90,28 @@ ENV/
 
 #carptea disño saas
 
-desing/bower_components/*
-desing/node_modules/*
-desing/scss/_app.scss
-desing/scss/_config.scss
-desing/scss/_settings.scss
-desing/scss/styles.scss
+#desing/bower_components/*
+#desing/node_modules/*
+#desing/scss/_app.scss
+#desing/scss/_config.scss
+#desing/scss/_settings.scss
+#desing/scss/styles.scss
 design/*
 
 
 # Secrect json
 
-#nppt/secrets.json
+nppt/secrets.json
 nppt/nppt/settings.py
+nppt/manage.py
+nppt/nppt/wsgi.py
 
 !__init__.py
 
 *migrations/*
 
 nppt/media/*
-#nppt/static/img/*
+nppt/static/img/*
 
 
 nppt/applications/home/migrations/*
