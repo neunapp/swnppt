@@ -95,3 +95,35 @@
     color: color(dos);
   }
 }
+
+.btn-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3%;
+  box-shadow: 1px 1px 1px 3px rgba(110,189,182,0.18);
+  border-radius: 5px;
+  margin-bottom: 2em;
+  &__txt {
+    font-family: $font-fam-tercero;
+    color: color(tres);
+    font-weight: bold;
+  }
+  &__btn {
+    border: solid;
+    padding: {
+      top: 6px;
+      bottom: 6px;
+      left: 20px;
+      right: 20px;
+    };
+    border-radius: 5px;
+    background: color(dos);
+    color: color(blanco);
+    &:hover {
+      color: color(blanco);
+      background: color(uno);
+    }
+  }
+}

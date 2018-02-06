@@ -21,6 +21,8 @@
 @import "modules/cards/card-secondary";
 @import "modules/cards/detail-card";
 @import "modules/cards/primary-card";
+@import "modules/cards/person-card";
+@import "modules/cards/info-card";
 
 //componentes
 @import "components/include/header/mov-header";
@@ -38,6 +40,7 @@
 @import "components/blog/banner";
 @import "components/blog/list";
 @import "components/blog/detail";
+@import "components/blog/blogger";
 @import "components/ap/banner";
 @import "components/ap/ap-bloque";
 @import "components/ap/ap-datos";

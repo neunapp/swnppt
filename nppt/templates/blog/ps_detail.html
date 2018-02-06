@@ -1,0 +1,62 @@
+{% extends "blog/base_blog.html" %}
+
+{% load  staticfiles %}
+
+{% load thumbnail %}
+
+{% load l10n %}
+
+{% block title %}{{home.title_seo}}{% endblock %}
+
+{% block description %}{{home.description_seo}}{% endblock %}
+
+{% block title_rs %}{{home.title_seo}}{% endblock %}
+
+{% block description_rs %}{{home.description_seo}}{% endblock %}
+
+
+{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+
+{% block content %}
+  {% include "include/header.html" %}
+  <!-- inicio de banner -->
+  <!-- inicio de banner -->
+  <div class="banner-detail">
+    <img src="{{object.image1.url}}" alt="{{object.title}}" class="banner-detail__img">
+    <div class="banner-detail__title">
+      <h1 class="banner-detail__title__name">{{object.title}}</h1>
+    </div>
+  </div>
+  <!-- fin de banner -->
+
+  <p class="text-date">{{object.created|date }}</p>
+
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell small-12 large-8">
+        <div class="blog-detail-text">
+          <p class="blog-text">
+            {{object.content|safe}}
+          </p>
+        </div>
+      </div>
+      <div class="cell small-12 large-4">
+        <div class="grid-x">
+          <h3 class="cell primary-subtitle">Más Proyectos Sociales de PPT</h3>
+          {% for ps in proyectos_sociales  %}
+            <div class="cell small-12">
+              <div class="card-secondary">
+                <img src="{{ps.image1.url}}" alt="name" class="card-secondary__img">
+                <div class="card-secondary__copy">
+                  <p class="card-secondary__copy__text">{{ps.description|truncatechars:100}}</p>
+                  <a href="{% url 'blog_app:ps_detail'  ps.slug %}" class="card-secondary__copy__link">Ver más</a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "include/footer.html" %}
+{% endblock %}

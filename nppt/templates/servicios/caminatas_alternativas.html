@@ -1,0 +1,199 @@
+{% extends "home/base_home.html" %}
+
+{% load  staticfiles %}
+
+{% load thumbnail %}
+
+{% load l10n %}
+
+{% block title %}{{home.title_seo}}{% endblock %}
+
+{% block description %}{{home.description_seo}}{% endblock %}
+
+{% block title_rs %}{{home.title_seo}}{% endblock %}
+
+{% block description_rs %}{{home.description_seo}}{% endblock %}
+
+
+{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+
+{% block content %}
+  {% include "include/header.html" %}
+
+  <!-- inicio de banner -->
+  <div class="banner-list">
+    <img src="{% static 'img/2.jpg' %}" alt="fondo" class="banner-list__img">
+    <div class="banner-list__alert">
+      <p class="banner-list__alert__text">
+        Remember that you can also assemble your own package, choose your schedules, days and places that you would like to visit.
+      </p>
+      <a href="#" class="banner-list__alert__link">Build package</a>
+    </div>
+    <div class="banner-list__search">
+      <form class="banner-list__search__form" method="get">
+        <input type="text" class="search__input__1" placeholder="Buscar paquete ...">
+        <button type="submit" name="button" class="search__btn__1">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- fin de banner -->
+
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x align-center service-list">
+      <h2 class="cell primary-subtitle">You like to walk? Look at the options we have for you</h2>
+      <div class="cell small-12 medium-6 large-4">
+        <div class="product-card">
+          <div class="product-card__header">
+            <img src="{% static 'img/5.jpeg' %}" alt="name" class="product-card__header__img">
+            <div class="product-card__header__tags">
+              <span class="product-card__header__tags__l">$ 120.00</span>
+              <a href="#" class="product-card__header__tags__r">Reservar</a>
+            </div>
+          </div>
+          <h3 class="product-card__title">Caminata Cusco Clasico (4 dias/3 noches)</h3>
+          <div class="product-card__body">
+            <div class="product-card__body__content">
+              <ul class="product-card__body__content__resume">
+                <li class="product-card__body__content__resume__item">
+                  <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
+                </li>
+                <li class="product-card__body__content__resume__item">
+                  <a href="#" class="product-card__body__content__resume__item__a">Caminata por 8 horas</a>
+                </li>
+                <li class="product-card__body__content__resume__item">
+                  <a href="#" class="product-card__body__content__resume__item__a">Excursion a valle sagrado</a>
+                </li>
+                <li class="product-card__body__content__resume__item">
+                  <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
+                </li>
+                <li class="product-card__body__content__resume__item">
+                  <a href="#" class="product-card__body__content__resume__item__a">muso del inka</a>
+                </li>
+              </ul>
+            </div>
+            <div class="product-card__body__detail">
+              <div class="product-card__body__detail__btns">
+                <button type="button" name="button" class="product-card__body__detail__btns__btn background-f">Privado</button>
+                <button type="button" name="button" class="product-card__body__detail__btns__btn background-t">Compartido</button>
+              </div>
+              <div class="product-card__body__detail__info">
+                <p class="product-card__body__detail__info__item">Hora inicio: 12:30 pm</p>
+                <p class="product-card__body__detail__info__item">Hora fin: 16:30 pm</p>
+                <p class="product-card__body__detail__info__item">Grado de dificultad: Facil</p>
+                <p class="product-card__body__detail__info__item">Altura maxima: 3850 msnm</p>
+              </div>
+              <div class="product-card__body__detail__action">
+                <a href="#" class="product-card__body__detail__action__btn">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cell small-12 medium-6 large-4">
+        <div class="product-card">
+          <div class="product-card__header">
+            <img src="{% static 'img/4.jpg' %}" alt="name" class="product-card__header__img">
+            <div class="product-card__header__tags">
+              <span class="product-card__header__tags__l">$ 120.00</span>
+              <a href="#" class="product-card__header__tags__r">Reservar</a>
+            </div>
+          </div>
+          <h3 class="product-card__title">Caminata maras marauy 2 dias</h3>
+          <div class="product-card__body">
+            <div class="product-card__body__content">
+              <ul class="product-card__body__content__resume">
+                <li class="product-card__body__content__resume__item">
+                  <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
+                </li>
+                <li class="product-card__body__content__resume__item">
+                  <a href="#" class="product-card__body__content__resume__item__a">Caminata por 8 horas</a>
+                </li>
+                <li class="product-card__body__content__resume__item">
+                  <a href="#" class="product-card__body__content__resume__item__a">Excursion a valle sagrado</a>
+                </li>
+                <li class="product-card__body__content__resume__item">
+                  <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
+                </li>
+                <li class="product-card__body__content__resume__item">
+                  <a href="#" class="product-card__body__content__resume__item__a">muso del inka</a>
+                </li>
+              </ul>
+            </div>
+            <div class="product-card__body__detail">
+              <div class="product-card__body__detail__btns">
+                <button type="button" name="button" class="product-card__body__detail__btns__btn background-f">Privado</button>
+                <button type="button" name="button" class="product-card__body__detail__btns__btn background-t">Compartido</button>
+              </div>
+              <div class="product-card__body__detail__info">
+                <p class="product-card__body__detail__info__item">Hora inicio: 12:30 pm</p>
+                <p class="product-card__body__detail__info__item">Hora fin: 16:30 pm</p>
+                <p class="product-card__body__detail__info__item">Grado de dificultad: Facil</p>
+                <p class="product-card__body__detail__info__item">Altura maxima: 3850 msnm</p>
+              </div>
+              <div class="product-card__body__detail__action">
+                <a href="#" class="product-card__body__detail__action__btn">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-x grid-margin-x align-center service-ps">
+      <h2 class="cell primary-subtitle">Recuerda que con cada servicios que solicitas estas ayudando con nuestros proyectos sociales.</h2>
+      <div class="cell small-12 medium-6 large-4">
+        <div class="blog-card">
+          <img src="{% static 'img/5.jpg' %}" alt="name" class="blog-card__img">
+          <a href="#" class="blog-card__name">Nombre del proyecto social</a>
+          <p class="blog-card__text">
+            Real Spaces is a Powerful WordPress Theme designed & developed for Real Estate, Estate Agents Websites and comes handy for Business or Corporate Websites. Features added
+          </p>
+        </div>
+      </div>
+
+      <div class="cell small-12 medium-6 large-4">
+        <div class="blog-card">
+          <img src="/img/7.jpeg" alt="name" class="blog-card__img">
+          <a href="#" class="blog-card__name">Nombre del proyecto social</a>
+          <p class="blog-card__text">
+            Real Spaces is a Powerful WordPress Theme designed & developed for Real Estate, Estate Agents Websites and comes handy for Business or Corporate Websites. Features added
+          </p>
+        </div>
+      </div>
+
+      <div class="cell small-12 medium-6 large-4">
+        <div class="blog-card">
+          <img src="/img/8.jpeg" alt="name" class="blog-card__img">
+          <a href="#" class="blog-card__name">Nombre del proyecto social</a>
+          <p class="blog-card__text">
+            Real Spaces is a Powerful WordPress Theme designed & developed for Real Estate, Estate Agents Websites and comes handy for Business or Corporate Websites. Features added
+          </p>
+        </div>
+      </div>
+
+      <div class="cell small-12 medium-6 large-4">
+        <div class="blog-card">
+          <img src="/img/9.jpeg" alt="name" class="blog-card__img">
+          <a href="#" class="blog-card__name">Nombre del proyecto social</a>
+          <p class="blog-card__text">
+            Real Spaces is a Powerful WordPress Theme designed & developed for Real Estate, Estate Agents Websites and comes handy for Business or Corporate Websites. Features added
+          </p>
+        </div>
+      </div>
+
+      <div class="cell small-12 medium-6 large-4">
+        <div class="blog-card">
+          <img src="/img/10.jpeg" alt="name" class="blog-card__img">
+          <a href="#" class="blog-card__name">Nombre del proyecto social</a>
+          <p class="blog-card__text">
+            Real Spaces is a Powerful WordPress Theme designed & developed for Real Estate, Estate Agents Websites and comes handy for Business or Corporate Websites. Features added
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include "include/footer.html" %}
+{% endblock %}

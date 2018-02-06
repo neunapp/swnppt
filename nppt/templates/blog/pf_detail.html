@@ -1,0 +1,68 @@
+{% extends "blog/base_blog.html" %}
+
+{% load  staticfiles %}
+
+{% load thumbnail %}
+
+{% load l10n %}
+
+{% block title %}{{home.title_seo}}{% endblock %}
+
+{% block description %}{{home.description_seo}}{% endblock %}
+
+{% block title_rs %}{{home.title_seo}}{% endblock %}
+
+{% block description_rs %}{{home.description_seo}}{% endblock %}
+
+
+{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+
+{% block content %}
+  {% include "include/header.html" %}
+  <!-- inicio de banner -->
+  <!-- inicio de banner -->
+  <div class="banner-detail">
+    <img src="{{object.image1.url}}" alt="{{object.title_seo}}" class="banner-detail__img">
+    <div class="banner-detail__title">
+      <h1 class="banner-detail__title__name">{{object.title}}</h1>
+    </div>
+  </div>
+  <!-- fin de banner -->
+
+  <p class="text-date">{{object.created|date }}</p>
+
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell small-12 large-8">
+        <div class="blog-detail-text">
+          <p class="blog-text">
+            {{object.content|safe}}
+          </p>
+        </div>
+        {% if object.video != '' %}
+          <div class="video-content">
+            {{object.video|safe}}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="cell small-12 large-4">
+        <div class="grid-x grid-margin-x align-center service-ps">
+          <h2 class="cell primary-subtitle">¿Cómo apoyamos a las comunidades cusqueñas?</h2>
+          {% for ps in proyectos_sociales  %}
+            <div class="cell small-12">
+              <div class="blog-card">
+                <img src="{{ps.image1.url}}" alt="{{ps.title_seo}}" class="blog-card__img">
+                <a href="{% url 'blog_app:ps_detail'  ps.slug %}" class="blog-card__name">{{ps.title}}</a>
+                <p class="blog-card__text">
+                  {{ps.description|truncatechars:100}}
+                </p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "include/footer.html" %}
+{% endblock %}

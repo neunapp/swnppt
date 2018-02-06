@@ -1,0 +1,62 @@
+{% extends "itinerario/base_itinerario.html" %}
+
+{% load  staticfiles %}
+
+{% load thumbnail %}
+
+{% load l10n %}
+
+{% block title %}{{home.title_seo}}{% endblock %}
+
+{% block description %}{{home.description_seo}}{% endblock %}
+
+{% block title_rs %}{{home.title_seo}}{% endblock %}
+
+{% block description_rs %}{{home.description_seo}}{% endblock %}
+
+
+{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+
+{% block content %}
+  {% include "include/header.html" %}
+  <!-- inicio de banner -->
+  <!-- inicio de banner -->
+  <div class="banner-detail">
+    <img src="{{object.image.url}}" alt="laguna-de-huamantay" class="banner-detail__img">
+    <div class="banner-detail__title">
+      <h1 class="banner-detail__title__name">{{object.name}}</h1>
+    </div>
+  </div>
+  <!-- fin de banner -->
+
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell small-12 large-8">
+        <div class="blog-detail-text">
+          <p class="blog-text">
+            {{object.content|safe}}
+          </p>
+        </div>
+      </div>
+      <div class="cell small-12 large-4">
+        <div class="grid-x person-cards">
+          <h3 class="cell primary-subtitle">Con PPT conoce más del Perú</h3>
+          {% for l in lugares  %}
+          <div class="cell small-12 person-cards__card">
+            <img src="{{l.image.url}}" alt="{{l.title_seo}}" class="person-cards__card__img">
+            <div class="person-cards__card__content">
+              <h3 class="person-cards__card__content__title">{{l.title}}</h3>
+              <p class="person-cards__card__content__etiqueta">{{l.destiny}}</p>
+              <p class="person-cards__card__content__text">
+                {{l.description|truncatechars_html:60}}
+              </p>
+              <a href="{% url 'itinerario_app:place_detail' l.slug %}" class="person-cards__card__content__btn">Ver más</a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "include/footer.html" %}
+{% endblock %}

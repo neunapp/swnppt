@@ -1,0 +1,103 @@
+{% extends "home/base_home.html" %}
+
+{% load  staticfiles %}
+
+{% load thumbnail %}
+
+{% load l10n %}
+
+{% block title %}{{home.title_seo}}{% endblock %}
+
+{% block description %}{{home.description_seo}}{% endblock %}
+
+{% block title_rs %}{{home.title_seo}}{% endblock %}
+
+{% block description_rs %}{{home.description_seo}}{% endblock %}
+
+
+{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+
+{% block content %}
+  {% include "include/header.html" %}
+  <!-- inicio de banner -->
+  <div class="banner-detail">
+    <img src="{{object.image.url}}" alt="{{objetc.title}}" class="banner-detail__img">
+    <div class="banner-detail__title">
+      <h1 class="banner-detail__title__name">{{object.title}}</h1>
+    </div>
+  </div>
+  <!-- fin de banner -->
+
+    <div class="grid-container">
+      <br>
+      <br>
+      <div class="service-ps">
+          <ul class="cell tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+            <li class="tabs-title service-ps__tab is-active"><a href="#panel1c"><span class="service-ps__tab__a">Resumen</span></a></li>
+            <li class="tabs-title service-ps__tab"><a href="#panel2c"><span class="service-ps__tab__a">Detalle</a></span></li>
+            {% for i in itinerario  %}
+              <li class="tabs-title service-ps__tab"><a href="#{{i.id}}"><span class="service-ps__tab__a">{{i.denomination}}</a></span></li>
+            {% endfor %}
+          </ul>
+
+          <div class="tabs-content" data-tabs-content="collapsing-tabs">
+            <div class="tabs-panel" id="panel1c">
+              <div class="info-card">
+                <p class="info-card__b">Description:<span class="info-card__p"> {{object.description}}</span></p>
+                <p class="info-card__b">Recommended for:<span class="info-card__p"> {{object.recommended_for}}</span></p>
+                <p class="info-card__b">Trip Length:<span class="info-card__p"> {{object.days}} Days</span></p>
+                <p class="info-card__b">Maximum altitude: <span class="info-card__p"> {{object.altitude_average}} msnm</span></p>
+                <p class="info-card__b">difficulty: <span class="info-card__p"> {{object.difficulty}}</span></p>
+                <p class="info-card__b">type of excursion: <span class="info-card__p">{{object.spa_trip}}</span></p>
+                <p class="info-card__b">Start Time: <span class="info-card__p">{{object.hour_start}}</span></p>
+                <p class="info-card__b">End Time: <span class="info-card__p">{{object.hour_end}}</span></p>
+                <p class="info-card__b">considerations: <span class="info-card__p">{{object.consideration|safe}}</span></p>
+                <p class="info-card__b centrar">Precio Privado:</p>
+                <p class="info-card__text-primary">${{object.private_price}} por persona</p>
+                <p class="info-card__b centrar">Precio Compartido:</p>
+                <p class="info-card__text-primary">${{object.shared_price}} por persona</p>
+                <p class="info-card__text-secondary">Al comprar este paquete estas ayudando a plantar {{object.tree}} arboles en una comnidad cusqueña.</p>
+              </div>
+            </div>
+            <div class="tabs-panel" id="panel2c">
+              <p class="info-card__b">Include: </p>
+              <p>{{object.include|safe}}</p>
+              <p class="info-card__b">Not Include:</p>
+              <p>{{object.not_include|safe}}</p>
+            </div>
+            {% for i in itinerario  %}
+            <div class="tabs-panel" id="{{i.id}}">
+              <div class="info-card">
+                <p class="secondary-text"><span class="primary-text color-cuarto">Distancia a pie:</span> {{i.distance_foot}}</p>
+                <p class="secondary-text"><span class="primary-text color-cuarto">Altitud del Lugar:</span> {{i.altitude_place}}</p>
+                <p class="secondary-text"><span class="primary-text color-cuarto">Clima del Lugar:</span> {{i.clima}}</p>
+                <p class="secondary-text"><span class="primary-text color-cuarto">Descripcion:</span> {{i.description}}</p>
+                {% for ip in i.place.all  %}
+                  <a href="{% url 'itinerario_app:place_detail' ip.slug %}" target="_blank" class="info-card__b">{{ip.name}}</a>
+                  <p>{{ip.description}}</p>
+                {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+      </div>
+
+      <div class="btn-action">
+        <p class="btn-action__txt">Comprando este producto estas plantando <span class="color-cuarto">{{object.tree}}</span> arboles en una comunidad de Cusco.</p>
+        <a href="#" class="btn-action__btn">Quiero comprar el producto</a>
+      </div>
+
+      <div class="grid-x grid-margin-x">
+        <h3 class="cell subtitle-text">Recuerda que al comprar en PPT estas apoyando con nuestros poryectos sociales en Cusco:</h3>
+        {% for p in proyectos  %}
+          <div class="cell small-4 large-3 home-about-galery__item">
+            <a href="{% url 'blog_app:ps_detail' p.slug %}" class="home-about-galery__item__link">
+              <img src="{{ p.image1.url }}" alt="{{p.title}}" class="home-about-galery__item__img">
+              <p class="home-about-galery__item__name">{{p.title_seo}}</p>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% include "include/footer.html" %}
+{% endblock %}

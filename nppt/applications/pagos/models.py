@@ -71,8 +71,8 @@ class Detail_sale(TimeStampedModel):
     igv = models.DecimalField('IGV', max_digits=5, decimal_places=2)
 
     class Meta:
-        verbose_name = 'servicio'
-        verbose_name_plural = 'servicios'
+        verbose_name = 'Detalle Venta'
+        verbose_name_plural = 'Detalle Ventas'
         ordering = ['-created']
 
     def __str__(self):

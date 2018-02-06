@@ -1,0 +1,84 @@
+{% extends "blog/base_blog.html" %}
+
+{% load  staticfiles %}
+
+{% load thumbnail %}
+
+{% load l10n %}
+
+{% block title %}{{home.title_seo}}{% endblock %}
+
+{% block description %}{{home.description_seo}}{% endblock %}
+
+{% block title_rs %}{{home.title_seo}}{% endblock %}
+
+{% block description_rs %}{{home.description_seo}}{% endblock %}
+
+
+{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+
+{% block content %}
+  {% include "include/header.html" %}
+  <!-- inicio de banner -->
+  <div class="banner-blog">
+    <img src="{% static 'img/3.jpg' %}" alt="fondo" class="banner-blog__img">
+    <div class="banner-blog__description">
+      <div class="banner-blog__card">
+        <div class="banner-blog__card__head">
+          <span class="banner-blog__card__head__title">Quiero enviar una pregunta</span>
+        </div>
+        <div class="banner-blog__card__body">
+          <form class="form-banner" method="post">{% csrf_token %}
+            {{form.email}}
+            {{form.question}}
+            <button type="submit" name="button" class="btn-submit">Enviar</button>
+          </form>
+        </div>
+        <div class="banner-blog__card__footer">
+          <span class="banner-blog__card__footer__tag">Peru Private Tours</span>
+        </div>
+      </div>
+      <div class="banner-blog__copy">
+        <h1 class="banner-blog__copy__title">¿Tiene alguna duda o sugerencia?</h1>
+        <p class="banner-blog__copy__text">
+          Si tiene alguna dudas, sobre lugares, trasporte, tramites y otros.
+          Puede enviarnos su consulta y redacaremos un articulo resolviendo su peticion.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- fin de banner -->
+
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x lista-blog">
+      <h3 class="cell primary-subtitle">Revisa las preguntas que ya hemos resuelto:</h3>
+      <form class="cell search-form" method="get">{% csrf_token %}
+        {{form2.kword}}
+        <button type="submit" name="button" class="search-form__btn">
+          <i class="fa fa-search search-form__btn__icon" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      {% for pf in preguntas_frecuentes  %}
+        <div class="cell small-12 medium-6 large-3">
+          <div class="blog-2-card">
+            <div class="blog-2-card__head">
+              <img src="{{pf.image1.url}}" alt="{{pf.title_seo}}" class="blog-2-card__head__img">
+              <div class="blog-2-card__head__den">
+                <p class="blog-2-card__head__den__tag">{{pf.author|truncatechars_html:15}}</p>
+                <a href="{% url 'blog_app:pf_detail' pf.slug %}" class="blog-2-card__head__den__link">
+                  <i class="fa fa-plus-square blog-2-card__head__den__link__icon" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <div class="blog-2-card__body">
+              <p class="blog-2-card__body__name">{{pf.title}}</p>
+              <span class="blog-2-card__body__subname">{{pf.created|date}}</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% include "include/footer.html" %}
+{% endblock %}

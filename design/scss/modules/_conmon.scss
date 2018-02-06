@@ -80,3 +80,20 @@
 .text-lbl {
   font-family: $font-fam-tercero;
 }
+
+.subtitle-text {
+  font-family: $font-fam-tercero;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.video-content {
+  padding: 2em;
+  width: 100%;
+  height: 315px;
+  @include desde(1000px){
+    height: 415px;
+  };
+}

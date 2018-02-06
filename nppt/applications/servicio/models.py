@@ -4,7 +4,7 @@ from datetime import timedelta, datetime
 # Create your models here.
 #third party
 from model_utils.models import TimeStampedModel
-from froala_editor.fields import FroalaField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 #django libraries
 
@@ -22,7 +22,7 @@ from .managers import ServiceManager
 class Category_Service(TimeStampedModel):
 
    name = models.CharField('nombre', max_length=150)
-   slug = models.SlugField()
+   slug = models.SlugField(editable=False, max_length=200)
 
    class Meta:
        verbose_name = 'Categoria servicio'
@@ -92,29 +92,44 @@ class Destiny(TimeStampedModel):
 
 class Service(TimeStampedModel):
 
-    type_service = models.ForeignKey(Type_Service, on_delete=models.CASCADE)
-    destiny = models.ForeignKey(Destiny, on_delete=models.CASCADE)
-    title = models.CharField('titulo', max_length=100)
+    type_service = models.ForeignKey(
+        Type_Service,
+        on_delete=models.CASCADE,
+        verbose_name='Tipo de Servicio',
+    )
+    destiny = models.ForeignKey(
+        Destiny,
+        on_delete=models.CASCADE,
+        verbose_name='Destino',
+    )
+    title = models.CharField('titulo', max_length=130)
     image = models.ImageField('imagen', upload_to="destinos")
-    days = models.IntegerField()
+    days = models.IntegerField('dias', default=0)
     promo = models.BooleanField('Promocion', default=False)
-    altitude_average = models.IntegerField()
+    altitude_average = models.IntegerField('Altitud', default=0)
     description = models.TextField('descripcion', blank=True)
-    include = FroalaField()
-    not_include = FroalaField()
+    include = RichTextUploadingField('incluye', blank=True)
+    not_include = RichTextUploadingField('No incluye', blank=True)
     tree = models.IntegerField('numero de arboles', default=0)
-    private_price = models.CharField('precio privado', max_length=50)
-    shared_price = models.CharField('precio compartido', max_length=50)
-    difficulty = models.CharField('dificultad', max_length=50)
-    spa_trip = models.CharField('spa excursion', max_length=150)
-    hour_start = models.TimeField('hora inicio')
-    hour_end = models.TimeField('hora inicio')
-    distance_total = models.CharField('distancia total', max_length=50)
-    recommended_for = models.CharField('recomendado para', max_length=200)
-    consideration = FroalaField()
-    service_categ11ory = models.ForeignKey(Category_Service, on_delete=models.CASCADE, null=True, blank=True)
-    state = models.BooleanField(default=True)
-    visit = models.IntegerField()
+    private_price = models.DecimalField('Precio Privado', max_digits=7, decimal_places=2, default=0)
+    shared_price = models.DecimalField('Precio Compartido', max_digits=7, decimal_places=2, default=0)
+    difficulty = models.CharField('dificultad', max_length=50, blank=True)
+    spa_trip = models.CharField('tipo excursion', max_length=150, blank=True)
+    hour_start = models.TimeField('hora inicio', blank=True, null=True)
+    hour_end = models.TimeField('hora Fin', blank=True, null=True)
+    distance_total = models.CharField('distancia total', max_length=50, blank=True)
+    recommended_for = models.CharField('recomendado para', max_length=200, blank=True)
+    consideration = RichTextUploadingField('concideraciones', blank=True)
+    service_categ11ory = models.ForeignKey(
+        Category_Service,
+        verbose_name='Cetgoria de servicio',
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True
+    )
+    state = models.BooleanField(default=False)
+    visit = models.IntegerField(default=0, editable=False)
+    slug = models.SlugField(editable=False, max_length=200)
 
     objects = ServiceManager()
 
@@ -125,3 +140,21 @@ class Service(TimeStampedModel):
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            # calculamos el total de segundos de la hora actual
+            now = datetime.now()
+            total_time = timedelta(
+                hours=now.hour,
+                minutes=now.minute,
+                seconds=now.second
+            )
+            seconds = int(total_time.total_seconds())
+            slug_unique = '%s %s' % (self.title, str(seconds))
+        else:
+            seconds = self.slug.split('-')[-1]  # recuperamos los segundos
+            slug_unique = '%s %s' % (self.title, str(seconds))
+
+        self.slug = slugify(slug_unique)
+        super(Service, self).save(*args, **kwargs)

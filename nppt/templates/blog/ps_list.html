@@ -1,0 +1,64 @@
+{% extends "blog/base_blog.html" %}
+
+{% load  staticfiles %}
+
+{% load thumbnail %}
+
+{% load l10n %}
+
+{% block title %}{{home.title_seo}}{% endblock %}
+
+{% block description %}{{home.description_seo}}{% endblock %}
+
+{% block title_rs %}{{home.title_seo}}{% endblock %}
+
+{% block description_rs %}{{home.description_seo}}{% endblock %}
+
+
+{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+
+{% block content %}
+  {% include "include/header.html" %}
+  <!-- inicio de banner -->
+  <div class="banner-blog">
+    <img src="{% static 'img/fondo2.jpg' %}" alt="fondo" class="banner-blog__img">
+    <div class="banner-blog__description">
+      <div class="banner-blog__copy">
+        <h1 class="banner-blog__copy__title">Apoya una Comindad de Cusco</h1>
+        <p class="banner-blog__copy__text">
+          PPT no solo se dedica a brindar aventuras y experiencias inolvidables en el Perú.
+          Tambien contribuimos al desarrollo de la sociedad cusqueña creando proyectos socioales.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- fin de banner -->
+
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x lista-blog">
+      <h3 class="cell primary-subtitle">Echa un vistazo a nuestros proyectos sociales.</h3>
+      <form class="cell search-form" method="get">{% csrf_token %}
+        {{form.kword}}
+        <button type="submit" name="button" class="search-form__btn">
+          <i class="fa fa-search search-form__btn__icon" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <div class="grid-x grid-margin-x align-center service-ps">
+        <h2 class="cell primary-subtitle">Recuerda que con cada servicios que solicitas estas ayudando con nuestros proyectos sociales.</h2>
+        {% for ps in proyectos_sociales  %}
+          <div class="cell small-12 medium-6 large-4">
+            <div class="blog-card">
+              <img src="{{ps.image1.url}}" alt="{{ps.title_seo}}" class="blog-card__img">
+              <a href="{% url 'blog_app:ps_detail' ps.slug %}" class="blog-card__name">{{ps.title}}</a>
+              <p class="blog-card__text">
+                {{ps.description|truncatechars_html:120}}
+              </p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% include "include/footer.html" %}
+{% endblock %}

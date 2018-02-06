@@ -30,16 +30,17 @@ LOCAL_APPS = (
     'applications.users',
     'applications.home',
     'applications.blog',
+    'applications.servicio',
     'applications.itinerario',
     'applications.pagos',
-    'applications.servicio',
     'applications.armado',
 )
 
 THIRD_PARTY_APPS = (
-    'froala_editor',
     'sorl.thumbnail',
     'rest_framework',
+    'ckeditor',
+    'ckeditor_uploader',
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS

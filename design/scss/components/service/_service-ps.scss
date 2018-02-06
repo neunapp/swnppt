@@ -1,3 +1,9 @@
 .service-ps {
-  
+  &__tab {
+    font-family: $font-fam-tercero;
+    &__a {
+      color: color(tres);
+      font-weight: bold;
+    }
+  }
 }

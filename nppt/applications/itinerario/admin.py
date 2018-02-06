@@ -6,12 +6,11 @@ from .models import Place, Itinerary
 class PlaceAdmin(admin.ModelAdmin):
     """admin Place model"""
     list_display = (
-        'destiny',
         'name',
+        'destiny',
         'title_seo',
         'description',
         'description_seo',
-        'content',
         'visit',
 
     )

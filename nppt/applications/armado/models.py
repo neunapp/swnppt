@@ -3,7 +3,7 @@ from datetime import timedelta, datetime
 # Create your models here.
 #third party
 from model_utils.models import TimeStampedModel
-from froala_editor.fields import FroalaField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 #django libraries
 from django.utils.encoding import python_2_unicode_compatible
@@ -82,4 +82,3 @@ class ItineraryDestiny(TimeStampedModel):
 
     def __str__(self):
         return self.armeddestiny
-

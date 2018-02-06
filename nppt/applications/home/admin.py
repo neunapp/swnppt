@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Values_enterprice, Home, Client_commentary
+from .models import Values_enterprice, Home, Client_commentary, ContactUs
 # Register your models here.
 
 
@@ -11,22 +11,17 @@ class Values_enterpriceAdmin(admin.ModelAdmin):
         'description_value',
     )
 
+
 class HomeAdmin(admin.ModelAdmin):
     """admin home model"""
     list_display = (
-        'title_seo',
+        'title',
         'description_seo',
-        'phone1',
-        'phone2',
-        'phone3',
-        'title_feature_enterprice',
-        'sub_title',
-
     )
     #
     filter_horizontal = ('values_enterprice',)
-    search_fields = ('title_seo',)
-    list_filter = ('title_seo',)
+    search_fields = ('title',)
+
 
 class Client_commentaryAdmin(admin.ModelAdmin):
     """admin home model"""
@@ -38,6 +33,8 @@ class Client_commentaryAdmin(admin.ModelAdmin):
     search_fields = ('client_name',)
     list_filter = ('client_name',)
 
+
 admin.site.register(Values_enterprice, Values_enterpriceAdmin)
 admin.site.register(Home, HomeAdmin)
 admin.site.register(Client_commentary, Client_commentaryAdmin)
+admin.site.register(ContactUs)

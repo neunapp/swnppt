@@ -1,0 +1,51 @@
+{% extends "home/base_home.html" %}
+
+{% load  staticfiles %}
+
+{% load thumbnail %}
+
+{% load l10n %}
+
+{% block title %}{{home.title_seo}}{% endblock %}
+
+{% block description %}{{home.description_seo}}{% endblock %}
+
+{% block title_rs %}{{home.title_seo}}{% endblock %}
+
+{% block description_rs %}{{home.description_seo}}{% endblock %}
+
+
+{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+
+{% block content %}
+  {% include "include/header.html" %}
+
+  <div class="blogger">
+    <div class="blogger__banner">
+      <img src="{% static 'img/3.jpg' %}" alt="peru-private-tours-machu-picchu" class="blogger__banner__img">
+      <div class="blogger__banner__copy">
+        <h1 class="blogger__banner__copy__title">PERU CLASSIC TOURS</h1>
+        <p class="blogger__banner__copy__subtitle">PERU CLASSIC TOURS - CUSTOMIZED TOUR PACKAGES</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x person-cards">
+      {% for s in servicios %}
+        <div class="cell small-6 medium-4 large-3 person-cards__card">
+          <img src="{{s.image.url}}" alt="{{s.title_seo}}" class="person-cards__card__img">
+          <div class="person-cards__card__content">
+            <h3 class="person-cards__card__content__title">{{s.title}}</h3>
+            <p class="person-cards__card__content__etiqueta">{{s.destiny}}</p>
+            <p class="person-cards__card__content__text">
+              ({{s.days}} dia) - {{s.description|truncatechars_html:60}}
+            </p>
+            <a href="{% url 'servicio_app:service_detail' s.slug %}" class="person-cards__card__content__btn">Ver más</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% include "include/footer.html" %}
+{% endblock %}

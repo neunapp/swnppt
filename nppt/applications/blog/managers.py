@@ -34,28 +34,31 @@ class CategoryManager(models.Manager):
 class BlogManager(models.Manager):
     """procedimiento para tabla blog"""
 
-    def search_blog(self, blog, category):
-        #"""funcion que devuelve blogs mas visitados"""
+    # def search_blog(self, blog, category):
+    #     #"""funcion que devuelve blogs mas visitados"""
+    #     return self.filter(
+    #         title_seo__icontains=blog,
+    #         category__slug=category
+    #     ).order_by('-title_seo')[:20]
+    #
+    #
+    # def list_blog_by_category(self, slugcategory):
+    #     #filtramos por nombre blog
+    #     return self.filter(
+    #         category__slug=slugcategory,
+    #     ).order_by('-title_seo')[:20]
+    #
+    #
+    # def search_blog_detail(self, slug):
+    #     # """funcion que devuelve detalle de blog"""
+    #     return self.filter(
+    #         slug=slug
+    #     ).order_by('-title_seo')[:20]
+
+    def list_by_category(self, kword, categoria):
+        # funcion que devuelve blogs dependiendo la categoria
         return self.filter(
-            title_seo__icontains=blog,
-            category__slug=category
-        ).order_by('-title_seo')[:20]
-
-
-    def list_blog_by_category(self, slugcategory):
-        #filtramos por nombre blog
-        return self.filter(
-            category__slug=slugcategory,
-        ).order_by('-title_seo')[:20]
-
-
-    def search_blog_detail(self, slug):
-        # """funcion que devuelve detalle de blog"""
-        return self.filter(
-            slug=slug
-        ).order_by('-title_seo')[:20]
-
-
-
-
-
+            published=True,
+            category__model=categoria,
+            title__icontains=kword,
+        ).order_by('-visits')

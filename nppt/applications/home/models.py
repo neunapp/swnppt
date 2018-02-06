@@ -15,6 +15,10 @@ from django.template.defaultfilters import slugify
 #model from other applications
 
 from applications.servicio.models import Destiny
+#app blog
+from applications.blog.models import Blog
+#applications servicio
+from applications.servicio.models import Service
 
 
 @python_2_unicode_compatible
@@ -24,7 +28,7 @@ class Values_enterprice(TimeStampedModel):
 
     class Meta:
         verbose_name = 'valor'
-        verbose_name_plural = 'valores'
+        verbose_name_plural = 'valores empresa'
         ordering = ['-created']
 
     def __str__(self):
@@ -35,30 +39,90 @@ class Values_enterprice(TimeStampedModel):
 @python_2_unicode_compatible
 class Home(TimeStampedModel):
 
-   title_seo = models.CharField('titulo seo', max_length=200)
-   description_seo = models.CharField('descripcion seo', max_length=10)
-   banner_img = models.URLField('Imagen banner', blank=True, null=True)
-   logo_img = models.URLField('Imagen logo', blank=True, null=True)
-   phone1 = models.CharField('Celular 1', max_length=15)
-   phone2 = models.CharField('Celular 2', max_length=15)
-   phone3 = models.CharField('Celular 3', max_length=15)
-   link_face = models.URLField('Facebook', blank=True, null=True)
-   link_instagram = models.URLField('instragram', blank=True, null=True)
-   link_youtube = models.URLField('youtube', blank=True, null=True)
-   link_tripadvisor = models.URLField('tripadvisor', blank=True, null=True)
-   title_feature_enterprice = models.CharField('titulo caracteristica empresa', max_length=200)
-   values_enterprice = models.ManyToManyField(Values_enterprice)
-   sub_title = models.CharField('subtitulo', max_length=100)
-   description = models.CharField('descripcion', max_length=200)
+    title_seo = models.CharField('titulo seo', max_length=200)
+    description_seo = models.CharField('descripcion seo', max_length=200)
+    title_seo = models.CharField('titulo seo redes sociales', max_length=200)
+    description_seo = models.CharField('descripcion seo redes sociales', max_length=200)
+    title = models.CharField('titulo banner', max_length=200, blank=True)
+    slogan = models.CharField('slogan banner', max_length=200, blank=True)
+    banner_img = models.ImageField('imagen de banner', upload_to='home', blank=True, null=True)
+    title_featured_article = models.CharField(
+        'titulo articulo destacado',
+        max_length=200,
+        blank=True
+    )
+    featured_article = models.ForeignKey(
+        Blog,
+        on_delete=models.CASCADE,
+        related_name='home_articulo_destcado',
+        verbose_name='articulo destacado',
+        null=True,
+        blank=True,
+    )
+    title_featured_service = models.CharField(
+        'titulo servicio mas solicitado',
+        max_length=200,
+        blank=True
+    )
+    featured_service = models.ForeignKey(
+        Service,
+        on_delete=models.CASCADE,
+        related_name='home_servicio_destcado',
+        verbose_name='servicio destacado',
+        null=True,
+        blank=True,
+    )
+    title_emblema_article = models.CharField('titulo articulo emblema', max_length=200)
+    emblema_article = models.ForeignKey(
+        Blog,
+        on_delete=models.CASCADE,
+        related_name='home_articulo_emblema',
+        verbose_name='articulo emblema',
+        null=True,
+        blank=True,
+    )
+    title_content1_article = models.CharField('titulo contenido 1', max_length=200)
+    content1_article = models.ForeignKey(
+        Blog,
+        on_delete=models.CASCADE,
+        related_name='home_contenido_1',
+        verbose_name='contenido 1',
+        null=True,
+        blank=True,
+    )
+    title_content2_article = models.CharField('titulo contenido 2', max_length=200)
+    content2_article = models.ForeignKey(
+        Blog,
+        on_delete=models.CASCADE,
+        related_name='home_contenido_2',
+        verbose_name='contenido 2',
+        null=True,
+        blank=True,
+    )
+    phone1 = models.CharField('WhatsApp', max_length=60, blank=True)
+    email = models.EmailField('E-mail', blank=True)
+    link_face = models.URLField('Facebook', blank=True, null=True)
+    link_instagram = models.URLField('instragram', blank=True, null=True)
+    link_youtube = models.URLField('youtube', blank=True, null=True)
+    link_tripadvisor = models.URLField('tripadvisor', blank=True, null=True)
+    title_feature_enterprice = models.CharField(
+        'titulo caracteristica empresa',
+        max_length=200,
+        blank=True
+    )
+    values_enterprice = models.ManyToManyField(
+        Values_enterprice,
+        verbose_name='valores de la empresa',
+        blank=True
+    )
 
-   class Meta:
-       verbose_name = 'home'
-       verbose_name_plural = 'home'
-       ordering = ['-created']
+    class Meta:
+        verbose_name = 'Pagina Pricipal'
+        verbose_name_plural = 'Pagina Principal'
+        ordering = ['-created']
 
-   def __str__(self):
-       return self.title_seo
-
+    def __str__(self):
+        return self.title
 
 
 @python_2_unicode_compatible
@@ -129,10 +193,10 @@ class ContactUs(TimeStampedModel):
     )
     message = models.TextField('mensaje')
 
+    class Meta:
+        verbose_name = 'Formulario de Contacto'
+        verbose_name_plural = 'Formulario de Contactos'
+        ordering = ['-created']
 
-
-
-
-
-
-
+    def __str__(self):
+        return self.client_name
