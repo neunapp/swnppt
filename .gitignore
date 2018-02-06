@@ -101,7 +101,7 @@ design/*
 
 # Secrect json
 
-nppt/secrets.json
+#nppt/secrets.json
 nppt/nppt/settings.py
 
 !__init__.py
