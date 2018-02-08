@@ -111,7 +111,7 @@ nppt/nppt/wsgi.py
 *migrations/*
 
 nppt/media/*
-nppt/static/img/*
+#nppt/static/img/*
 
 
 nppt/applications/home/migrations/*
