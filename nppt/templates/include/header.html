@@ -17,6 +17,12 @@
           </a>
         </li>
         <li class="mov-menu__ul__li">
+          <a href="#" class="mov-menu__ul__li__a">
+            <i class="fa fa-blind mov-menu__ul__li__a__icon color-sexto" aria-hidden="true"></i>
+            <span class="mov-menu__ul__li__a__text">Camino Inka</span>
+          </a>
+        </li>
+        <li class="mov-menu__ul__li">
           <a href="{% url 'servicio_app:alternative_walks' %}" class="mov-menu__ul__li__a">
             <i class="fa fa-male mov-menu__ul__li__a__icon color-tercero" aria-hidden="true"></i>
             <span class="mov-menu__ul__li__a__text">Caminatas Alternativas</span>
@@ -68,12 +74,15 @@
     </div>
     <div class="main-header__menu">
       <a href="/" class="main-header__menu__logo">
-        <img src="{% static 'img/logo_mov2.png' %}" alt="Private-tours-peru" class="main-header__menu__logo__img">
+        <img src="{% static 'img/logo4.png' %}" alt="Private-tours-peru" class="main-header__menu__logo__img">
         <span class="main-header__menu__logo__name">Peru Private Tours</span>
       </a>
       <ul class="main-header__menu__ul">
         <li class="main-header__menu__ul__li">
           <a href="{% url 'servicio_app:clasic_tours' %}" class="main-header__menu__ul__li__a">Tours Clasicos</a>
+        </li>
+        <li class="main-header__menu__ul__li">
+          <a href="{% url 'servicio_app:clasic_tours' %}" class="main-header__menu__ul__li__a">Camino Inka</a>
         </li>
         <li class="main-header__menu__ul__li">
           <a href="{% url 'servicio_app:alternative_walks' %}" class="main-header__menu__ul__li__a">Caminatas Alternativas</a>

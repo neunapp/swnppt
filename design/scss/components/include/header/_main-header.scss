@@ -30,14 +30,15 @@
     align-items: center;
     flex-direction: column;
     &__img {
-      width: 60px;
-      height: 30px;
+      width: 100px;
+      height: 50px;
       margin: 0px;
     }
     &__name {
       font-family: $font-fam-segundo;
-      color: #4E342E;
+      color: color(blanco);
       font-weight: bold;
+      font-size: 1.5em;
     }
   }
   &__ul {

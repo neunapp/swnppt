@@ -23,7 +23,7 @@ class ServiceManager(models.Manager):
         #"""procedimiento para adquirir los 20 servicios mas recientes"""
         return self.filter(
             state=True,
-        ).order_by('-visit')[:20]
+        ).order_by('-visit')[:9]
 
 
     def find_destiny_by_service(self, destiny):

@@ -112,7 +112,7 @@
             </div>
             <div class="simple-card__body">
               <p class="simple-card__body__text">
-                {{home.featured_article.description|truncatechars:270}}
+                {{home.featured_article.description|truncatechars:150}}
               </p>
             </div>
             <div class="simple-card__footer">
@@ -122,7 +122,7 @@
         </div>
       </div>
       <!-- fin de busqueda de reservas -->
-      <div class="cell small-12  medium-8 large-4">
+      <div class="cell small-12 large-4">
         <div class="home-armar-paquete__servicio_destacado">
           <h3 class="cell text-subtitle">{{home.title_featured_service}}</h3>
           <div class="shop-card">
@@ -137,7 +137,7 @@
             <div class="shop-card__body">
               <p class="shop-card__body__text1">Grado dificultad: {{home.featured_service.difficulty}}</p>
               <p class="shop-card__body__text2">
-                {{home.featured_service.description|truncatechars:270}}
+                {{home.featured_service.description|truncatechars:150}}
               </p>
             </div>
             <div class="shop-card__footer">
@@ -155,470 +155,114 @@
       </div>
     </div>
 
-    <div class="grid-x home-space">
-      <!--
-      <div class="small-12">
-        <h3 class="cell text-subtitle">¿Desea un paquete ya elaborado?</h3>
-        <div class="search-form">
-          <input type="text" name="search" placeholder="Buscar paquete" class="search-form__input">
-          <button type="button" name="button" class="search-form__btn">
-            <i class="fa fa-search search-form__btn__icon" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-      <div class="cell small-12 grid-x grid-margin-x home-paque-result">
-        <div class="cell small-12 medium-6 large-4">
-          <div class="product-card">
-            <div class="product-card__header">
-              <img src="/img/1.jpg" alt="name" class="product-card__header__img">
-              <div class="product-card__header__tags">
-                <span class="product-card__header__tags__l">$ 120.00</span>
-                <a href="#" class="product-card__header__tags__r">Reservar</a>
-              </div>
-            </div>
-            <h3 class="product-card__title">Cusco Clasico (4 dias/3 noches)</h3>
-            <div class="product-card__body">
-              <div class="product-card__body__content">
-                <ul class="product-card__body__content__resume">
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Caminata por 8 horas</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Excursion a valle sagrado</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">muso del inka</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-card__body__detail">
-                <div class="product-card__body__detail__btns">
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-f">Privado</button>
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-t">Compartido</button>
-                </div>
-                <div class="product-card__body__detail__info">
-                  <p class="product-card__body__detail__info__item">Hora inicio: 12:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Hora fin: 16:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Grado de dificultad: Facil</p>
-                  <p class="product-card__body__detail__info__item">Altura maxima: 3850 msnm</p>
-                </div>
-                <div class="product-card__body__detail__action">
-                  <a href="#" class="product-card__body__detail__action__btn">Ver más</a>
-                </div>
-              </div>
+    <app>
+      <div class="grid-x grid-margin-x align-center">
+        <div class="cell">
+            <h3 class="cell text-subtitle">¿Desea un paquete ya elaborado?</h3>
+            <div class="search-form">
+              <input type="text" name="search" placeholder="Buscar paquete" class="search-form__input">
+              <button type="button" name="button" class="search-form__btn">
+                <i class="fa fa-search search-form__btn__icon" aria-hidden="true"></i>
+              </button>
             </div>
           </div>
-        </div>
-
-        <div class="cell small-12 medium-6 large-4">
-          <div class="product-card">
-            <div class="product-card__header">
-              <img src="/img/1.jpg" alt="name" class="product-card__header__img">
-              <div class="product-card__header__tags">
-                <span class="product-card__header__tags__l">$ 120.00</span>
-                <a href="#" class="product-card__header__tags__r">Reservar</a>
-              </div>
-            </div>
-            <h3 class="product-card__title">Cusco Clasico (4 dias/3 noches)</h3>
-            <div class="product-card__body">
-              <div class="product-card__body__content">
-                <ul class="product-card__body__content__resume">
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Caminata por 8 horas</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Excursion a valle sagrado</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">muso del inka</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-card__body__detail">
-                <div class="product-card__body__detail__btns">
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-f">Privado</button>
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-t">Compartido</button>
-                </div>
-                <div class="product-card__body__detail__info">
-                  <p class="product-card__body__detail__info__item">Hora inicio: 12:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Hora fin: 16:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Grado de dificultad: Facil</p>
-                  <p class="product-card__body__detail__info__item">Altura maxima: 3850 msnm</p>
-                </div>
-                <div class="product-card__body__detail__action">
-                  <a href="#" class="product-card__body__detail__action__btn">Ver más</a>
+        <div class="cell grid-x grid-margin-x align-center">
+          <div class="cell small-12 medium-6 large-4" v-for="(s, index) in servicios">
+            <div class="product-card">
+              <div class="product-card__header">
+                <img v-bind:src="s.image" v-bind:alt="s.title" class="product-card__header__img">
+                <div class="product-card__header__tags">
+                  <span class="product-card__header__tags__l">$ {$ s.private_price $}</span>
+                  <a href="#" class="product-card__header__tags__r">Reservar</a>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cell small-12 medium-6 large-4">
-          <div class="product-card">
-            <div class="product-card__header">
-              <img src="/img/2.jpg" alt="name" class="product-card__header__img">
-              <div class="product-card__header__tags">
-                <span class="product-card__header__tags__l">$ 120.00</span>
-                <a href="#" class="product-card__header__tags__r">Reservar</a>
-              </div>
-            </div>
-            <h3 class="product-card__title">Camino inka clasico (4 dias/3 noches)</h3>
-            <div class="product-card__body">
-              <div class="product-card__body__content">
-                <ul class="product-card__body__content__resume">
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Caminata por 8 horas</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Excursion a valle sagrado</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">muso del inka</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-card__body__detail">
-                <div class="product-card__body__detail__btns">
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-f">Privado</button>
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-t">Compartido</button>
+              <h3 class="product-card__title">{$ s.title $}</h3>
+              <div class="product-card__body">
+                <div class="product-card__body__content">
+                  <ul class="product-card__body__content__resume">
+                    <li class="product-card__body__content__resume__item">
+                      <a href="#" class="product-card__body__content__resume__item__a">{$ s.spa_trip $}</a>
+                    </li>
+                    <li class="product-card__body__content__resume__item">
+                      <a href="#" class="product-card__body__content__resume__item__a">{$ s.recommended_for $}</a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="product-card__body__detail__info">
-                  <p class="product-card__body__detail__info__item">Hora inicio: 12:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Hora fin: 16:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Grado de dificultad: Facil</p>
-                  <p class="product-card__body__detail__info__item">Altura maxima: 3850 msnm</p>
-                </div>
-                <div class="product-card__body__detail__action">
-                  <a href="#" class="product-card__body__detail__action__btn">Ver más</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cell small-12 medium-6 large-4">
-          <div class="product-card">
-            <div class="product-card__header">
-              <img src="/img/3.jpg" alt="name" class="product-card__header__img">
-              <div class="product-card__header__tags">
-                <span class="product-card__header__tags__l">$ 120.00</span>
-                <a href="#" class="product-card__header__tags__r">Reservar</a>
-              </div>
-            </div>
-            <h3 class="product-card__title">City Tour Cusco (5 horas)</h3>
-            <div class="product-card__body">
-              <div class="product-card__body__content">
-                <ul class="product-card__body__content__resume">
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Caminata por 8 horas</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Excursion a valle sagrado</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">muso del inka</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-card__body__detail">
-                <div class="product-card__body__detail__btns">
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-f">Privado</button>
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-t">Compartido</button>
-                </div>
-                <div class="product-card__body__detail__info">
-                  <p class="product-card__body__detail__info__item">Hora inicio: 12:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Hora fin: 16:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Grado de dificultad: Facil</p>
-                  <p class="product-card__body__detail__info__item">Altura maxima: 3850 msnm</p>
-                </div>
-                <div class="product-card__body__detail__action">
-                  <a href="#" class="product-card__body__detail__action__btn">Ver más</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cell small-12 medium-6 large-4">
-          <div class="product-card">
-            <div class="product-card__header">
-              <img src="/img/4.jpg" alt="name" class="product-card__header__img">
-              <div class="product-card__header__tags">
-                <span class="product-card__header__tags__l">$ 120.00</span>
-                <a href="#" class="product-card__header__tags__r">Reservar</a>
-              </div>
-            </div>
-            <h3 class="product-card__title">Cusco Clasico (4 dias/3 noches)</h3>
-            <div class="product-card__body">
-              <div class="product-card__body__content">
-                <ul class="product-card__body__content__resume">
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Caminata por 8 horas</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Excursion a valle sagrado</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">muso del inka</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-card__body__detail">
-                <div class="product-card__body__detail__btns">
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-f">Privado</button>
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-t">Compartido</button>
-                </div>
-                <div class="product-card__body__detail__info">
-                  <p class="product-card__body__detail__info__item">Hora inicio: 12:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Hora fin: 16:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Grado de dificultad: Facil</p>
-                  <p class="product-card__body__detail__info__item">Altura maxima: 3850 msnm</p>
-                </div>
-                <div class="product-card__body__detail__action">
-                  <a href="#" class="product-card__body__detail__action__btn">Ver más</a>
+                <div class="product-card__body__detail">
+                  <div class="product-card__body__detail__btns">
+                    <button type="button" name="button" class="product-card__body__detail__btns__btn background-f">Privado</button>
+                    <button type="button" name="button" class="product-card__body__detail__btns__btn background-t">Compartido</button>
+                  </div>
+                  <div class="product-card__body__detail__info">
+                    <p class="product-card__body__detail__info__item">Hora inicio: {$ s.hour_start $}</p>
+                    <p class="product-card__body__detail__info__item">Hora fin: 16:30 pm</p>
+                    <p class="product-card__body__detail__info__item">Grado de dificultad: {$ s.difficulty $}</p>
+                    <p class="product-card__body__detail__info__item">Altura promedio: {$ s.altitude_average $} msnm</p>
+                  </div>
+                  <div class="product-card__body__detail__action">
+                    <a href="#" class="product-card__body__detail__action__btn">Ver más</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      -->
-      <div class="home-about">
-        <div class="home-about__header">
-          <img src="{% static 'img/p.png' %}" alt="salva el planeta" class="home-about__header__img">
-          <h3 class="home-about__header__title">{{home.title_emblema_article}}</h3>
-        </div>
-        <div class="home-about__body">
-          <div class="grid-x">
-            <div class="cell small-12 medium-6 large-6 home-about__body__video">
-              {{home.emblema_article.video|safe}}
-            </div>
-            <div class="cell small-12 medium-6 large-6 home-about__body__text">
-              <p>
-                {{home.emblema_article.description|truncatechars_html:400}}
-              </p>
-              <div class="home-about__body__text__action">
-                <a href="{% url 'blog_app:ps_detail' home.emblema_article.slug %}" class="home-about__body__text__action__btn">Conocer más del proyecto</a>
-              </div>
+    </app>
+
+    <div class="home-about">
+      <div class="home-about__header">
+        <img src="{% static 'img/p.png' %}" alt="salva el planeta" class="home-about__header__img">
+        <h3 class="home-about__header__title">{{home.title_emblema_article}}</h3>
+      </div>
+      <div class="home-about__body">
+        <div class="grid-x">
+          <div class="cell small-12 medium-6 large-6 home-about__body__video">
+            {{home.emblema_article.video|safe}}
+          </div>
+          <div class="cell small-12 medium-6 large-6 home-about__body__text">
+            <p>
+              {{home.emblema_article.description|truncatechars_html:400}}
+            </p>
+            <div class="home-about__body__text__action">
+              <a href="{% url 'blog_app:ps_detail' home.emblema_article.slug %}" class="home-about__body__text__action__btn">Conocer más del proyecto</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="home-about-galery">
-        <h3 class="home-about-galery__title">Conoce más sobre nuestros proyectos sociales</h3>
-        <div class="grid-x grid-margin-x">
-          {% for ps in proyectos  %}
-            <div class="cell small-4 large-3 home-about-galery__item">
-              <a href="{% url 'blog_app:ps_detail' ps.slug %}" class="home-about-galery__item__link">
-                <img src="{{ps.image1.url}}" alt="{{ps.title}}" class="home-about-galery__item__img">
-                <p class="home-about-galery__item__name">{{ps.title}}</p>
-              </a>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-
-      <div class="home-about-values">
-        <h3 class="text-subtitle-2">{{home.title_content1_article}}</h3>
-        <p class="home-about-values__content">
-          {{home.content1_article.content|safe}}
-        </p>
-        <a href="{% url 'blog_app:blog_detail' home.content1_article.slug %}" class="home-about-values__link">Ver más</a>
-      </div>
-
-      <div class="small-12 grid-x grid-margin-x home-about-values-item">
-        <h3 class="cell text-subtitle-2">¿Que nos hace distinto?</h3>
-        {% for value in home.values_enterprice.all  %}
-          <div class="small-12 medium-6 large-4 home-about-values-item__val">
-            <i class="fa fa-check-circle home-about-values-item__val__i" aria-hidden="true"></i>
-            <span class="home-about-values-item__val__text">{{value.description_value}}</span>
+    <div class="home-about-galery home-space">
+      <h3 class="home-about-galery__title">Conoce más sobre nuestros proyectos sociales</h3>
+      <div class="grid-x grid-margin-x">
+        {% for ps in proyectos  %}
+          <div class="cell small-4 large-3 home-about-galery__item">
+            <a href="{% url 'blog_app:ps_detail' ps.slug %}" class="home-about-galery__item__link">
+              <img src="{{ps.image1.url}}" alt="{{ps.title}}" class="home-about-galery__item__img">
+              <p class="home-about-galery__item__name">{{ps.title}}</p>
+            </a>
           </div>
         {% endfor %}
       </div>
+    </div>
 
-      <!--
-      <div class="cell small-12 grid-x grid-margin-x home-paque-result">
-        <h3 class="cell text-subtitle-2">Paquetes mas solicitados</h3>
-        <div class="cell small-12 medium-6 large-4">
-          <div class="product-card">
-            <div class="product-card__header">
-              <img src="/img/1.jpg" alt="name" class="product-card__header__img">
-              <div class="product-card__header__tags">
-                <span class="product-card__header__tags__l">$ 120.00</span>
-                <a href="#" class="product-card__header__tags__r">Reservar</a>
-              </div>
-            </div>
-            <h3 class="product-card__title">Cusco Clasico (4 dias/3 noches)</h3>
-            <div class="product-card__body">
-              <div class="product-card__body__content">
-                <ul class="product-card__body__content__resume">
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Caminata por 8 horas</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Excursion a valle sagrado</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">muso del inka</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-card__body__detail">
-                <div class="product-card__body__detail__btns">
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-f">Privado</button>
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-t">Compartido</button>
-                </div>
-                <div class="product-card__body__detail__info">
-                  <p class="product-card__body__detail__info__item">Hora inicio: 12:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Hora fin: 16:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Grado de dificultad: Facil</p>
-                  <p class="product-card__body__detail__info__item">Altura maxima: 3850 msnm</p>
-                </div>
-                <div class="product-card__body__detail__action">
-                  <a href="#" class="product-card__body__detail__action__btn">Ver más</a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="home-about-values">
+      <h3 class="text-subtitle-2">{{home.title_content1_article}}</h3>
+      <p class="home-about-values__content">
+        {{home.content1_article.content|safe}}
+      </p>
+      <a href="{% url 'blog_app:blog_detail' home.content1_article.slug %}" class="home-about-values__link">Ver más</a>
+    </div>
+
+    <div class="grid-x grid-margin-x home-about-values-item">
+      <h3 class="cell text-subtitle-2">¿Que nos hace distinto?</h3>
+      {% for value in home.values_enterprice.all  %}
+        <div class="small-12 medium-6 large-4 home-about-values-item__val">
+          <i class="fa fa-check-circle home-about-values-item__val__i" aria-hidden="true"></i>
+          <span class="home-about-values-item__val__text">{{value.description_value}}</span>
         </div>
-
-        <div class="cell small-12 medium-6 large-4">
-          <div class="product-card">
-            <div class="product-card__header">
-              <img src="/img/1.jpg" alt="name" class="product-card__header__img">
-              <div class="product-card__header__tags">
-                <span class="product-card__header__tags__l">$ 120.00</span>
-                <a href="#" class="product-card__header__tags__r">Reservar</a>
-              </div>
-            </div>
-            <h3 class="product-card__title">Cusco Clasico (4 dias/3 noches)</h3>
-            <div class="product-card__body">
-              <div class="product-card__body__content">
-                <ul class="product-card__body__content__resume">
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Caminata por 8 horas</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Excursion a valle sagrado</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">muso del inka</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-card__body__detail">
-                <div class="product-card__body__detail__btns">
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-f">Privado</button>
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-t">Compartido</button>
-                </div>
-                <div class="product-card__body__detail__info">
-                  <p class="product-card__body__detail__info__item">Hora inicio: 12:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Hora fin: 16:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Grado de dificultad: Facil</p>
-                  <p class="product-card__body__detail__info__item">Altura maxima: 3850 msnm</p>
-                </div>
-                <div class="product-card__body__detail__action">
-                  <a href="#" class="product-card__body__detail__action__btn">Ver más</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cell small-12 medium-6 large-4">
-          <div class="product-card">
-            <div class="product-card__header">
-              <img src="/img/2.jpg" alt="name" class="product-card__header__img">
-              <div class="product-card__header__tags">
-                <span class="product-card__header__tags__l">$ 120.00</span>
-                <a href="#" class="product-card__header__tags__r">Reservar</a>
-              </div>
-            </div>
-            <h3 class="product-card__title">Camino inka clasico (4 dias/3 noches)</h3>
-            <div class="product-card__body">
-              <div class="product-card__body__content">
-                <ul class="product-card__body__content__resume">
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Caminata por 8 horas</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Excursion a valle sagrado</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">Visita catedral</a>
-                  </li>
-                  <li class="product-card__body__content__resume__item">
-                    <a href="#" class="product-card__body__content__resume__item__a">muso del inka</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-card__body__detail">
-                <div class="product-card__body__detail__btns">
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-f">Privado</button>
-                  <button type="button" name="button" class="product-card__body__detail__btns__btn background-t">Compartido</button>
-                </div>
-                <div class="product-card__body__detail__info">
-                  <p class="product-card__body__detail__info__item">Hora inicio: 12:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Hora fin: 16:30 pm</p>
-                  <p class="product-card__body__detail__info__item">Grado de dificultad: Facil</p>
-                  <p class="product-card__body__detail__info__item">Altura maxima: 3850 msnm</p>
-                </div>
-                <div class="product-card__body__detail__action">
-                  <a href="#" class="product-card__body__detail__action__btn">Ver más</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      -->
+      {% endfor %}
+    </div>
     </div>
   </div>
   <!-- fin de contenido de la pagina -->
