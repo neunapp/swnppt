@@ -4,11 +4,21 @@ from django.db import models
 class ServiceManager(models.Manager):
     """Procedimientos para tabla Service"""
 
-    def service_by_tipe(self, tipo):
+    def service_by_tipe(self, tipo, kword):
         # devolvemos los servicios dependiendo del tipo solicitado
         return self.filter(
             state=True,
-            type_service__model=tipo,
+            type_service=tipo,
+            title__icontains=kword,
+        ).order_by('-visit')
+
+    def service_by_all_type(self, kword):
+        # devolvemos los servicios que sean tipo paquete
+        return self.filter(
+            state=True,
+            title__icontains=kword,
+        ).exclude(
+            type_service='0',
         ).order_by('-visit')
 
     def service_visit(self):

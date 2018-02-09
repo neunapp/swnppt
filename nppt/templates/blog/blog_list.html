@@ -6,28 +6,28 @@
 
 {% load l10n %}
 
-{% block title %}{{home.title_seo}}{% endblock %}
+{% block title %}Experiencias viajando por el Perú, y por todo Cuzco{% endblock %}
 
-{% block description %}{{home.description_seo}}{% endblock %}
+{% block description %}Conoce nuestras experiencias y anecdotas viajando por el Perú con distintos grupos de distintas nacionalidades.{% endblock %}
 
-{% block title_rs %}{{home.title_seo}}{% endblock %}
+{% block title_rs %}Experiencias viajando por el Perú, y por todo Cuzco{% endblock %}
 
-{% block description_rs %}{{home.description_seo}}{% endblock %}
+{% block description_rs %}Conoce nuestras experiencias y anecdotas viajando por el Perú con distintos grupos de distintas nacionalidades.{% endblock %}
 
 
-{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+{% block tags %}cusco peru, cusco experiencias, experiencias viaje cusco, experiencias en cusco peru, experiencias de viajes a cusco{% endblock tags %}
 
 {% block content %}
   {% include "include/header.html" %}
   <!-- inicio de banner -->
   <div class="banner-blog">
-    <img src="{% static 'img/fondo2.jpg' %}" alt="fondo" class="banner-blog__img">
+    <img src="{% static 'img/2.jpg' %}" alt="experiencias-de-viajes-a-cusco" class="banner-blog__img">
     <div class="banner-blog__description">
       <div class="banner-blog__copy">
         <h1 class="banner-blog__copy__title">Experiéncias viajando por Perú</h1>
         <p class="banner-blog__copy__text">
           En cada artículo te contamos distintas experiéncias,
-           anecdotas y sugerencias para que pases mejor tus estadia en Perú.
+           anecdotas y sugerencias para que pases mejor tu estadia en Perú.
         </p>
       </div>
     </div>

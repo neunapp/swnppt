@@ -6,26 +6,26 @@
 
 {% load l10n %}
 
-{% block title %}Caminatas alternativas a camino inca{% endblock %}
+{% block title %}camino inca - inka trail - camino inca cusco{% endblock %}
 
-{% block description %}Caminatas por distintos lugares de cusco, como camino inca, caminata de salkantay, camino inca selva{% endblock %}
+{% block description %}Encuentra el mejor paquete de camino inca por cusco.{% endblock %}
 
-{% block title_rs %}Otras opciones a camino inca{% endblock %}
+{% block title_rs %}camino inca - inka trail - camino inca cusco{% endblock %}
 
-{% block description_rs %}Caminatas por distintos lugares de cusco, como camino inca, caminata de salkantay, camino inca selva{% endblock %}
+{% block description_rs %}Encuentra el mejor paquete de camino inca por cusco.{% endblock %}
 
 
-{% block tags %}cusco machu picchu, cusco ollantaytambo, 	cusco a machu picchu, cusco booking{% endblock tags %}
+{% block tags %}camino inca, camino inca 2 dias, mapa camino inca, camino inca machu picchu{% endblock tags %}
 
 {% block content %}
   {% include "include/header.html" %}
 
   <!-- inicio de banner -->
   <div class="banner-list">
-    <img src="{% static 'img/ca.jpg' %}" alt="fondo" class="banner-list__img">
+    <img src="{% static 'img/ci.jpg' %}" alt="fondo" class="banner-list__img">
     <div class="banner-list__alert">
       <p class="banner-list__alert__text">
-        Recuerde que con PPT también puede armar su propio paquete, elegir sus horarios, días y lugares que le gustaría visitar.
+        Estos son nuestros paquetes en camino inka. recuerda que también puedes armar tu paquete como mas te convenga.
       </p>
       <a href="#" class="banner-list__alert__link">Armar Paquete</a>
     </div>
@@ -42,7 +42,7 @@
 
   <div class="grid-container">
     <div class="grid-x grid-margin-x align-center service-list">
-      <h2 class="cell primary-subtitle">Te gusta caminar?. No pudiste encontrar cupo para Camino Inca?. Mira las opciones que tenemos para ti</h2>
+      <h2 class="cell primary-subtitle">Camino inka es una aventura única en cusco, busca el paquete para tí.</h2>
       {% for s in servicios.queryset %}
         <div class="cell small-12 medium-6 large-4">
           <div class="product-card">
@@ -94,8 +94,9 @@
       {% endfor %}
     </div>
 
+    <br>
     <div class="grid-x grid-margin-x align-center service-ps">
-      <h2 class="cell primary-subtitle">Peru Private Tours es una empresa que tambien se preocupa por su sociedad. Mira aqui como PPT apoya a las comunidades cusqueñas</h2>
+      <h2 class="cell primary-subtitle">Recuerda que con cada servicios que solicitas estas ayudando con nuestros proyectos sociales.</h2>
       {% for p in servicios.proyectos  %}
         <div class="cell small-12 medium-6 large-4">
           <div class="blog-card">

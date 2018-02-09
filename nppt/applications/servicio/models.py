@@ -16,57 +16,37 @@ from django.template.defaultfilters import slugify
 #import manager servicio
 from .managers import ServiceManager
 
-
-
-@python_2_unicode_compatible
-class Category_Service(TimeStampedModel):
-
-   name = models.CharField('nombre', max_length=150)
-   slug = models.SlugField(editable=False, max_length=200)
-
-   class Meta:
-       verbose_name = 'Categoria servicio'
-       verbose_name_plural = 'Categorias servicio'
-       ordering = ['-created']
-
-   def __str__(self):
-       return self.name
-
-   def save(self, *args, **kwargs):
-       if not self.id:
-           # calculamos el total de segundos de la hora actual
-           now = datetime.now()
-           total_time = timedelta(
-               hours=now.hour,
-               minutes=now.minute,
-               seconds=now.second
-           )
-           seconds = int(total_time.total_seconds())
-           slug_unique = '%s %s' % (self.name, str(seconds))
-       else:
-           seconds = self.slug.split('-')[-1]  # recuperamos los segundos
-           slug_unique = '%s %s' % (self.name, str(seconds))
-
-       self.slug = slugify(slug_unique)
-       super(Category_Service, self).save(*args, **kwargs)
-
-
-
-
-@python_2_unicode_compatible
-class Type_Service(TimeStampedModel):
-
-    model = models.CharField('modelo', max_length=200)
-    name = models.CharField('nombre', max_length=200)
-
-    class Meta:
-        verbose_name = 'tipo de servicio'
-        verbose_name_plural = 'tipos de servicio'
-        ordering = ['-created']
-
-    def __str__(self):
-        return self.model
-
+# @python_2_unicode_compatible
+# class Category_Service(TimeStampedModel):
+#
+#    name = models.CharField('nombre', max_length=150)
+#    slug = models.SlugField(editable=False, max_length=200)
+#
+#    class Meta:
+#        verbose_name = 'Categoria servicio'
+#        verbose_name_plural = 'Categorias servicio'
+#        ordering = ['-created']
+#
+#    def __str__(self):
+#        return self.name
+#
+#    def save(self, *args, **kwargs):
+#        if not self.id:
+#            # calculamos el total de segundos de la hora actual
+#            now = datetime.now()
+#            total_time = timedelta(
+#                hours=now.hour,
+#                minutes=now.minute,
+#                seconds=now.second
+#            )
+#            seconds = int(total_time.total_seconds())
+#            slug_unique = '%s %s' % (self.name, str(seconds))
+#        else:
+#            seconds = self.slug.split('-')[-1]  # recuperamos los segundos
+#            slug_unique = '%s %s' % (self.name, str(seconds))
+#
+#        self.slug = slugify(slug_unique)
+#        super(Category_Service, self).save(*args, **kwargs)
 
 
 class Destiny(TimeStampedModel):
@@ -91,11 +71,25 @@ class Destiny(TimeStampedModel):
 
 
 class Service(TimeStampedModel):
+    """ modelo para paquetes servicios """
 
-    type_service = models.ForeignKey(
-        Type_Service,
-        on_delete=models.CASCADE,
-        verbose_name='Tipo de Servicio',
+    E = '4'
+    D = '3'
+    C = '2'
+    B = '1'
+    A = '0'
+    TYPE_CHOICES = (
+        (A, 'Tours Clasicos'),
+        (B, 'Camino Inca'),
+        (C, 'Caminatas Alternativas'),
+        (D, 'Paqute Normal'),
+        (E, 'Paqute simple'),
+    )
+    type_service = models.CharField(
+        'tipo de servicio',
+        max_length=2,
+        blank=True,
+        choices=TYPE_CHOICES
     )
     destiny = models.ForeignKey(
         Destiny,
@@ -120,13 +114,6 @@ class Service(TimeStampedModel):
     distance_total = models.CharField('distancia total', max_length=50, blank=True)
     recommended_for = models.CharField('recomendado para', max_length=200, blank=True)
     consideration = RichTextUploadingField('concideraciones', blank=True)
-    service_categ11ory = models.ForeignKey(
-        Category_Service,
-        verbose_name='Cetgoria de servicio',
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True
-    )
     state = models.BooleanField(default=False)
     visit = models.IntegerField(default=0, editable=False)
     slug = models.SlugField(editable=False, max_length=200)
