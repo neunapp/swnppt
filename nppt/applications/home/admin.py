@@ -1,15 +1,7 @@
 from django.contrib import admin
 
-from .models import Values_enterprice, Home, Client_commentary, ContactUs
+from .models import Home, Client_commentary, ContactUs
 # Register your models here.
-
-
-class Values_enterpriceAdmin(admin.ModelAdmin):
-    """admin model values enterprice"""
-
-    list_display = (
-        'description_value',
-    )
 
 
 class HomeAdmin(admin.ModelAdmin):
@@ -34,7 +26,6 @@ class Client_commentaryAdmin(admin.ModelAdmin):
     list_filter = ('client_name',)
 
 
-admin.site.register(Values_enterprice, Values_enterpriceAdmin)
 admin.site.register(Home, HomeAdmin)
 admin.site.register(Client_commentary, Client_commentaryAdmin)
 admin.site.register(ContactUs)

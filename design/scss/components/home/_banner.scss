@@ -53,7 +53,7 @@
 
   &__main {
     margin-bottom: 3em;
-    background-color:rgba(0,0,0,0.7);
+    background-color:rgba(0,0,0,0.3);
     width: 500px;
     text-align: center;
     color: color(blanco);
@@ -62,12 +62,13 @@
     }
     &__slogan {
       font-family: $font-fam-tercero;
+      font-weight: bold;
     }
   }
 
   &__comentary {
     margin-bottom: 3em;
-    background-color:rgba(0,0,0,0.4);
+    background-color:rgba(0,0,0,0.2);
     border-radius: 10px;
     width: 370px;
     height: 350px;

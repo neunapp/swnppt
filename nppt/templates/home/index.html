@@ -255,11 +255,11 @@
     </div>
 
     <div class="grid-x grid-margin-x home-about-values-item">
-      <h3 class="cell text-subtitle-2">¿Que nos hace distinto?</h3>
+      <h3 class="cell text-subtitle-2">¿Que nos hace distintos?</h3>
       {% for value in home.values_enterprice.all  %}
-        <div class="small-12 medium-6 large-4 home-about-values-item__val">
-          <i class="fa fa-check-circle home-about-values-item__val__i" aria-hidden="true"></i>
-          <span class="home-about-values-item__val__text">{{value.description_value}}</span>
+        <div class="small-12 medium-6 home-about-values-item__val">
+          <img src="{% static 'img/p.png' %}" alt="ppt" class="home-about-values-item__val__i">
+          <a href="{% url 'blog_app:pf_detail' value.slug %}" class="home-about-values-item__val__text">{{value.title}}</a>
         </div>
       {% endfor %}
     </div>

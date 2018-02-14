@@ -6,8 +6,6 @@
     left: 5px;
     right: 5px;
   }
-  border: 1px solid;
-  border-color: color(tres);
   border-radius: 10px;
   margin-top: 1em;
   @include desde(1024px){
@@ -84,8 +82,6 @@
 .home-about-galery {
   margin-top: 1em;
   padding: 10px;
-  border: 1px solid;
-  border-color: color(cuatro);
   border-radius: 10px;
   width: 100%;
   @include desde(640px){
@@ -176,9 +172,9 @@
     align-items: center;
     margin-bottom: 1em;
     &__i {
-      margin-right: 8px;
-      font-size: 1.5em;
-      color: color(tres)
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
     }
     &__text {
       color: color(gris);

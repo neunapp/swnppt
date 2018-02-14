@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   padding: 1em;
-  background: color(dos);
+  background: color(cuatro);
   @include hasta(1024px){
     display: none;
   };
@@ -30,15 +30,16 @@
     align-items: center;
     flex-direction: column;
     &__img {
-      width: 100px;
+      width: 170px;
       height: 50px;
       margin: 0px;
     }
     &__name {
-      font-family: $font-fam-segundo;
+      text-align: center;
+      font-family: $font-fam-primero;
       color: color(blanco);
+      font-size: 1em;
       font-weight: bold;
-      font-size: 1.5em;
     }
   }
   &__ul {
@@ -48,18 +49,53 @@
     align-items: center;
     justify-content: center;
     &__li {
+      position: relative;
       padding: {
         top: 0.6em;
         bottom: 0.6em;
         left: 1em;
         right: 1em;
       };
+      z-index: 200;
+      &:hover {
+        background: color(dos);
+      }
+      &__ul {
+        list-style: none;
+        position: absolute;
+        top: 44px;
+        left: 0px;
+        z-index: 300;
+        background: color(dos);
+        width: 200px;
+        padding: 0px;
+        margin: 0px;
+        display: none;
+        &__li {
+          padding: 1em;
+          &__a {
+            color: color(blanco);
+            font-family: $font-fam-tercero;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            width: 100%;
+            &:hover {
+              color: color(cuatro);
+            }
+          }
+        }
+      }
+      &:hover > ul {
+        display: block;
+      }
       &__a {
         color: color(blanco);
         font-family: $font-fam-segundo;
         font-weight: bold;
         &:hover {
-          color: color(tres);
+          color: color(blanco);
         }
       }
     }

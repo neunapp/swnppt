@@ -21,20 +21,6 @@ from applications.blog.models import Blog
 from applications.servicio.models import Service
 
 
-@python_2_unicode_compatible
-class Values_enterprice(TimeStampedModel):
-
-    description_value = models.CharField('valor de la empresa', max_length=200)
-
-    class Meta:
-        verbose_name = 'valor'
-        verbose_name_plural = 'valores empresa'
-        ordering = ['-created']
-
-    def __str__(self):
-        return self.description_value
-
-
 
 @python_2_unicode_compatible
 class Home(TimeStampedModel):
@@ -111,7 +97,7 @@ class Home(TimeStampedModel):
         blank=True
     )
     values_enterprice = models.ManyToManyField(
-        Values_enterprice,
+        Blog,
         verbose_name='valores de la empresa',
         blank=True
     )
