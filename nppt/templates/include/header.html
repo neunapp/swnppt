@@ -80,15 +80,35 @@
       <ul class="main-header__menu__ul">
         <li class="main-header__menu__ul__li">
           <a href="{% url 'servicio_app:clasic_tours' %}" class="main-header__menu__ul__li__a">Tours Clasicos</a>
+            <ul class="main-header__menu__ul__li__ul">
+              {% for s in global_tc %}
+                <li class="main-header__menu__ul__li__ul__li"><a href="{% url 'servicio_app:service_detail' s.slug %}" class="main-header__menu__ul__li__ul__li__a">{{s.title|truncatechars_html:45}}</a></li>
+              {% endfor %}
+            </ul>
         </li>
         <li class="main-header__menu__ul__li">
           <a href="{% url 'servicio_app:camino_inca' %}" class="main-header__menu__ul__li__a">Camino Inka</a>
+          <ul class="main-header__menu__ul__li__ul">
+            {% for s in global_ci %}
+              <li class="main-header__menu__ul__li__ul__li"><a href="{% url 'servicio_app:service_detail' s.slug %}" class="main-header__menu__ul__li__ul__li__a">{{s.title|truncatechars_html:45}}</a></li>
+            {% endfor %}
+          </ul>
         </li>
         <li class="main-header__menu__ul__li">
           <a href="{% url 'servicio_app:alternative_walks' %}" class="main-header__menu__ul__li__a">Caminatas Alternativas</a>
+          <ul class="main-header__menu__ul__li__ul">
+            {% for s in global_ca %}
+              <li class="main-header__menu__ul__li__ul__li"><a href="{% url 'servicio_app:service_detail' s.slug %}" class="main-header__menu__ul__li__ul__li__a">{{s.title|truncatechars_html:45}}</a></li>
+            {% endfor %}
+          </ul>
         </li>
         <li class="main-header__menu__ul__li">
           <a href="{% url 'servicio_app:paquetes' %}" class="main-header__menu__ul__li__a">Paquetes Turisticos</a>
+          <ul class="main-header__menu__ul__li__ul">
+            {% for s in global_pt %}
+              <li class="main-header__menu__ul__li__ul__li"><a href="{% url 'servicio_app:service_detail' s.slug %}" class="main-header__menu__ul__li__ul__li__a">{{s.title|truncatechars_html:45}}</a></li>
+            {% endfor %}
+          </ul>
         </li>
         <li class="main-header__menu__ul__li">
           <a href="{% url 'blog_app:ps_list' %}" class="main-header__menu__ul__li__a">Proyectos Sociales</a>
