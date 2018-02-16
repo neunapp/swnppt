@@ -35,6 +35,9 @@
           <ul class="cell tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
             <li class="tabs-title service-ps__tab is-active"><a href="#panel1c"><span class="service-ps__tab__a">Resumen</span></a></li>
             <li class="tabs-title service-ps__tab"><a href="#panel2c"><span class="service-ps__tab__a">Detalle</a></span></li>
+            {% for e in object.extra.all  %}
+              <li class="tabs-title service-ps__tab"><a href="#{{e.id}}"><span class="service-ps__tab__a">{{e.name}}</a></span></li>
+            {% endfor %}
             {% for i in itinerario  %}
               <li class="tabs-title service-ps__tab"><a href="#{{i.id}}"><span class="service-ps__tab__a">{{i.denomination}}</a></span></li>
             {% endfor %}
@@ -65,6 +68,13 @@
               <p class="info-card__b">Not Include:</p>
               <p>{{object.not_include|safe}}</p>
             </div>
+            {% for e in object.extra.all  %}
+            <div class="tabs-panel" id="{{e.id}}">
+              <div class="info-card">
+                <p>{{e.content|safe}}</p>
+              </div>
+            </div>
+            {% endfor %}
             {% for i in itinerario  %}
             <div class="tabs-panel" id="{{i.id}}">
               <div class="info-card">

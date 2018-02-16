@@ -16,37 +16,20 @@ from django.template.defaultfilters import slugify
 #import manager servicio
 from .managers import ServiceManager
 
-# @python_2_unicode_compatible
-# class Category_Service(TimeStampedModel):
-#
-#    name = models.CharField('nombre', max_length=150)
-#    slug = models.SlugField(editable=False, max_length=200)
-#
-#    class Meta:
-#        verbose_name = 'Categoria servicio'
-#        verbose_name_plural = 'Categorias servicio'
-#        ordering = ['-created']
-#
-#    def __str__(self):
-#        return self.name
-#
-#    def save(self, *args, **kwargs):
-#        if not self.id:
-#            # calculamos el total de segundos de la hora actual
-#            now = datetime.now()
-#            total_time = timedelta(
-#                hours=now.hour,
-#                minutes=now.minute,
-#                seconds=now.second
-#            )
-#            seconds = int(total_time.total_seconds())
-#            slug_unique = '%s %s' % (self.name, str(seconds))
-#        else:
-#            seconds = self.slug.split('-')[-1]  # recuperamos los segundos
-#            slug_unique = '%s %s' % (self.name, str(seconds))
-#
-#        self.slug = slugify(slug_unique)
-#        super(Category_Service, self).save(*args, **kwargs)
+
+@python_2_unicode_compatible
+class ExtraDetails(TimeStampedModel):
+
+   name = models.CharField('nombre', max_length=150)
+   content = RichTextUploadingField('contenido', blank=True)
+
+   class Meta:
+       verbose_name = 'Detalles extra de un servicio'
+       verbose_name_plural = 'Detalles extra de un servicio'
+       ordering = ['-created']
+
+   def __str__(self):
+       return self.name
 
 
 class Destiny(TimeStampedModel):
@@ -104,6 +87,7 @@ class Service(TimeStampedModel):
     description = models.TextField('descripcion', blank=True)
     include = RichTextUploadingField('incluye', blank=True)
     not_include = RichTextUploadingField('No incluye', blank=True)
+    extra = models.ManyToManyField(ExtraDetails, verbose_name='detalles extra')
     tree = models.IntegerField('numero de arboles', default=0)
     private_price = models.DecimalField('Precio Privado', max_digits=7, decimal_places=2, default=0)
     shared_price = models.DecimalField('Precio Compartido', max_digits=7, decimal_places=2, default=0)

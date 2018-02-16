@@ -154,7 +154,7 @@ class ContactUs(TimeStampedModel):
     last_name = models.CharField('apellido', max_length=150, blank=False, null=False)
     email = models.EmailField('correo', blank=False, null=False)
     phone = models.CharField('telefono', max_length=15)
-    skype = models.URLField('skype', max_length=150)
+    skype = models.CharField('ID en Skype', blank=True, max_length=100)
     best_time_contact = models.CharField('Mejor momento para contactarlo', max_length=200)
     country_residence = models.CharField('pais de residencia', max_length=20)
     city = models.CharField('ciudad', max_length=15)

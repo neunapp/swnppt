@@ -1,0 +1,45 @@
+{% extends "home/base_home.html" %}
+
+{% load  staticfiles %}
+
+{% load thumbnail %}
+
+{% load l10n %}
+
+{% block title %}{{home.title_seo}}{% endblock %}
+
+{% block description %}{{home.description_seo}}{% endblock %}
+
+{% block title_rs %}{{home.title_seo}}{% endblock %}
+
+{% block description_rs %}{{home.description_seo}}{% endblock %}
+
+
+{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+
+{% block content %}
+  {% include "include/header.html" %}
+  <!-- inicio de home -->
+  <div class="contact-form">
+    <img src="{% static 'img/fondo.jpg' %}" alt="contacto" class="contact-form__bg">
+    <div class="contact-form-body">
+      <div class="grid-x grid-margin-x align-center contact-form-body__content">
+        <h3 class="cell primary-subtitle">Comunicate con PPT</h3>
+        <div class="cell small-12 medium-6">
+          <div class="primary-form">
+            <i class="fa fa-address-card primary-form__icon" aria-hidden="true"></i>
+            <input type="text" name="name" class="primary-form__input" placeholder="nombres...">
+          </div>
+        </div>
+        <div class="cell small-12 medium-6">
+          <div class="primary-form">
+            <i class="fa fa-address-card primary-form__icon" aria-hidden="true"></i>
+            <input type="text" name="name" class="primary-form__input">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin de contenido de la pagina -->
+  {% include "include/footer.html" %}
+{% endblock %}
