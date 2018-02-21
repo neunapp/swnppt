@@ -1,10 +1,10 @@
 //archivo de confguracion scss
 
 //importamos la tipodrafia
-@import url('https://fonts.googleapis.com/css?family=Handlee|Open+Sans+Condensed:300|Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Condensed|Tinos');
 $font-fam-primero: 'Roboto Condensed', sans-serif;
-$font-fam-segundo: 'Open Sans Condensed', sans-serif;
-$font-fam-tercero: 'Handlee', cursive;
+$font-fam-segundo: 'Tinos', serif;
+$font-fam-tercero: 'PT Sans', sans-serif;
 
 //
 $ligth: 300;
@@ -36,9 +36,10 @@ $colors: (
   fondo2:     #f1f2f7,
   fondo3:     #e0e0e0,
   fondo4:     #eeeeee,
+  sub:        #5a3b38,
   uno:        #60e9ee,
   dos:        #46b1bb,
-  tres:       #00d246,
+  tres:       #58c143,
   cuatro:     #252440,
   cinco:      #e8422f,
   seis:       #f5d92d,

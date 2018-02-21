@@ -21,6 +21,8 @@ from .managers import ServiceManager
 class ExtraDetails(TimeStampedModel):
 
    name = models.CharField('nombre', max_length=150)
+   order = models.PositiveIntegerField('orden', default=0)
+   denomination = models.CharField('ID',blank=True, max_length=150)
    content = RichTextUploadingField('contenido', blank=True)
 
    class Meta:
@@ -29,7 +31,7 @@ class ExtraDetails(TimeStampedModel):
        ordering = ['-created']
 
    def __str__(self):
-       return self.name
+       return self.denomination+' ['+str(self.id)+']'
 
 
 class Destiny(TimeStampedModel):
@@ -80,7 +82,8 @@ class Service(TimeStampedModel):
         verbose_name='Destino',
     )
     title = models.CharField('titulo', max_length=130)
-    image = models.ImageField('imagen', upload_to="destinos")
+    image = models.ImageField('imagen', upload_to="servicios")
+    mapa = models.ImageField('mapa', upload_to="mapa", blank=True, null=True)
     days = models.IntegerField('dias', default=0)
     promo = models.BooleanField('Promocion', default=False)
     altitude_average = models.IntegerField('Altitud', default=0)

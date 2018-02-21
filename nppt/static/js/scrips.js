@@ -16,12 +16,15 @@ $(function(){
 
   //scrip para scroll en header
   var header_class = $('#main-header');
+  var main_header_logo = $('#main-header-logo');
   $(window).scroll(function () {
       if ($(this).scrollTop() > 70) {
         header_class.removeClass('main-header').addClass('main-header-change');
+        main_header_logo.removeClass('main-header-logo').addClass('main-header__menu__ul__logo');
       }
       if ($(this).scrollTop() < 70) {
         header_class.removeClass('main-header-change').addClass('main-header');
+        main_header_logo.removeClass('main-header__menu__ul__logo').addClass('main-header-logo');
       }
    });
 });

@@ -6,4 +6,11 @@
       font-weight: bold;
     }
   }
+  &__mapa {
+    margin-bottom: 2em;
+    width: 100%;
+    @include desde(1024px){
+      width: 300px;
+    };
+  }
 }
