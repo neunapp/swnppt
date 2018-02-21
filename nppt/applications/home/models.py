@@ -172,7 +172,7 @@ class ContactUs(TimeStampedModel):
         'hotel',
         max_length=2,
         blank=True,
-        choices=MODE_CHOICES
+        choices=MODE_CHOICES,
     )
     type_service = models.CharField(
         'tipo de servicio',

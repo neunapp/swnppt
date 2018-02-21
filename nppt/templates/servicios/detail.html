@@ -6,16 +6,16 @@
 
 {% load l10n %}
 
-{% block title %}{{home.title_seo}}{% endblock %}
+{% block title %}{{object.title_seo}}{% endblock %}
 
-{% block description %}{{home.description_seo}}{% endblock %}
+{% block description %}{{object.description_seo}}{% endblock %}
 
-{% block title_rs %}{{home.title_seo}}{% endblock %}
+{% block title_rs %}{{object.title_seo}}{% endblock %}
 
-{% block description_rs %}{{home.description_seo}}{% endblock %}
+{% block description_rs %}{{object.description_seo}}{% endblock %}
 
 
-{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+{% block tags %}{% endblock tags %}
 
 {% block content %}
   {% include "include/header.html" %}
@@ -43,9 +43,9 @@
         </div>
         <div class="cell small-12 medium-6 large-4">
           {% if object.mapa %}
-              <img src="{{object.mapa.url}}" alt="{{object.name}}" class="service-ps__mapa">
+              <img src="{{object.mapa.url}}" alt="{{object.name}}" style="cursor:pointer;" onclick="window.open('{{object.mapa.url}}','_blank');" class="service-ps__mapa">
           {% else %}
-              <img src="{% static 'img/mapa3.jpg' %}" alt="{{object.name}}" class="service-ps__mapa">
+              <img src="{% static 'img/mapa3.jpg' %}" alt="{{object.name}}" style="cursor:pointer;" onclick="window.open('{% static 'img/mapa3.jpg' %}','_blank');" class="service-ps__mapa">
           {% endif %}
         </div>
       </div>

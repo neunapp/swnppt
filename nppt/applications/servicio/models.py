@@ -28,7 +28,7 @@ class ExtraDetails(TimeStampedModel):
    class Meta:
        verbose_name = 'Detalles extra de un servicio'
        verbose_name_plural = 'Detalles extra de un servicio'
-       ordering = ['-created']
+       ordering = ['-order']
 
    def __str__(self):
        return self.denomination+' ['+str(self.id)+']'

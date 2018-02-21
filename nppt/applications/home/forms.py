@@ -45,98 +45,115 @@ class ContactUsForm(forms.ModelForm):
             'type_service',
             'message',
         )
-"""
+
         widgets = {
             'name':forms.TextInput(
                 attrs={
-                    'placeholder':'nombre',
+                    'placeholder':'Nombres',
+                    'class':'simple-form',
                 }
             ),
             'last_name': forms.TextInput(
                 attrs={
-                    'placeholder': 'apellido',
+                    'placeholder': 'Apellidos',
+                    'class':'simple-form',
                 }
             ),
-            'email': forms.TextInput(
+            'email': forms.EmailInput(
                 attrs={
-                    'placeholder': 'correo',
+                    'placeholder': 'E-mail',
+                    'class':'simple-form',
                 }
             ),
             'phone': forms.TextInput(
                 attrs={
                     'placeholder': 'Telefono',
+                    'class':'simple-form',
                 }
             ),
             'skype': forms.TextInput(
                 attrs={
                     'placeholder': 'skype',
+                    'class':'simple-form',
                 }
             ),
             'best_time_contact': forms.TextInput(
                 attrs={
-                    'placeholder': 'mejor momento para contactar',
+                    'placeholder': 'Mejor momento para contactar',
+                    'class':'simple-form',
                 }
             ),
             'country_residence': forms.TextInput(
                 attrs={
-                    'placeholder': 'pais de residencia',
+                    'placeholder': 'País de residencia',
+                    'class':'simple-form',
                 }
             ),
             'city': forms.TextInput(
                 attrs={
                     'placeholder': 'ciudad',
+                    'class':'simple-form',
                 }
             ),
             'destiny': forms.TextInput(
                 attrs={
-                    'placeholder': 'nombre',
+                    'placeholder': 'Destino favorito',
+                    'class':'simple-form',
                 }
             ),
-            'departure_date': forms.TextInput(
+            'departure_date': forms.DateInput(
                 attrs={
-                    'placeholder': 'fecha de partida',
+                    'class':'simple-form',
+                    'type':'date',
                 }
             ),
-            'days_amount': forms.TextInput(
+            'days_amount': forms.NumberInput(
                 attrs={
                     'placeholder': 'cantidad de dias',
+                    'class':'simple-form',
                 }
             ),
-            'adult_amount': forms.TextInput(
+            'adult_amount': forms.NumberInput(
                 attrs={
                     'placeholder': 'adultos',
+                    'class':'simple-form',
                 }
             ),
-            'infant_amount': forms.TextInput(
+            'infant_amount': forms.NumberInput(
                 attrs={
                     'placeholder': 'infantes(0-24 meses)',
+                    'class':'simple-form',
                 }
             ),
-            'boy_infant_amount': forms.TextInput(
+            'boy_infant_amount': forms.NumberInput(
                 attrs={
                     'placeholder': 'niños (2-5 años)',
+                    'class':'simple-form',
                 }
             ),
-            'boy_amount': forms.TextInput(
+            'boy_amount': forms.NumberInput(
                 attrs={
                     'placeholder': 'niños de 12 años ',
+                    'class':'simple-form',
                 }
             ),
-            'hotel': forms.TextInput(
+            'hotel': forms.Select(
                 attrs={
                     'placeholder': 'hotel',
+                    'class':'simple-form',
                 }
             ),
-            'type_service': forms.TextInput(
+            'type_service': forms.Select(
                 attrs={
                     'placeholder': 'tipo de servicio',
+                    'class':'simple-form',
                 }
             ),
             'message':forms.Textarea(
                 attrs={
-                    'placeholder': 'mensaje'
+                    'placeholder': 'mensaje',
+                    'class':'simple-form',
+                    'rows':'4',
                 }
             )
-
-
-        }"""
+        }
