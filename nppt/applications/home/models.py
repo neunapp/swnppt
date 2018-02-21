@@ -31,7 +31,10 @@ class Home(TimeStampedModel):
     description_seo = models.CharField('descripcion seo redes sociales', max_length=200)
     title = models.CharField('titulo banner', max_length=200, blank=True)
     slogan = models.CharField('slogan banner', max_length=200, blank=True)
-    banner_img = models.ImageField('imagen de banner', upload_to='home', blank=True, null=True)
+    banner_img = models.ImageField('imagen de banner 1', upload_to='home', blank=True, null=True)
+    banner_img2 = models.ImageField('imagen de banner 2', upload_to='home', blank=True, null=True)
+    banner_img3 = models.ImageField('imagen de banner 3', upload_to='home', blank=True, null=True)
+    banner_img4 = models.ImageField('imagen de banner 4', upload_to='home', blank=True, null=True)
     title_featured_article = models.CharField(
         'titulo articulo destacado',
         max_length=200,

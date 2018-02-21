@@ -19,23 +19,105 @@
 
 {% block content %}
   {% include "include/header.html" %}
-  <!-- inicio de home -->
-  <div class="banner">
-    <img src="{{home.banner_img.url}}" alt="peru-private-tours" class="banner__img">
-    <div class="banner__logo">
-      <img src="{% static 'img/main_logo.png' %}" alt="peru-private-tours" class="banner__logo__img">
-    </div>
-    <div class="banner__copy">
-      <div class="banner__copy__main">
-        <h1 class="banner__copy__main__title">{{home.title}}</h1>
-        <p class="banner__copy__main__slogan">{{home.slogan}}</p>
+  <!-- inicio de banner slide -->
+  <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-pause-on-hover="false" data-timer-delay=8000>
+    <div class="orbit-wrapper">
+      <div class="orbit-controls">
+        <button class="orbit-previous"><span class="show-for-sr">Atrás</span>&#9664;&#xFE0E;</button>
+        <button class="orbit-next"><span class="show-for-sr">Siguiente</span>&#9654;&#xFE0E;</button>
       </div>
-      <div class="banner__copy__comentary">
-        La pagina web esta en construccion disculpe las molestias :(
-      </div>
+      <ul class="orbit-container">
+        <li class="is-active orbit-slide">
+          <div class="banner">
+            <img src="{{home.banner_img.url}}" alt="peru-private-tours" class="banner__img">
+            <div class="banner__logo">
+              <img src="{% static 'img/main_logo.png' %}" alt="peru-private-tours" class="banner__logo__img">
+            </div>
+            <div class="banner__copy">
+              <div class="banner__copy__main">
+                <h1 class="banner__copy__main__title">{{home.title}}</h1>
+                <p class="banner__copy__main__slogan">{{home.slogan}}</p>
+              </div>
+              <div class="banner__copy__comentary">
+                La pagina web esta en construccion disculpe las molestias :(
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="is-active orbit-slide">
+          <div class="banner">
+            {% if home.banner_img2 %}
+              <img src="{{home.banner_img2.url}}" alt="peru-private-tours" class="banner__img">
+            {% else %}
+              <img src="{{home.banner_img.url}}" alt="peru-private-tours" class="banner__img">
+            {% endif %}
+            <div class="banner__logo">
+              <img src="{% static 'img/main_logo.png' %}" alt="peru-private-tours" class="banner__logo__img">
+            </div>
+            <div class="banner__copy">
+              <div class="banner__copy__main">
+                <h1 class="banner__copy__main__title">{{home.title}}</h1>
+                <p class="banner__copy__main__slogan">{{home.slogan}}</p>
+              </div>
+              <div class="banner__copy__comentary">
+                La pagina web esta en construccion  :(
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="is-active orbit-slide">
+          <div class="banner">
+            {% if home.banner_img3 %}
+              <img src="{{home.banner_img3.url}}" alt="peru-private-tours" class="banner__img">
+            {% else %}
+              <img src="{{home.banner_img.url}}" alt="peru-private-tours" class="banner__img">
+            {% endif %}
+            <div class="banner__logo">
+              <img src="{% static 'img/main_logo.png' %}" alt="peru-private-tours" class="banner__logo__img">
+            </div>
+            <div class="banner__copy">
+              <div class="banner__copy__main">
+                <h1 class="banner__copy__main__title">{{home.title}}</h1>
+                <p class="banner__copy__main__slogan">{{home.slogan}}</p>
+              </div>
+              <div class="banner__copy__comentary">
+                La pagina web esta en construccion  :(
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="is-active orbit-slide">
+          <div class="banner">
+            {% if home.banner_img4 %}
+              <img src="{{home.banner_img4.url}}" alt="peru-private-tours" class="banner__img">
+            {% else %}
+              <img src="{{home.banner_img.url}}" alt="peru-private-tours" class="banner__img">
+            {% endif %}
+            <div class="banner__logo">
+              <img src="{% static 'img/main_logo.png' %}" alt="peru-private-tours" class="banner__logo__img">
+            </div>
+            <div class="banner__copy">
+              <div class="banner__copy__main">
+                <h1 class="banner__copy__main__title">{{home.title}}</h1>
+                <p class="banner__copy__main__slogan">{{home.slogan}}</p>
+              </div>
+              <div class="banner__copy__comentary">
+                La pagina web esta en construccion  :(
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
+    <nav class="orbit-bullets">
+      <button class="is-active" data-slide="0"><span class="show-for-sr">1.</span><span class="show-for-sr">Current Slide</span></button>
+      <button data-slide="1"><span class="show-for-sr">2.</span></button>
+      <button data-slide="2"><span class="show-for-sr">3.</span></button>
+      <button data-slide="3"><span class="show-for-sr">4.</span></button>
+    </nav>
   </div>
-  <!-- fin de home -->
+  <!-- Fin de banner slide -->
+
   <!-- inicio del contenido de la pagina -->
   <div class="grid-container">
     <div class="grid-x grid-margin-x align-center">
@@ -222,7 +304,7 @@
           </div>
           <div class="cell small-12 medium-6 large-6 home-about__body__text">
             <p>
-              {{home.emblema_article.description|truncatechars_html:400}}
+              {{home.emblema_article.content|safe|truncatechars_html:600}}
             </p>
             <div class="home-about__body__text__action">
               <a href="{% url 'blog_app:ps_detail' home.emblema_article.slug %}" class="home-about__body__text__action__btn">Conocer más del proyecto</a>
@@ -249,7 +331,7 @@
     <div class="home-about-values">
       <h3 class="text-subtitle-2">{{home.title_content1_article}}</h3>
       <p class="home-about-values__content">
-        {{home.content1_article.content|safe}}
+        {{home.content1_article.content|safe|truncatechars_html:600}}
       </p>
       <a href="{% url 'blog_app:blog_detail' home.content1_article.slug %}" class="home-about-values__link">Ver más</a>
     </div>
@@ -262,6 +344,14 @@
           <a href="{% url 'blog_app:pf_detail' value.slug %}" class="home-about-values-item__val__text">{{value.title}}</a>
         </div>
       {% endfor %}
+    </div>
+
+    <div class="home-about-values">
+      <h3 class="text-subtitle-2">{{home.title_content2_article}}</h3>
+      <p class="home-about-values__content">
+        {{home.content2_article.content|safe|truncatechars_html:600}}
+      </p>
+      <a href="{% url 'blog_app:blog_detail' home.content1_article.slug %}" class="home-about-values__link">Ver más</a>
     </div>
     </div>
   </div>
