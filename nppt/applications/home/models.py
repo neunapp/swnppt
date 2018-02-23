@@ -99,6 +99,11 @@ class Home(TimeStampedModel):
         max_length=200,
         blank=True
     )
+    subtitle_feature_enterprice = models.CharField(
+        'Sub titulo caracteristicas de la empresa',
+        max_length=200,
+        blank=True
+    )
     values_enterprice = models.ManyToManyField(
         Blog,
         verbose_name='valores de la empresa',
@@ -154,20 +159,27 @@ class ContactUs(TimeStampedModel):
 
     )
     name = models.CharField('nombre', max_length=50)
-    last_name = models.CharField('apellido', max_length=150, blank=False, null=False)
-    email = models.EmailField('correo', blank=False, null=False)
-    phone = models.CharField('telefono', max_length=15)
+    last_name = models.CharField('apellido', max_length=150)
+    email = models.EmailField('correo', blank=False)
+    phone = models.CharField('telefono', max_length=15, blank=True)
     skype = models.CharField('ID en Skype', blank=True, max_length=100)
-    best_time_contact = models.CharField('Mejor momento para contactarlo', max_length=200)
+    best_time_contact = models.CharField('Mejor momento para contactarlo', max_length=200, blank=True)
     country_residence = models.CharField('pais de residencia', max_length=20)
     city = models.CharField('ciudad', max_length=15)
-    destiny = models.ManyToManyField(Destiny)
-    departure_date = models.DateField('fecha de salida')
-    days_amount = models.IntegerField('cantidad de dias')
-    adult_amount = models.IntegerField('cantidad de adultos')
-    infant_amount = models.IntegerField('cantidad de infantes')
-    boy_infant_amount = models.IntegerField('cantidad de niños menosres de 2 a 3')
-    boy_amount = models.IntegerField('cantidad de niños mayores a 3 años')
+    destiny = models.ForeignKey(
+        Destiny,
+        on_delete=models.CASCADE,
+        related_name='contact_destino',
+        verbose_name='destino favorito',
+        null=True,
+        blank=True,
+    )
+    departure_date = models.DateField('fecha de salida', blank=True, null=True)
+    days_amount = models.IntegerField('cantidad de dias', default=0)
+    adult_amount = models.IntegerField('cantidad de adultos', default=0)
+    infant_amount = models.IntegerField('cantidad de infantes', default=0)
+    boy_infant_amount = models.IntegerField('cantidad de niños menosres de 2 a 3', default=0)
+    boy_amount = models.IntegerField('cantidad de niños mayores a 3 años', default=0)
     hotel = models.CharField(
         'hotel',
         max_length=2,
@@ -188,4 +200,4 @@ class ContactUs(TimeStampedModel):
         ordering = ['-created']
 
     def __str__(self):
-        return self.client_name
+        return self.name

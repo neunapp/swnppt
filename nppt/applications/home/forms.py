@@ -95,7 +95,7 @@ class ContactUsForm(forms.ModelForm):
                     'class':'simple-form',
                 }
             ),
-            'destiny': forms.TextInput(
+            'destiny': forms.Select(
                 attrs={
                     'placeholder': 'Destino favorito',
                     'class':'simple-form',

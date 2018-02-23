@@ -337,7 +337,8 @@
     </div>
 
     <div class="grid-x grid-margin-x home-about-values-item">
-      <h3 class="cell text-subtitle-2">¿Que nos hace distintos?</h3>
+      <h3 class="cell text-subtitle-2">{{home.title_feature_enterprice}}</h3>
+      <p>{{home.subtitle_feature_enterprice}}</p>
       {% for value in home.values_enterprice.all  %}
         <div class="small-12 medium-6 home-about-values-item__val">
           <img src="{% static 'img/p.png' %}" alt="ppt" class="home-about-values-item__val__i">
@@ -346,13 +347,23 @@
       {% endfor %}
     </div>
 
-    <div class="home-about-values">
+    <div class="home-about__body">
       <h3 class="text-subtitle-2">{{home.title_content2_article}}</h3>
-      <p class="home-about-values__content">
-        {{home.content2_article.content|safe|truncatechars_html:600}}
-      </p>
-      <a href="{% url 'blog_app:blog_detail' home.content2_article.slug %}" class="home-about-values__link">Ver más</a>
+      <div class="grid-x">
+        <div class="cell small-12 medium-6 large-6 home-about__body__video">
+          {{home.content2_article.video|safe}}
+        </div>
+        <div class="cell small-12 medium-6 large-6 home-about__body__text">
+          <p>
+            {{home.content2_article.content|safe|truncatechars_html:600}}
+          </p>
+          <div class="home-about__body__text__action">
+            <a href="{% url 'blog_app:ps_detail' home.content2_article.slug %}" class="home-about__body__text__action__btn">Más de PPT</a>
+          </div>
+        </div>
+      </div>
     </div>
+
     </div>
   </div>
   <!-- fin de contenido de la pagina -->

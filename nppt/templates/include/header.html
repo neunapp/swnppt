@@ -152,15 +152,31 @@
             {% endfor %}
           </ul>
         </li>
+
         <li class="main-header__menu__ul__li">
-          <a href="{% url 'blog_app:ps_list' %}" class="main-header__menu__ul__li__a">Proyectos Sociales</a>
+          <a href="{% url 'servicio_app:paquetes' %}" class="main-header__menu__ul__li__a">Acerca de PPT</a>
+          <ul class="main-header__menu__ul__li__ul">
+            <li class="main-header__menu__ul__li__ul__li">
+              <a href="{% url 'blog_app:ps_list' %}" class="main-header__menu__ul__li__ul__li__a">
+                <img src="{% static 'img/p1.png' %}" class="main-header__menu__ul__li__ul__li__a__img">
+                Proyectos Sociales
+              </a>
+            </li>
+            <li class="main-header__menu__ul__li__ul__li">
+              <a href="{% url 'blog_app:blog_list' %}" class="main-header__menu__ul__li__ul__li__a">
+                <img src="{% static 'img/p1.png' %}" class="main-header__menu__ul__li__ul__li__a__img">
+                Blog
+              </a>
+            </li>
+            <li class="main-header__menu__ul__li__ul__li">
+              <a href="{% url 'blog_app:frecuent_questions' %}" class="main-header__menu__ul__li__ul__li__a">
+                <img src="{% static 'img/p1.png' %}" class="main-header__menu__ul__li__ul__li__a__img">
+                Preguntas Frecuentes
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="main-header__menu__ul__li">
-          <a href="{% url 'blog_app:blog_list' %}" class="main-header__menu__ul__li__a">Blog</a>
-        </li>
-        <li class="main-header__menu__ul__li">
-          <a href="{% url 'blog_app:frecuent_questions' %}" class="main-header__menu__ul__li__a">Preguntas Frecuentes</a>
-        </li>
+
         <li class="main-header__menu__ul__li">
           <a href="{% url 'home_app:home_contact' %}" class="main-header__menu__ul__li__a">Contácto</a>
         </li>
