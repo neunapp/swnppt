@@ -50,46 +50,58 @@
         </div>
       </div>
       <br><br>
-      <div class="service-ps">
-          <ul class="cell tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
-            <li class="tabs-title service-ps__tab"><a href="#panel2c"><span class="service-ps__tab__a">Incluye</a></span></li>
-            {% for e in object.extra.all  %}
-              <li class="tabs-title service-ps__tab"><a href="#{{e.id}}"><span class="service-ps__tab__a">{{e.name}}</a></span></li>
-            {% endfor %}
-            {% for i in itinerario  %}
-              <li class="tabs-title service-ps__tab"><a href="#{{i.id}}"><span class="service-ps__tab__a">{{i.denomination}}</a></span></li>
-            {% endfor %}
-          </ul>
+      <div class="grid-x grid-margin-x">
+        <div class="cell small-12 large-9 service-ps">
+            <ul class="cell tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+              <li class="tabs-title service-ps__tab"><a href="#panel2c"><span class="service-ps__tab__a">Incluye</a></span></li>
+              {% for e in object.extra.all  %}
+                <li class="tabs-title service-ps__tab"><a href="#{{e.id}}"><span class="service-ps__tab__a">{{e.name}}</a></span></li>
+              {% endfor %}
+              {% for i in itinerario  %}
+                <li class="tabs-title service-ps__tab"><a href="#{{i.id}}"><span class="service-ps__tab__a">{{i.denomination}}</a></span></li>
+              {% endfor %}
+            </ul>
 
-          <div class="tabs-content" data-tabs-content="collapsing-tabs">
-            <div class="tabs-panel" id="panel2c">
-              <p class="info-card__b">Include: </p>
-              <p>{{object.include|safe}}</p>
-              <p class="info-card__b">Not Include:</p>
-              <p>{{object.not_include|safe}}</p>
-            </div>
-            {% for e in object.extra.all  %}
-            <div class="tabs-panel" id="{{e.id}}">
-              <div class="info-card">
-                <p>{{e.content|safe}}</p>
+            <div class="tabs-content" data-tabs-content="collapsing-tabs">
+              <div class="tabs-panel" id="panel2c">
+                <p class="info-card__b">Include: </p>
+                <p>{{object.include|safe}}</p>
+                <p class="info-card__b">Not Include:</p>
+                <p>{{object.not_include|safe}}</p>
               </div>
-            </div>
-            {% endfor %}
-            {% for i in itinerario  %}
-            <div class="tabs-panel" id="{{i.id}}">
-              <div class="info-card">
-                <p class="secondary-text"><span class="primary-text color-cuarto">Distancia a pie:</span> {{i.distance_foot}}</p>
-                <p class="secondary-text"><span class="primary-text color-cuarto">Altitud del Lugar:</span> {{i.altitude_place}}</p>
-                <p class="secondary-text"><span class="primary-text color-cuarto">Clima del Lugar:</span> {{i.clima}}</p>
-                <p class="secondary-text"><span class="primary-text color-cuarto">Descripcion:</span> {{i.description}}</p>
-                {% for ip in i.place.all  %}
-                  <a href="{% url 'itinerario_app:place_detail' ip.slug %}" target="_blank" class="info-card__b">{{ip.name}}</a>
-                  <p>{{ip.description}}</p>
-                {% endfor %}
+              {% for e in object.extra.all  %}
+              <div class="tabs-panel" id="{{e.id}}">
+                <div class="info-card">
+                  <p>{{e.content|safe}}</p>
+                </div>
               </div>
+              {% endfor %}
+              {% for i in itinerario  %}
+              <div class="tabs-panel" id="{{i.id}}">
+                <div class="info-card">
+                  <p class="secondary-text"><span class="primary-text color-cuarto">Distancia a pie:</span> {{i.distance_foot}}</p>
+                  <p class="secondary-text"><span class="primary-text color-cuarto">Altitud del Lugar:</span> {{i.altitude_place}}</p>
+                  <p class="secondary-text"><span class="primary-text color-cuarto">Clima del Lugar:</span> {{i.clima}}</p>
+                  <p class="secondary-text"><span class="primary-text color-cuarto">Descripcion:</span> {{i.description}}</p>
+                  {% for ip in i.place.all  %}
+                    <a href="{% url 'itinerario_app:place_detail' ip.slug %}" target="_blank" class="info-card__b">{{ip.name}}</a>
+                    <p>{{ip.description}}</p>
+                  {% endfor %}
+                </div>
+              </div>
+              {% endfor %}
             </div>
-            {% endfor %}
-          </div>
+        </div>
+        <div class="cell small-12 large-3">
+          <h3 class="footer-services__title" style="color:#1abc9c;">Revisa nuestros articuls:</h3>
+          {% for gb in global_blog  %}
+            <ul class="footer-services__ul">
+              <li class="footer-services__ul__li">
+                <a href="{% url 'blog_app:blog_detail' gb.slug %}" class="footer-services__ul__li__a" style="color:#424242;">{{gb.title|truncatechars:33}}</a>
+              </li>
+            </ul>
+          {% endfor %}
+        </div>
       </div>
       <p> <span class="info-card__p">{{object.consideration|safe}}</span></p>
       <p class="info-card__b centrar">Precio Privado:</p>

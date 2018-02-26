@@ -23,11 +23,13 @@ class Category(TimeStampedModel):
     B = '2'
     C = '1'
     D = '0'
+    E = '4'
     MODE_CHOICES = (
         (A, 'Proyectos Sociales'),
         (B, 'Preguntas Frecuentes'),
         (C, 'Empresa'),
-        (D, 'Otro'),
+        (D, 'Video'),
+        (E, 'Otro'),
     )
     model = models.CharField(
         'modelo',

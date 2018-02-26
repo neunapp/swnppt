@@ -94,7 +94,7 @@ class ServicesListView(ListView):
         #recuperamos el valor por GET
         q = self.request.GET.get("kword", '')
         #consultas
-        queryset = Service.objects.service_by_all_type(q)
+        queryset = Service.objects.service_by_tipe('3',q)
         return queryset
 
 

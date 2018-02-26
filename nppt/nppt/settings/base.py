@@ -74,6 +74,7 @@ TEMPLATES = [
                 'applications.procesors.global_camintas_alternativas',
                 'applications.procesors.global_camino_inca',
                 'applications.procesors.global_services',
+                'applications.procesors.global_blogs',
             ],
         },
     },
