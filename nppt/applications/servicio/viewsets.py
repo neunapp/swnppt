@@ -3,9 +3,12 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 
 #models
-from .models import Service
+from .models import Service, Destiny
 
-from .serializers import ServiceRecentlyVisitSerializer
+from .serializers import (
+    ServiceRecentlyVisitSerializer,
+    DestinyListSerializer
+)
 
 
 class ServiceRecentlyVisitViewset(viewsets.ModelViewSet):
@@ -15,7 +18,18 @@ class ServiceRecentlyVisitViewset(viewsets.ModelViewSet):
     serializer_class = ServiceRecentlyVisitSerializer
 
     def get_queryset(self):
-        queryset = Service.objects.service_recent()
+        queryset = Service.objects.service_recent()[:3]
+        return queryset
+
+
+class DestinyListViewset(viewsets.ModelViewSet):
+    """
+        viewset que lista los destinos registrados
+    """
+    serializer_class = DestinyListSerializer
+
+    def get_queryset(self):
+        queryset = Destiny.objects.all()
         return queryset
 
 

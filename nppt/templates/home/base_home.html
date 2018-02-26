@@ -7,7 +7,7 @@
   <meta property="og:locale" content="es_PE">
   <meta property="og:site_name" content="Visita laguna de salcantay">
   <meta property="og:url" content="http://ppttours.com/">
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}?rand=23423423">
   <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
 
 {% endblock css %}
@@ -16,12 +16,14 @@
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/axios.min.js' %}"></script>
   <script src="{% static 'js/vue.min.js' %}"></script>
+
+  <!-- ==========seccion codigo vuejs========== -->
+  <script src="{% static 'apps/servicios/services.js' %}?rand=23423423"></script>
+  <script src="{% static 'apps/ap/homeArmado.js' %}?rand=23423423"></script>
+  <!-- ==========Fin seccion codigo vuejs========== -->
+
   <script src="{% static 'js/foundation.min.js' %}"></script>
   <script src="{% static 'js/app.js' %}"></script>
   <script src="{% static 'js/scrips.js' %}"></script>
-
-  <!-- ==========seccion codigo vuejs========== -->
-  <script src="{% static 'apps/servicios/services.js' %}"></script>
-  <!-- ==========Fin seccion codigo vuejs========== -->
 
 {% endblock js %}

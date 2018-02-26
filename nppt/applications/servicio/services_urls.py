@@ -15,5 +15,9 @@ urlpatterns = [
             viewsets.ServicebyDestinyViewset.as_view({'get': 'list'}),
             name='api_servicios-by-destiny'
         ),
-
+        #url para listar destinos
+        re_path(r'^api/servicio/destino/list/$',
+            viewsets.DestinyListViewset.as_view({'get': 'list'}),
+            name='api_servicerecent-destiny-list'
+        ),
 ]

@@ -123,54 +123,92 @@
     <div class="grid-x grid-margin-x align-center">
       <!-- inicio de armado de paquete -->
       <div class="cell small-12 large-4">
-        <h3 class="cell text-subtitle">Nos adaptamos de acuerdo a tus necesidades, arma tu paquete y ahorra tiempo.</h3>
-        <div class="grid-x grid-padding-x home-armar-paquete">
-          <div class="cell small-6">
-            <label><span class="label-input">Fecha de arribo</span>
-              <input type="date" class="home-armar-paquete__input">
-            </label>
-          </div>
-          <div class="cell small-6">
-            <label><span class="label-input">Hora de arribo</span>
-              <input type="time" class="home-armar-paquete__input">
-            </label>
-          </div>
-          <div class="cell small-6">
-            <label><span class="label-input">Fecha de salida</span>
-              <input type="date" class="home-armar-paquete__input">
-            </label>
-          </div>
-          <div class="cell small-6">
-            <label><span class="label-input">Hora de salida</span>
-              <input type="time" class="home-armar-paquete__input">
-            </label>
-          </div>
-          <div class="cell small-12">
-            <label><span class="label-input">Destinos</span>
-              <select class="home-armar-paquete__input">
-                <option value="husker">Cusco</option>
-                <option value="starbuck">Arequipa</option>
-                <option value="hotdog">Puno</option>
-                <option value="apollo">Lima</option>
-              </select>
-            </label>
-            <div class="home-armar-paquete__destinos">
-              <span class="home-armar-paquete__destinos__destino">Cusco</span>
-              <span class="home-armar-paquete__destinos__destino">Arequipa</span>
-              <span class="home-armar-paquete__destinos__destino">Puno</span>
+        <appHomeArmado>
+          <h3 class="cell text-subtitle">Nos adaptamos de acuerdo a tus necesidades, arma tu paquete y ahorra tiempo.</h3>
+          <div class="grid-x grid-padding-x home-armar-paquete">
+            <div class="cell small-6">
+              <label><span class="label-input">Fecha de arribo</span>
+                <input type="date" class="home-armar-paquete__input">
+              </label>
+            </div>
+            <div class="cell small-6">
+              <label><span class="label-input">Hora de arribo</span>
+                <input type="time" class="home-armar-paquete__input">
+              </label>
+            </div>
+            <div class="cell small-6">
+              <label><span class="label-input">Fecha de salida</span>
+                <input type="date" class="home-armar-paquete__input">
+              </label>
+            </div>
+            <div class="cell small-6">
+              <label><span class="label-input">Hora de salida</span>
+                <input type="time" class="home-armar-paquete__input">
+              </label>
+            </div>
+            <div class="cell small-12">
+              <label><span class="label-input">Destinos</span>
+                <select v-model="apDestinos" @change="add_destinos_seleccionados(apDestinos)" class="home-armar-paquete__input">
+                  <option v-for="d in destinos" v-bind:value="d">{$ d.city $}</option>
+                </select>
+              </label>
+              <div class="home-armar-paquete__destinos">
+                <span style="margin-right:10px;"class="home-armar-paquete__destinos__destino" v-for="ds in destinos_seleccionados">{$ ds.city $}</span>
+              </div>
+            </div>
+            <div class="cell small-12">
+              <label><span class="label-input">E-mail</span>
+                <input type="email" class="home-armar-paquete__input" placeholder="Email">
+              </label>
+            </div>
+            <div class="cell small-12 centrar">
+              <button type="button" name="button" class="home-armar-paquete__btn" data-open="datosModal1">
+                Buscar
+              </button>
             </div>
           </div>
-          <div class="cell small-12">
-            <label><span class="label-input">E-mail</span>
-              <input type="email" class="home-armar-paquete__input" placeholder="Email">
-            </label>
+
+          <!-- Modal-->
+          <div class="grid-x grid-margin-x align-center">
+            <div class="reveal" id="datosModal1" data-reveal>
+              <form class="grid-x grid-margin-x login-form">
+                <div class="cell grid-x grid-margin-x align-center">
+                  <p class="cell login-form__p">Registrese como usuario para comenzar</p>
+                  <a href="#" class="cell login-form__f" data-open="loginModal1">¿Ya tienes una cuenta?</a>
+                </div>
+                <div class="cell small-12">
+                  <div class="simple-form-2">
+                    <label for="formulario" class="simple-form-2__lbl">E-mail:</label>
+                    <input type="email" name="email" class="simple-form" placeholder="E-mail">
+                  </div>
+                </div>
+                <div class="cell small-12">
+                  <div class="simple-form-2">
+                    <label for="formulario" class="simple-form-2__lbl">Password:</label>
+                    <input type="password" name="email" class="simple-form" placeholder="E-mail">
+                  </div>
+                </div>
+                <div class="cell small-12">
+                  <div class="simple-form-2">
+                    <label for="formulario" class="simple-form-2__lbl">Nacionalidad:</label>
+                    <select v-model="apPais" class="home-armar-paquete__input">
+                      <option v-for="p in paises" v-bind:value="p.name">{$ p.name $}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="cell small-12 centrar">
+                  <button type="button" name="button" class="home-armar-paquete__btn" data-open="datosModal1">
+                    Ingresar
+                  </button>
+                </div>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </form>
+            </div>
           </div>
-          <div class="cell small-12 centrar">
-            <button type="button" name="button" class="home-armar-paquete__btn" data-open="datosModal1">
-              Buscar
-            </button>
-          </div>
-        </div>
+          <!-- fin de modal -->
+        </appHomeArmado>
       </div>
       <!-- fin de armado de pequete -->
       <!-- inicio de busqueda de reservas -->
@@ -239,7 +277,7 @@
       </div>
     </div>
 
-    <app>
+    <appServices>
       <div class="grid-x grid-margin-x align-center">
         <div class="cell">
             <h3 class="cell text-subtitle">¿Desea un paquete ya elaborado?</h3>
@@ -292,7 +330,7 @@
           </div>
         </div>
       </div>
-    </app>
+    </appServices>
 
     <div class="home-about">
       <div class="home-about__header">
@@ -366,48 +404,8 @@
       </div>
     </div>
 
-    </div>
   </div>
   <!-- fin de contenido de la pagina -->
-
-  <!-- Modal-->
-  <div class="reveal" id="datosModal1" data-reveal>
-    <form class="grid-x grid-margin-x">
-      <div class="cell small-12">
-        <div class="simple-form-2">
-          <label for="formulario" class="simple-form-2__lbl">E-mail:</label>
-          <input type="email" name="email" class="simple-form" placeholder="E-mail">
-        </div>
-      </div>
-      <div class="cell small-12">
-        <div class="simple-form-2">
-          <label for="formulario" class="simple-form-2__lbl">Password:</label>
-          <input type="password" name="email" class="simple-form" placeholder="E-mail">
-        </div>
-      </div>
-      <div class="cell small-12">
-        <div class="simple-form-2">
-          <label for="formulario" class="simple-form-2__lbl">Nacionalidad:</label>
-          <select>
-            <option value="husker">España</option>
-            <option value="starbuck">Alemania</option>
-            <option value="hotdog">Francia</option>
-            <option value="apollo">Argentina</option>
-          </select>
-        </div>
-      </div>
-      <div class="cell small-12 centrar">
-        <button type="button" name="button" class="home-armar-paquete__btn" data-open="datosModal1">
-          Ingresar
-        </button>
-      </div>
-    </form>
-
-    <button class="close-button" data-close aria-label="Close modal" type="button">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <!-- fin de modal -->
 
   <!-- Modal para login user-->
   <div class="reveal" id="loginModal1" data-reveal>
@@ -435,7 +433,7 @@
           </button>
         </div>
         <a class="cell login-form__f">¿olvidaste la constraseña?</a>
-        <a class="cell login-form__r">Registrar una cuenta nueva</a>
+        <a href="#" data-open="datosModal1" class="cell login-form__r">Registrar una cuenta nueva</a>
       </form>
     </div>
     <button class="close-button" data-close aria-label="Close reveal" type="button">

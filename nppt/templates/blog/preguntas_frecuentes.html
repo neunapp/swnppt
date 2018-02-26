@@ -63,7 +63,11 @@
         <div class="cell small-12 medium-6 large-3">
           <div class="blog-2-card">
             <div class="blog-2-card__head">
-              <img src="{{pf.image1.url}}" alt="{{pf.title_seo}}" class="blog-2-card__head__img">
+              {% if pf.image2 %}
+                <img src="{{pf.image2.url}}" alt="{{pf.title_seo}}" class="blog-2-card__head__img">
+              {% else %}
+                <img src="{{pf.image1.url}}" alt="{{pf.title_seo}}" class="blog-2-card__head__img">
+              {% endif %}
               <div class="blog-2-card__head__den">
                 <p class="blog-2-card__head__den__tag">{{pf.author|truncatechars_html:15}}</p>
                 <a href="{% url 'blog_app:pf_detail' pf.slug %}" class="blog-2-card__head__den__link">

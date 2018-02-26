@@ -6,16 +6,16 @@
 
 {% load l10n %}
 
-{% block title %}{{home.title_seo}}{% endblock %}
+{% block title %}{% endblock %}
 
-{% block description %}{{home.description_seo}}{% endblock %}
+{% block description %}{% endblock %}
 
-{% block title_rs %}{{home.title_seo}}{% endblock %}
+{% block title_rs %}{% endblock %}
 
-{% block description_rs %}{{home.description_seo}}{% endblock %}
+{% block description_rs %}{% endblock %}
 
 
-{% block tags %}{% for t in home.tags_set.all  %}{{t.name}},{% endfor %}{% endblock tags %}
+{% block tags %} {% endblock tags %}
 
 {% block content %}
   {% include "include/header.html" %}
@@ -49,7 +49,11 @@
         {% for ps in proyectos_sociales  %}
           <div class="cell small-12 medium-6 large-4">
             <div class="blog-card">
-              <img src="{{ps.image1.url}}" alt="{{ps.title_seo}}" class="blog-card__img">
+              {% if ps.imaga2  %}
+                <img src="{{ps.image2.url}}" alt="{{ps.title_seo}}" class="blog-card__img">
+              {% else %}
+                <img src="{{ps.image1.url}}" alt="{{ps.title_seo}}" class="blog-card__img">
+              {% endif %}
               <a href="{% url 'blog_app:ps_detail' ps.slug %}" class="blog-card__name">{{ps.title}}</a>
               <p class="blog-card__text">
                 {{ps.description|truncatechars_html:120}}
