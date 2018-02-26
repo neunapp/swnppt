@@ -80,3 +80,42 @@
     }
   }
 }
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  &__logo {
+    width: 150px;
+    height: 90px;
+  }
+  &__p {
+    text-align: center;
+    font-size: 14px;
+    font-family: $font-fam-segundo;
+    color: color(dos);
+    font-weight: bold;
+  }
+  &__f {
+    text-align: center;
+    margin: 1em;
+    font-size: 12px;
+    font-family: $font-fam-tercero;
+    color: color(sub);
+    &:hover {
+      color: color(dos);
+    }
+  }
+  &__r {
+    text-align: center;
+    margin: 1em;
+    font-size: 12px;
+    font-family: $font-fam-tercero;
+    color: color(tres);
+    &:hover {
+      color: color(sub);
+    }
+  }
+}

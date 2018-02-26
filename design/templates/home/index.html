@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/foundation.min.js"></script>
-    <script type="text/javascript" src="/js/scrips.js"></script>
   </head>
   <body class="body" id="body">
     <header>
@@ -178,6 +175,11 @@
             <li class="main-header__menu__ul__li">
               <a href="#" class="main-header__menu__ul__li__a">Contácto</a>
             </li>
+            <li class="main-header__menu__ul__li">
+              <a href="#" class="main-header__menu__ul__li__a" data-open="loginModal1">
+                <i class="fa fa-user" aria-hidden="true"></i> Ingresar
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -248,7 +250,9 @@
               </label>
             </div>
             <div class="cell small-12 centrar">
-              <button type="button" name="button" class="home-armar-paquete__btn">Buscar</button>
+              <button type="button" name="button" class="home-armar-paquete__btn" data-open="datosModal1">
+                Buscar
+              </button>
             </div>
           </div>
         </div>
@@ -829,6 +833,80 @@
       </div>
     </div>
     <!-- fin de contenido de la pagina -->
+
+    <!-- Modal-->
+    <div class="reveal" id="datosModal1" data-reveal>
+      <form class="grid-x grid-margin-x">
+        <div class="cell small-12">
+          <div class="simple-form-2">
+            <label for="formulario" class="simple-form-2__lbl">E-mail:</label>
+            <input type="email" name="email" class="simple-form" placeholder="E-mail">
+          </div>
+        </div>
+        <div class="cell small-12">
+          <div class="simple-form-2">
+            <label for="formulario" class="simple-form-2__lbl">Password:</label>
+            <input type="password" name="email" class="simple-form" placeholder="E-mail">
+          </div>
+        </div>
+        <div class="cell small-12">
+          <div class="simple-form-2">
+            <label for="formulario" class="simple-form-2__lbl">Nacionalidad:</label>
+            <select>
+              <option value="husker">España</option>
+              <option value="starbuck">Alemania</option>
+              <option value="hotdog">Francia</option>
+              <option value="apollo">Argentina</option>
+            </select>
+          </div>
+        </div>
+        <div class="cell small-12 centrar">
+          <button type="button" name="button" class="home-armar-paquete__btn" data-open="datosModal1">
+            Ingresar
+          </button>
+        </div>
+      </form>
+
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <!-- fin de modal -->
+
+    <!-- Modal para login user-->
+    <div class="reveal" id="loginModal1" data-reveal>
+      <div class="grid-x grid-x-margin align-center">
+        <form class="cell small-12 large-8 grid-x grid-margin-x login-form" method="post">
+          <div class="cell grid-x grid-margin-x align-center">
+            <img src="/img/logo.png" alt="ppt" class="login-form__logo">
+            <p class="cell login-form__p">Bienvenido al sistema de armado de paquetes turisticos PPT</p>
+          </div>
+          <div class="cell small-12">
+            <div class="primary-form">
+              <i class="fa fa-envelope primary-form__icon" aria-hidden="true"></i>
+              <input type="email" name="name" class="primary-form__input" placeholder="E-mail">
+            </div>
+          </div>
+          <div class="cell small-12">
+            <div class="primary-form">
+              <i class="fa fa-unlock-alt primary-form__icon" aria-hidden="true"></i>
+              <input type="password" name="name" class="primary-form__input" placeholder="password">
+            </div>
+          </div>
+          <div class="cell small-12 centrar">
+            <button type="button" name="button" class="home-armar-paquete__btn" data-open="datosModal1">
+              Ingresar
+            </button>
+          </div>
+          <a class="cell login-form__f">¿olvidaste la constraseña?</a>
+          <a class="cell login-form__r">Registrar una cuenta nueva</a>
+        </form>
+      </div>
+      <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <!-- FIN Modal para login user-->
     <footer>
       <div class="footer">
         <div class="footer-services">
@@ -877,4 +955,8 @@
       </div>
     </footer>
   </body>
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/foundation.min.js"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="/js/scrips.js"></script>
 </html>

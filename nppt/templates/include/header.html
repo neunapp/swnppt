@@ -12,13 +12,13 @@
       <ul class="mov-menu__ul">
         <li class="mov-menu__ul__li">
           <a href="{% url 'servicio_app:clasic_tours' %}" class="mov-menu__ul__li__a">
-            <i class="fa fa-blind mov-menu__ul__li__a__icon color-sexto" aria-hidden="true"></i>
-            <span class="mov-menu__ul__li__a__text">Classic Tours</span>
+            <i class="fa fa-bus mov-menu__ul__li__a__icon color-sexto" aria-hidden="true"></i>
+            <span class="mov-menu__ul__li__a__text">Tours Clasicos</span>
           </a>
         </li>
         <li class="mov-menu__ul__li">
           <a href="{% url 'servicio_app:camino_inca' %}" class="mov-menu__ul__li__a">
-            <i class="fa fa-blind mov-menu__ul__li__a__icon color-sexto" aria-hidden="true"></i>
+            <i class="fa fa-blind mov-menu__ul__li__a__icon color-primero" aria-hidden="true"></i>
             <span class="mov-menu__ul__li__a__text">Camino Inka</span>
           </a>
         </li>
@@ -30,32 +30,26 @@
         </li>
         <li class="mov-menu__ul__li">
           <a href="{% url 'servicio_app:paquetes' %}" class="mov-menu__ul__li__a">
-            <i class="fa fa-male mov-menu__ul__li__a__icon color-tercero" aria-hidden="true"></i>
+            <i class="fa fa-building mov-menu__ul__li__a__icon color-tercero" aria-hidden="true"></i>
             <span class="mov-menu__ul__li__a__text">Paquetes Turisticos</span>
           </a>
         </li>
         <li class="mov-menu__ul__li">
-          <a href="{% url 'blog_app:blog_list' %}" class="mov-menu__ul__li__a">
-            <i class="fa fa-street-view mov-menu__ul__li__a__icon color-septimo" aria-hidden="true"></i>
-            <span class="mov-menu__ul__li__a__text">Blog</span>
-          </a>
-        </li>
-        <li class="mov-menu__ul__li">
           <a href="{% url 'blog_app:ps_list' %}" class="mov-menu__ul__li__a">
-            <i class="fa fa-train mov-menu__ul__li__a__icon color-cuarto" aria-hidden="true"></i>
-            <span class="mov-menu__ul__li__a__text">Proyectos Sociales</span>
+            <i class="fa fa-briefcase mov-menu__ul__li__a__icon color-tercero" aria-hidden="true"></i>
+            <span class="mov-menu__ul__li__a__text">Acerca de PPT</span>
           </a>
         </li>
         <li class="mov-menu__ul__li">
-          <a href="{% url 'blog_app:frecuent_questions' %}" class="mov-menu__ul__li__a">
-            <i class="fa fa-question-circle mov-menu__ul__li__a__icon color-quinto" aria-hidden="true"></i>
-            <span class="mov-menu__ul__li__a__text">Preguntas Frecuentes</span>
-          </a>
-        </li>
-        <li class="mov-menu__ul__li">
-          <a href="#" class="mov-menu__ul__li__a">
-            <i class="fa fa-envelope mov-menu__ul__li__a__icon color-segundo" aria-hidden="true"></i>
+          <a href="{% url 'home_app:home_contact' %}" class="mov-menu__ul__li__a">
+            <i class="fa fa-paper-plane mov-menu__ul__li__a__icon color-septimo" aria-hidden="true"></i>
             <span class="mov-menu__ul__li__a__text">Contacto</span>
+          </a>
+        </li>
+        <li class="mov-menu__ul__li">
+          <a href="{% url 'blog_app:blog_list' %}" class="mov-menu__ul__li__a" data-open="loginModal1">
+            <i class="fa fa-user mov-menu__ul__li__a__icon color-septimo" aria-hidden="true"></i>
+            <span class="mov-menu__ul__li__a__text">Ingresar</span>
           </a>
         </li>
         <div class="mov-menu__rs">
@@ -154,7 +148,7 @@
         </li>
 
         <li class="main-header__menu__ul__li">
-          <a href="{% url 'servicio_app:paquetes' %}" class="main-header__menu__ul__li__a">Acerca de PPT</a>
+          <a href="{% url 'blog_app:ps_list' %}" class="main-header__menu__ul__li__a">Acerca de PPT</a>
           <ul class="main-header__menu__ul__li__ul">
             <li class="main-header__menu__ul__li__ul__li">
               <a href="{% url 'blog_app:ps_list' %}" class="main-header__menu__ul__li__ul__li__a">
@@ -179,6 +173,11 @@
 
         <li class="main-header__menu__ul__li">
           <a href="{% url 'home_app:home_contact' %}" class="main-header__menu__ul__li__a">Contácto</a>
+        </li>
+        <li class="main-header__menu__ul__li">
+          <a href="#" class="main-header__menu__ul__li__a" data-open="loginModal1">
+            <i class="fa fa-user" aria-hidden="true"></i> Ingresar
+          </a>
         </li>
       </ul>
     </div>
