@@ -14,7 +14,9 @@ urlpatterns = [
     re_path(r'^', include('applications.itinerario.urls')),
     #urls app blog
     re_path(r'^', include('applications.blog.urls')),
+    # urls app user
+    re_path(r'^', include('applications.users.urls')),
 
-    #url para editor de texto
+                  #url para editor de texto
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

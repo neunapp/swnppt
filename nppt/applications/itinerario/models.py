@@ -98,6 +98,7 @@ class Itinerary(TimeStampedModel):
     service = models.ForeignKey(
         Service,
         verbose_name='Servicio',
+        related_name='itinerarys',
         on_delete=models.CASCADE
     )
 
