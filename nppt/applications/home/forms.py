@@ -1,9 +1,11 @@
 from django import forms
 
+
 from .models import ContactUs
 
 
 class ContactUsForm(forms.ModelForm):
+
     ESTRELLA_5 = '3'
     ESTRELLA_4 = '2'
     ESTRELLA_3 = '1'
@@ -23,7 +25,16 @@ class ContactUsForm(forms.ModelForm):
         (COMPARTIDO, 'compartido'),
 
     )
+
+
     class Meta:
+
+        destiny = forms.ModelMultipleChoiceField(
+            widget=forms.CheckboxSelectMultiple,
+            required=True,
+            queryset=ContactUs.objects.all()
+        )
+
         model = ContactUs
         fields = (
             'name',

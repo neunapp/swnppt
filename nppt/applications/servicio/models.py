@@ -46,11 +46,6 @@ class Destiny(TimeStampedModel):
         verbose_name_plural = 'destinos'
         ordering = ['-created']
 
-    def save(self, force_insert=False, force_update=False, using=None,
-             update_fields=None):
-        self.city = self.city.lower()
-        return super(Destiny, self).save()
-
     def __str__(self):
         return self.city
 

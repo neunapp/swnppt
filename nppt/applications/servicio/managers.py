@@ -36,8 +36,8 @@ class ServiceManager(models.Manager):
         ).order_by('-visit')[:9]
 
 
-    def find_destiny_by_service(self, destiny):
+    def find_destiny_by_service(self, pk):
         #procedimiento que busque servicio por destino
         return self.filter(
-            destiny__city=destiny,
+            destiny=pk,
         ).order_by('-visit')[:20]
